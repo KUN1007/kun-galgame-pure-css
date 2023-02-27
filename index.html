@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kun</title>
+    <style>
+        *{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+        }
+        body{
+        }
+        .top-bar-wrapper {
+            box-shadow: 0 2px 4px 0 rgba(0, 140, 255, 0.17);
+            min-width: 900px;
+            border: 1px solid black;
+        }
+        .web-name-space {
+            float: left;
+            position: absolute;
+            font-size: 1.5em;
+            top:10px;
+            border: 1px solid black;
+            left: 30px;
+        }
+        .web-name-space img {
+            width: 40px;
+            float: left;
+            border: 1px solid black;
+            margin-right: 20px;
+        }
+        .top-bar{
+            width: 700px;
+            height: 60px;
+            position: relative;
+            background-color: #fff;
+            margin-left: 10%;
+            border: 1px solid black;
+            text-align: center;
+        }
+        .top-bar ul{
+            display: flex;
+            align-items: center;
+            border: 1px solid black;
+            right: 5%;
+        }
+        .top-bar ul .top-bar-box{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            /* 如果导航栏就六个导航，那么每个导航的宽度都是整个导航
+            的六分之一 */
+            width: calc((100% / 6)*1);
+            height: 10px;
+            border-radius: 2px;
+            border: 1px solid black;
+            transition: .5s;
+        }
+        .top-bar ul li{
+            border: 1px solid black;
+            width: 100%;
+        }
+        .top-bar ul li a{
+            color: rgb(70, 100, 180);
+            font-size: 1.5em;
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid black;
+            line-height: 60px;
+        }
+        .top-bar ul li:nth-child(1):hover~.top-bar-box{
+            left: calc(100% / 6 *0);
+            background-color: rgb(250, 190, 250);
+        }
+        .top-bar ul li:nth-child(2):hover~.top-bar-box{
+            left: calc(100% / 6 *1);
+            background-color: red;
+        }
+        .top-bar ul li:nth-child(3):hover~.top-bar-box{
+            left: calc(100% / 6 *2);
+            background-color: #d18df8;
+        }
+        .top-bar ul li:nth-child(4):hover~.top-bar-box{
+            left: calc(100% / 6 *3);
+            background-color: #ffb1b1;
+        }
+        .top-bar ul li:nth-child(5):hover~.top-bar-box{
+            left: calc(100% / 6 *4);
+            background-color: #8da1f8;
+        }
+        .top-bar ul li:nth-child(6):hover~.top-bar-box{
+            left: calc(100% / 6 *5);
+            background-color: #7df88e;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="top-bar-wrapper">
+            <div class="web-name-space">
+                <img src="./img/favicon.png" alt="kungal">
+                kungal
+            </div>
+            <div class="top-bar">
+                <ul>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">JS</a></li>
+                    <li><a href="#">Jquery</a></li>
+                    <li><a href="#">VUE</a></li>
+                    <li><a href="#">PHP</a></li>
+                    <div class="top-bar-box"></div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./fa/css/all.css">
+    <style>
+      .top-search-bar:hover,
+      .top-search-bar:focus {
+        animation: top-search-bar 1s;
+        box-shadow: 0 0 0 2em transparent;
+      }
+
+      @keyframes top-search-bar {
+        0% {
+          box-shadow: 0 0 0 0 var(--hover);
+        }
+      }
+      .top-search-bar {
+        --color: #ef6eae;
+        --hover: #ef8f6e;
+        height: 60px;
+        width: 500px;
+        background: none;
+        border: 2px solid;
+        font: inherit;
+        line-height: 1;
+        margin: 0.5em;
+        color: var(--color);
+        transition: 0.25s;
+      }
+      .top-search-bar~span {
+        background-color: #ef6eae;
+        position: relative;
+        text-align: center;
+        color: #FFF;
+        height: 62px;
+        width: 62px;
+        left: -79px;
+        line-height: 62px;
+      }
+      .top-search-bar~span:hover {
+        background-color: #FFF;
+        color: #ef6eae;
+      }
+      .top-search-bar:hover,
+      .top-search-bar:focus {
+        border-color: var(--hover);
+        outline: none;
+        color: rgb(63, 63, 63);
+      }
+    </style>
+  </head>
+  <body>
+      <input class="top-search-bar" placeholder="请输入搜索内容">
+        <span class="fas fa-search"></span>
+      </input>
+    </div>
+  </body>
+</html>

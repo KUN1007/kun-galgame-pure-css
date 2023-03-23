@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>kungal</title>
-    <link rel="stylesheet" href="./fa/css/all.css" />
+    <title>Document</title>
+    <link rel="icon" href="./img/favicon.png" />
+    <link href="./fa/css/fontawesome.css" rel="stylesheet" />
+    <link href="./fa/css/brands.css" rel="stylesheet" />
+    <link href="./fa/css/solid.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/header.css" />
     <style>
       * {
         list-style: none;
@@ -13,110 +17,134 @@
         margin: 0;
         text-decoration: none;
       }
-
-      .header-bar {
+      *::-webkit-scrollbar {
+        display: none;
+      }
+      /* 主体部分样式 */
+      .main {
         display: flex;
+        justify-content: center;
+        min-width: 1200px;
       }
-      .left-entry {
-        width: 30%;
-        height: 50px;
-        background-color: rgb(194, 223, 250);
+      .banner-wrap {
+        min-width: 600px;
+        display: flex;
+        justify-content: center;
       }
-
-      .left-entry li {
-        float: left;
-        line-height: 50px;
+      .aside {
+        width: 15%;
+        height: 1007px;
+        background-color: azure;
       }
-      .left-entry span,
-      a {
-        display: block;
-        color: rgb(139, 139, 139);
-        pad: 0 40px;
+      .article {
+        width: 35%;
+        height: 1007px;
+        background-color: rgb(189, 189, 189);
       }
-      .center-top-search-container {
-        width: 40%;
-        height: 50px;
-        background-color: blueviolet;
-      }
-      .right-entry {
-        width: 30%;
-        height: 50px;
-        background-color: brown;
+      .footer {
+        height: 100px;
+        background-color: purple;
       }
     </style>
   </head>
   <body>
-    <div class="kungal">
-      <div class="header">
-        <div class="header-bar">
-          <ul class="left-entry">
-            <li>
-              <a href="google.com" class="kungal-main-page">
-                <span>kungal</span>
-              </a>
-            </li>
-            <li>
-              <a href="google.com" class="kungal-main-page">
-                <span>kungal</span>
-              </a>
-            </li>
-            <li>
-              <a href="google.com" class="kungal-main-page">
-                <span>kungal</span>
-              </a>
-            </li>
-            <li>
-              <a href="google.com" class="kungal-main-page">
-                <span>kungal</span>
-              </a>
-            </li>
-            <li>
-              <a href="google.com" class="kungal-main-page">
-                <span>kungal</span>
-              </a>
-            </li>
-            <li>
-              <a href="google.com" class="kungal-main-page">
-                <span>kungal</span>
-              </a>
-            </li>
-            <li>
-              <a href="google.com" class="kungal-main-page">
-                <span>kungal</span>
-              </a>
-            </li>
-          </ul>
-          <div class="center-top-search-container">
-            <div class="top-search-bar">
-              <span class="fa-solid fa-magnifying-glass"></span>
-              <span class="fa-solid fa-xmark"></span>
-              <input
-                type="text"
-                class="top-search-input"
-                placeholder="输入搜索内容"
-              />
-              <button class="top-search-button">搜索</button>
-            </div>
-          </div>
-          <ul class="right-entry">
-            <li class="user-avater">
-              <a href="#" class="user-space">
-                <img src="./img/KUN.jpg" alt="鲲" />
-              </a>
-            </li>
-            <li class="user-profile">
-              <a href="#" class="profile">
-                <span class="top-right-text">个人信息</span>
-              </a>
-            </li>
-            <li class="user-new-msg">
-              <a href="#" class="news">
-                <span class="top-right-text">新消息</span>
-              </a>
-            </li>
+    <!-- 头部 -->
+    <div class="header">
+      <!-- 顶部左侧交互栏 -->
+      <div class="nav-top">
+        <div class="kungal-info">
+          <a href="#"><img src="./img/favicon.png" alt="KUNgal" /></a>
+          <a href="#"><span>KUNgal</span></a>
+        </div>
+        <div class="top-bar">
+          <ul>
+            <li><a href="#">帖子发布</a></li>
+            <li><a href="#">长评撰写</a></li>
+            <li><a href="#">技术交流</a></li>
+            <li><a href="#">数据统计</a></li>
+            <div class="top-bar-box"></div>
           </ul>
         </div>
       </div>
+      <!-- 顶部全局搜索框 -->
+      <div class="top-search-bar">
+        <div class="top-search-box">
+          <input type="text" placeholder="请输入搜索内容:)" />
+          <div class="top-search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="top-cancel-icon">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div class="top-search-data"></div>
+        </div>
+        <script>
+          window.onload = () => {
+            const searchBox = document.querySelector(".top-search-box");
+            const searchBtn = document.querySelector(".top-search-icon");
+            const cancelBtn = document.querySelector(".top-cancel-icon");
+            const searchInput = document.querySelector(".top-search-box input");
+            const searchData = document.querySelector(".top-search-data");
+            searchBtn.onclick = () => {
+              searchBox.classList.add("active");
+              searchBtn.classList.add("active");
+              searchInput.classList.add("active");
+              cancelBtn.classList.add("active");
+              searchInput.focus();
+              if (searchInput.value != "") {
+                var values = searchInput.value;
+                searchData.classList.remove("active");
+                searchData.innerHTML =
+                  "You just typed " +
+                  "<span style='font-weight: 500;'>" +
+                  values +
+                  "</span>";
+              } else {
+                searchData.textContent = "";
+              }
+            };
+            cancelBtn.onclick = () => {
+              searchBox.classList.remove("active");
+              searchBtn.classList.remove("active");
+              searchInput.classList.remove("active");
+              cancelBtn.classList.remove("active");
+              searchData.classList.toggle("active");
+              searchInput.value = "";
+            };
+          };
+        </script>
+        <span>全局搜索</span>
+      </div>
+      <div class="kungalgamer-info"></div>
     </div>
+
+    <!-- 主体部分 -->
+    <div class="main">
+      <!-- 侧边栏 -->
+      <div class="aside">
+        <div class="item-box"></div>
+        <div class="top-topic"></div>
+        <div class="kungal-news"></div>
+      </div>
+      <!-- 话题 -->
+      <div class="article">
+        <!-- 话题顶部提示框 -->
+        <div class="article-header-wrap"></div>
+        <a href="#">
+          <div class="author-info">
+            <div class="author-avatar"></div>
+            <div class="author-name"></div>
+          </div>
+          <div class="article-info">
+            <div class="article-title"></div>
+            <div class="article-describe"></div>
+            <div class="article-date"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer"></div>
   </body>
 </html>

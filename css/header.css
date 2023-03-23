@@ -1,0 +1,174 @@
+/* 头部样式 */
+.header {
+  height: 60px;
+  box-shadow: 0 2px 4px 0 rgba(0, 140, 255, 0.17);
+}
+.nav-top {
+  display: flex;
+  align-items: center;
+  float: left;
+}
+.kungal-info {
+}
+/* 网站 LOGO */
+.kungal-info img {
+  margin-left: 50px;
+  height: 60px;
+}
+/* 网站名称 */
+.kungal-info span {
+  position: absolute;
+  padding-left: 30px;
+  padding-top: 18px;
+}
+.nav-top li {
+  float: left;
+}
+/* 顶部导航栏 */
+.top-bar {
+  width: 400px;
+  height: 60px;
+  position: relative;
+  background-color: #fff;
+  margin-left: 20%;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.top-bar ul {
+  display: flex;
+  align-items: center;
+  right: 5%;
+}
+.top-bar ul .top-bar-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* 如果导航栏就六个导航，那么每个导航的宽度都是整个导航
+            的六分之一 */
+  width: calc((100% / 4) * 1);
+  height: 7px;
+  border-radius: 2px;
+  transition: 0.5s;
+}
+.top-bar ul li {
+  width: 100%;
+}
+.top-bar ul li a {
+  color: rgb(70, 100, 180);
+  font-size: 0.8em;
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 60px;
+}
+.top-bar ul li a:hover {
+  background-color: #ecf3ff;
+  transition: 0.5s;
+}
+.top-bar ul li:nth-child(1):hover ~ .top-bar-box {
+  left: calc(100% / 4 * 0);
+  background-color: rgb(255, 130, 130);
+}
+.top-bar ul li:nth-child(2):hover ~ .top-bar-box {
+  left: calc(100% / 4 * 1);
+  background-color: rgb(251, 213, 0);
+}
+.top-bar ul li:nth-child(3):hover ~ .top-bar-box {
+  left: calc(100% / 4 * 2);
+  background-color: rgb(78, 164, 255);
+}
+.top-bar ul li:nth-child(4):hover ~ .top-bar-box {
+  left: calc(100% / 4 * 3);
+  background-color: rgb(0, 206, 0);
+}
+.top-search-bar{
+    float: left;
+    margin-left: 70px;
+}
+.top-search-box {
+  position: absolute;
+  height: 60px;
+  width: 100px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.top-search-box.active {
+  width: 350px;
+}
+.top-search-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #ffffff;
+  outline: none;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.top-search-box input.active {
+  opacity: 1;
+}
+.top-search-box input::placeholder {
+  color: #a6a6a6;
+}
+.top-search-box .top-search-icon {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60px;
+  width: 60px;
+  background: #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 22px;
+  color: #6495ff;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.top-search-box .top-search-icon.active {
+  right: 5px;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  font-size: 20px;
+  background: #6495ff;
+  color: #fff;
+  transform: translateY(-50%) rotate(360deg);
+}
+.top-search-box .top-cancel-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  color: #ff7878;
+  cursor: pointer;
+  transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.top-search-box .top-cancel-icon.active {
+  right: -40px;
+  transform: translateY(-50%) rotate(360deg);
+}
+.top-search-box .top-search-data {
+  text-align: center;
+  padding-top: 7px;
+  color: #fff;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+.top-search-box .top-search-data.active {
+  display: none;
+}
+.top-search-bar span{
+    float: left;
+    margin-left: 100px;
+    color: rgb(163, 163, 163);
+    font-size: 0.9em;
+    display: block;
+    height: 100%;
+    line-height: 60px;
+    font-style: oblique;
+}

@@ -10,6 +10,7 @@
     <link href="./fa/css/brands.css" rel="stylesheet" />
     <link href="./fa/css/solid.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/header.css" />
+    <script src="./js/header.js"></script>
     <style>
       * {
         list-style: none;
@@ -68,52 +69,12 @@
       </div>
       <!-- 顶部全局搜索框 -->
       <div class="top-search-bar">
-        <div class="top-search-box">
-          <input type="text" placeholder="请输入搜索内容:)" />
-          <div class="top-search-icon">
+        <div class="top-search-box" onClick="onClick(event)">
+          <input type="text" onFocus="onFocus()" onBlur="onBlur()"/>
+          <button>
             <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <div class="top-cancel-icon">
-            <i class="fa-solid fa-xmark"></i>
-          </div>
-          <div class="top-search-data"></div>
+          </button>
         </div>
-        <script>
-          window.onload = () => {
-            const searchBox = document.querySelector(".top-search-box");
-            const searchBtn = document.querySelector(".top-search-icon");
-            const cancelBtn = document.querySelector(".top-cancel-icon");
-            const searchInput = document.querySelector(".top-search-box input");
-            const searchData = document.querySelector(".top-search-data");
-            searchBtn.onclick = () => {
-              searchBox.classList.add("active");
-              searchBtn.classList.add("active");
-              searchInput.classList.add("active");
-              cancelBtn.classList.add("active");
-              searchInput.focus();
-              if (searchInput.value != "") {
-                var values = searchInput.value;
-                searchData.classList.remove("active");
-                searchData.innerHTML =
-                  "You just typed " +
-                  "<span style='font-weight: 500;'>" +
-                  values +
-                  "</span>";
-              } else {
-                searchData.textContent = "";
-              }
-            };
-            cancelBtn.onclick = () => {
-              searchBox.classList.remove("active");
-              searchBtn.classList.remove("active");
-              searchInput.classList.remove("active");
-              cancelBtn.classList.remove("active");
-              searchData.classList.toggle("active");
-              searchInput.value = "";
-            };
-          };
-        </script>
-        <span>全局搜索</span>
       </div>
       <div class="kungalgamer-info"></div>
     </div>

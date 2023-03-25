@@ -16,7 +16,7 @@
     <script src="./js/header.js"></script>
     <!-- 网站主体样式 -->
     <!-- 侧边栏样式 -->
-    <link rel="stylesheet" href="./css/aside.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <style>
       * {
         list-style: none;
@@ -26,28 +26,6 @@
       }
       *::-webkit-scrollbar {
         display: none;
-      }
-      .main {
-        width: 100%;
-      }
-      .content-container {
-        width: 50%;
-        height: 1007px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-      }
-      .aside {
-        width: 1px;
-        flex-grow: 1;
-        height: 1007px;
-        background-color: green;
-      }
-      .article {
-        width: 1px;
-        flex-grow: 2;
-        height: 1007px;
-        background-color: orange;
       }
     </style>
   </head>
@@ -88,9 +66,184 @@
 
     <!-- 主体部分 -->
     <div class="main">
+      <!-- 内容区容器 -->
       <div class="content-container">
-        <div class="aside"></div>
-        <div class="article"></div>
+        <!-- 侧边栏 -->
+        <div class="aside">
+          <!-- 侧边栏交互 -->
+          <div class="nav-aside">
+            <!-- fa 箭头图标字体 -->
+            <i class="fa-solid fa-arrow-left-long"></i>
+            折叠左侧区域
+          </div>
+          <!-- 侧边栏功能区 -->
+          <div class="item-box">
+            <!-- 发布新文章 -->
+            <div class="new-article">
+              <!-- 发布新文章的按钮 -->
+              <button class="btn-new-article">发布帖子</button>
+            </div>
+            <!-- 功能盒子容器 -->
+            <div class="item-box-container">
+              <div class="function">模式切换</div>
+              <div class="function">游戏排行</div>
+              <div class="function">坛友排行</div>
+              <div class="function">加入我们</div>
+              <div class="function">背景设置</div>
+              <div class="function">其它游戏</div>
+            </div>
+          </div>
+          <!-- 侧边栏动态推送今日热度帖子 -->
+          <div class="top-topic">
+            <!-- 今日热度帖子的标题名 -->
+            <div class="top-topic-title-name">今日热门</div>
+            <!-- 热门帖子的目录 -->
+            <div class="top-topic-content">
+              <!-- 单个热门帖子 （10 个）-->
+              <div class="hot-topic">
+                <!-- 热门帖子的标题 -->
+                <div class="top-topic-title">啊这可海星</div>
+                <!-- 热门帖子的热度值 -->
+                <div class="top-topic-number">
+                  <i class="fa-solid fa-fire"></i>
+                  <span>1007</span>
+                </div>
+              </div>
+              <div class="hot-topic">
+                <!-- 热门帖子的标题 -->
+                <div class="top-topic-title">鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲</div>
+                <!-- 热门帖子的热度值 -->
+                <div class="top-topic-number">
+                  <i class="fa-solid fa-fire"></i>
+                  1007
+                </div>
+              </div>
+              <div class="hot-topic">
+                <!-- 热门帖子的标题 -->
+                <div class="top-topic-title">啊这可海星</div>
+                <!-- 热门帖子的热度值 -->
+                <div class="top-topic-number">
+                  <i class="fa-solid fa-fire"></i>
+                  1007
+                </div>
+              </div>
+              <div class="hot-topic">
+                <!-- 热门帖子的标题 -->
+                <div class="top-topic-title">啊这可海星</div>
+                <!-- 热门帖子的热度值 -->
+                <div class="top-topic-number">
+                  <i class="fa-solid fa-fire"></i>
+                  1007
+                </div>
+              </div>
+              <div class="hot-topic">
+                <!-- 热门帖子的标题 -->
+                <div class="top-topic-title">啊这可海星</div>
+                <!-- 热门帖子的热度值 -->
+                <div class="top-topic-number">
+                  <i class="fa-solid fa-fire"></i>
+                  1007
+                </div>
+              </div>
+              <div class="hot-topic">
+                <!-- 热门帖子的标题 -->
+                <div class="top-topic-title">啊这可海星</div>
+                <!-- 热门帖子的热度值 -->
+                <div class="top-topic-number">
+                  <i class="fa-solid fa-fire"></i>
+                  1007
+                </div>
+              </div>
+              <div class="hot-topic">
+                <!-- 热门帖子的标题 -->
+                <div class="top-topic-title">啊这可海星</div>
+                <!-- 热门帖子的热度值 -->
+                <div class="top-topic-number">
+                  <i class="fa-solid fa-fire"></i>
+                  1007
+                </div>
+              </div>
+              <div class="hot-topic">
+                <!-- 热门帖子的标题 -->
+                <div class="top-topic-title">啊这可海星</div>
+                <!-- 热门帖子的热度值 -->
+                <div class="top-topic-number">
+                  <i class="fa-solid fa-fire"></i>
+                  1007
+                </div>
+              </div>
+              <div class="hot-topic">
+                <!-- 热门帖子的标题 -->
+                <div class="top-topic-title">啊这可海星</div>
+                <!-- 热门帖子的热度值 -->
+                <div class="top-topic-number">
+                  <i class="fa-solid fa-fire"></i>
+                  1007
+                </div>
+              </div>
+              <div class="hot-topic">
+                <!-- 热门帖子的标题 -->
+                <div class="top-topic-title">啊这可海星</div>
+                <!-- 热门帖子的热度值 -->
+                <div class="top-topic-number">
+                  <i class="fa-solid fa-fire"></i>
+                  1007
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 侧边栏新帖子 -->
+          <div class="new-topic"></div>
+        </div>
+        <!-- 文章区 -->
+        <div class="article">
+          <!-- 文章区容器 -->
+          <div class="article-container">
+            <!-- 文章区顶部交互区 -->
+            <div class="nav-article"></div>
+            <!-- 帖子区容器 -->
+            <div class="topic-container">
+              <!-- 单个帖子 -->
+              <div class="topic">
+                <!-- 帖子发布者个人信息 -->
+                <div class="kungalgamer-topic-info">
+                  <!-- 发布者头像 -->
+                  <div class="kungalgamer-topic-avatar"></div>
+                  <!-- 发布者姓名 -->
+                  <div class="kungalgamer-name"></div>
+                  <!-- 发布者相关信息 -->
+                  <!--                   <div class="kungalgamer-rank"></div> -->
+                </div>
+                <!-- 帖子信息 -->
+                <div class="topic-info">
+                  <!-- 帖子的概览信息 -->
+                  <div class="topic-summary">
+                    <!-- 帖子的标题 -->
+                    <div class="topic-title"></div>
+                    <!-- 帖子发布日期 -->
+                    <div class="topic-post-date"></div>
+                    <!-- 帖子的状态，点赞数等 -->
+                    <div class="topic-status"></div>
+                  </div>
+                  <!-- 帖子的预览介绍 -->
+                  <div class="topic-introduction"></div>
+                </div>
+              </div>
+              <div class="topic"></div>
+              <div class="topic"></div>
+              <div class="topic"></div>
+              <div class="topic"></div>
+              <div class="topic"></div>
+              <div class="topic"></div>
+              <div class="topic"></div>
+              <div class="topic"></div>
+              <div class="topic"></div>
+              <div class="topic"></div>
+              <div class="topic"></div>
+              <div class="topic"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

@@ -5,12 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- 网站图标 -->
     <link rel="icon" href="./img/favicon.png" />
+    <!-- 图标字体库 -->
     <link href="./fa/css/fontawesome.css" rel="stylesheet" />
     <link href="./fa/css/brands.css" rel="stylesheet" />
     <link href="./fa/css/solid.css" rel="stylesheet" />
+    <!-- 网站头部样式 -->
     <link rel="stylesheet" href="./css/header.css" />
     <script src="./js/header.js"></script>
+    <!-- 网站主体样式 -->
+    <!-- 侧边栏样式 -->
+    <link rel="stylesheet" href="./css/aside.css" />
     <style>
       * {
         list-style: none;
@@ -21,30 +27,27 @@
       *::-webkit-scrollbar {
         display: none;
       }
-      /* 主体部分样式 */
       .main {
-        display: flex;
-        justify-content: center;
-        min-width: 1200px;
+        width: 100%;
       }
-      .banner-wrap {
-        min-width: 600px;
+      .content-container {
+        width: 50%;
+        height: 1007px;
+        margin: 0 auto;
         display: flex;
-        justify-content: center;
+        align-items: center;
       }
       .aside {
-        width: 15%;
+        width: 1px;
+        flex-grow: 1;
         height: 1007px;
-        background-color: azure;
+        background-color: green;
       }
       .article {
-        width: 35%;
+        width: 1px;
+        flex-grow: 2;
         height: 1007px;
-        background-color: rgb(189, 189, 189);
-      }
-      .footer {
-        height: 100px;
-        background-color: purple;
+        background-color: orange;
       }
     </style>
   </head>
@@ -69,39 +72,25 @@
       </div>
       <!-- 顶部全局搜索框 -->
       <div class="top-search-bar">
-        <div class="top-search-box" onClick="onClick(event)">
-          <input type="text" onFocus="onFocus()" onBlur="onBlur()"/>
-          <button>
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
+        <div class="top-search-container">
+          <div class="top-search-box">
+            <input type="text" />
+            <span></span>
+          </div>
         </div>
       </div>
-      <div class="kungalgamer-info"></div>
+      <!-- 用户个人信息 -->
+      <div class="kungalgamer-info">
+        <a href="#"><img src="./img/KUN.jpg" alt="KUN" /></a>
+        <span>KUN</span>
+      </div>
     </div>
 
     <!-- 主体部分 -->
     <div class="main">
-      <!-- 侧边栏 -->
-      <div class="aside">
-        <div class="item-box"></div>
-        <div class="top-topic"></div>
-        <div class="kungal-news"></div>
-      </div>
-      <!-- 话题 -->
-      <div class="article">
-        <!-- 话题顶部提示框 -->
-        <div class="article-header-wrap"></div>
-        <a href="#">
-          <div class="author-info">
-            <div class="author-avatar"></div>
-            <div class="author-name"></div>
-          </div>
-          <div class="article-info">
-            <div class="article-title"></div>
-            <div class="article-describe"></div>
-            <div class="article-date"></div>
-          </div>
-        </a>
+      <div class="content-container">
+        <div class="aside"></div>
+        <div class="article"></div>
       </div>
     </div>
 

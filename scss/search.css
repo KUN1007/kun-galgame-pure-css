@@ -1,79 +1,82 @@
-html {
-  box-size: border-box;
-  background: #2196f3;
+body {
+  background: #e03a29;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+body *,
+html * {
+  box-sizing: border-box;
 }
 
-*,
-*:active,
-*:focus {
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+}
+
+.search-box input[type="text"] {
+  border: none;
+  background: none;
+  z-index: 1;
+  width: 25px;
+  height: 25px;
+  transition: all 0.25s ease-in 0.25s;
+  color: transparent;
+  font-size: 0.75rem;
+  line-height: 25px;
+}
+
+.search-box input[type="text"]:hover {
+  cursor: pointer;
+}
+
+.search-box input[type="text"]:hover:focus {
+  cursor: text;
+}
+
+.search-box input[type="text"]:hover + span {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.search-box input[type="text"]:focus {
+  width: 200px;
+  padding: 0 10px;
   outline: none;
-}
-
-.searchbox {
-  position: relative;
-  height: 40px;
-  width: 400px;
-  margin: 50px auto;
-  overflow: hidden;
-  border-bottom: 2px solid #fff;
+  color: black;
   background: none;
-  color: #fff;
-  perspective: 1800px;
-  perspective-origin: 40% 40%;
-  transform-style: preserve-3d;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  color: white;
 }
 
-.searchbox--active {
-  color: #000;
+.search-box input[type="text"]:focus + span {
+  width: 200px;
 }
 
-.searchbox:after {
+.search-box input[type="text"]:focus + span::before {
+  width: 2px;
+  opacity: 0;
+  transition: all 0.25s ease-in;
+}
+
+.search-box input[type="text"] + span {
+  z-index: -1;
   position: absolute;
+  border: 2px solid white;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  transition: all 0.25s ease-in 0.25s;
+  border-radius: 25px;
+  left: 0;
+}
+
+.search-box input[type="text"] + span::before {
+  transition: all 0.25s ease-in 0.5s;
+  transform-origin: left top;
   content: "";
-  width: 100%;
-  height: 100%;
-  top: 20px;
-  left: 0px;
-  transform: rotateX(90deg);
-  background: #fff;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.searchbox--active:after {
-  top: 0px;
-  left: 0px;
-  transform: rotateX(0deg);
-}
-
-.searchbox input {
   position: absolute;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  padding-left: 8px;
-  padding-right: 44px;
-  border: none;
-  font-size: 1em;
-  color: inherit;
-  background: none;
-}
-
-.searchbox button {
-  position: absolute;
-  z-index: 1;
-  right: 0px;
-  top: 0px;
-  height: 100%;
-  width: 44px;
-  border: none;
-  background: none;
-  font-size: 1.4em;
-  color: inherit;
+  width: 10px;
+  height: 5px;
+  border-radius: 5px;
+  background: white;
+  transform: rotate(45deg) translate(26px, -2px);
 }

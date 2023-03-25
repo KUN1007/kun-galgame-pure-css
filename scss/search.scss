@@ -1,92 +1,76 @@
-html{
-	box-size: border-box;
-	background: #2196F3;
-  }
-  
-  *, *:before, *:after{
-	box-sizing: inherit;
-  }
-  
-  *, *:active, *:focus{
-	outline: none;
-  }
-  
-  $btn-width: 44px;
-  
-  .searchbox{
-	position: relative;
-	
-	height: 40px;
-	width: 400px;
-	margin: 50px auto;
-	overflow: hidden;
-	
-	border-bottom: 2px solid #fff;
-	background: none;
-	color: #fff;
-	
-	perspective: 1800px;
-	perspective-origin: 40% 40%;
-	transform-style: preserve-3d;
-	
-	transition: all 0.4s cubic-bezier(.25, .8, .25, 1);
-	&--active{
-	  color: #000;
+body {
+	background: #e03a29;
+}
+body, html {
+	* {	
+			box-sizing:border-box;
 	}
-	
-	&:after{
-	  position: absolute;  
-	  content: "";
-	  // z-index: 1;
-	  
-	  width: 100%;
-	  height: 100%;
-	  top: 20px;
-	  left: 0px;
-	  
-	  transform: rotateX(90deg);
-	  background: #fff;
-	  
-	  transition: all 0.4s cubic-bezier(.25, .8, .25, 1);
+}
+
+.container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%);
+}
+
+.search-box {	
+	input[type="text"] {
+		border: none;
+		background: none;
+		z-index: 1;
+		width: 25px;
+		height: 25px;
+		transition: all .25s ease-in .25s;
+		color: transparent;
+		font-size: .75rem;
+		line-height:25px;
+		&:hover {
+			cursor: pointer;
+			&:focus {
+				cursor: text;
+			}
+			+ span {
+				background: rgba(255,255,255,0.2);
+			}
+		}
+		&:focus {
+			width: 200px;
+			padding: 0 10px;
+			outline: none;
+			color: black;
+			background:none;
+			color: white;
+			+ span {
+				width: 200px;
+				&::before {
+					width:2px;
+					opacity: 0;
+					transition: all .25s ease-in;
+				}
+			}
+		}
+		+ span {
+			z-index: -1;
+			position: absolute;
+			border: 2px solid white;
+			top: 0;
+			width: 25px;
+			height: 25px;
+			transition: all .25s ease-in .25s;
+			border-radius: 25px;
+			left: 0;
+			&::before {
+				transition: all .25s ease-in .5s;
+				transform-origin: left top;
+				content: '';
+				position: absolute;
+				width: 10px;
+				height: 5px;
+				border-radius: 5px;
+				background: white;
+				transform: rotate(45deg) translate(26px, -2px);
+			}
+		}
 	}
-	
-  
-	
-	&--active:after{
-	  top: 0px;
-	  left: 0px;
-	  
-	  transform: rotateX(0deg);
-	}
-	
-	input{
-	  position: absolute;
-	  z-index: 1;
-	  
-	  height: 100%;
-	  width: 100%;
-	  
-	  padding-left: 8px;
-	  padding-right: $btn-width;
-	  
-	  border: none;
-	  font-size: 1em;
-	  color: inherit;
-	  background: none;
-	}
-	
-	button{
-	  position: absolute;
-	  z-index: 1;
-	  
-	  right: 0px;
-	  top: 0px;
-	  height: 100%;
-	  width: $btn-width;
-	  
-	  border: none;
-	  background: none;
-	  font-size: 1.4em;
-	  color: inherit;
-	}
-  }
+}

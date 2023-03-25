@@ -2,27 +2,27 @@
 .header {
   height: 60px;
   box-shadow: 0 2px 4px 0 rgba(0, 140, 255, 0.17);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .nav-top {
   display: flex;
   align-items: center;
-  float: left;
 }
 .kungal-info {
+  display: flex;
+  align-items: center;
 }
 /* 网站 LOGO */
 .kungal-info img {
+  height: 50px;
   margin-left: 50px;
-  height: 60px;
 }
 /* 网站名称 */
 .kungal-info span {
-  position: absolute;
-  padding-left: 30px;
-  padding-top: 18px;
-}
-.nav-top li {
-  float: left;
+  margin-left: 20px;
+  margin-right: 7px;
 }
 /* 顶部导航栏 */
 .top-bar {
@@ -30,8 +30,6 @@
   height: 60px;
   position: relative;
   background-color: #fff;
-  margin-left: 20%;
-  margin-bottom: 5px;
   text-align: center;
 }
 .top-bar ul {
@@ -82,71 +80,95 @@
   background-color: rgb(0, 206, 0);
 }
 
-*,
-*:active,
-*:focus {
+/* 顶部搜索框 */
+
+/* 搜索框位置设定 */
+.top-search-container {
+  margin-left: 200px;
+  transform: translate(-50%);
+}
+
+.top-search-box input[type="text"] {
+  border: none;
+  background: none;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  transition: all 0.25s ease-in 0.25s;
+  color: transparent;
+  font-size: 0.75rem;
+  line-height: 25px;
+  margin-right: 0px;
+}
+
+.top-search-box input[type="text"]:hover {
+  cursor: pointer;
+}
+
+.top-search-box input[type="text"]:hover:focus {
+  cursor: text;
+}
+
+.top-search-box input[type="text"]:hover + span {
+  background: rgba(255, 0, 0, 0.2);
+}
+
+.top-search-box input[type="text"]:focus {
+  width: 250px;
+  padding: 0 10px;
   outline: none;
-}
-.top-search-box {
-  position: relative;
-  top: 15px;
-  height: 30px;
-  width: 200px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-bottom: 2px solid #6ea1ff;
+  color: black;
   background: none;
-  color: #6ea1ff;
-  perspective: 1800px;
-  perspective-origin: 40% 40%;
-  transform-style: preserve-3d;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  color: rgb(0, 0, 0);
 }
 
-.top-search-box--active {
-  color: #9e9e9e;
+.top-search-box input[type="text"]:focus + span {
+  width: 250px;
 }
 
-.top-search-box:after {
+.top-search-box input[type="text"]:focus + span::before {
+  width: 2px;
+  opacity: 0;
+  transition: all 0.25s ease-in;
+}
+
+.top-search-box input[type="text"] + span {
+  z-index: -1;
   position: absolute;
+  border: 2px solid rgb(0, 0, 0);
+  top: 0;
+  width: 20px;
+  height: 20px;
+  transition: all 0.25s ease-in 0.25s;
+  border-radius: 25px;
+  left: 0;
+}
+
+.top-search-box input[type="text"] + span::before {
+  transition: all 0.25s ease-in 0.5s;
+  transform-origin: left top;
   content: "";
-  width: 100%;
-  height: 100%;
-  top: 20px;
-  left: 0px;
-  transform: rotateX(90deg);
-  background: #ffbaba;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.top-search-box--active:after {
-  top: 0px;
-  left: 0px;
-  transform: rotateX(0deg);
-}
-
-.top-search-box input {
   position: absolute;
-  z-index: 1;
-  height: 100%;
-  width: 100%;
-  padding-left: 8px;
-  padding-right: 44px;
-  border: none;
-  font-size: 1em;
-  color: inherit;
-  background: none;
+  width: 10px;
+  height: 5px;
+  border-radius: 5px;
+  background: rgb(0, 0, 0);
+  transform: rotate(45deg) translate(26px, -2px);
 }
 
-.top-search-box button {
-  position: absolute;
-  z-index: 1;
-  right: 0px;
-  top: 0px;
-  height: 100%;
-  width: 44px;
-  border: none;
-  background: none;
-  font-size: 1.4em;
-  color: inherit;
+/* 用户个人信息 */
+.kungalgamer-info {
+  display: flex;
+  align-items: center;
+  padding-right: 50px;
+}
+
+.kungalgamer-info img {
+  border-radius: 50%;
+  height: 40px;
+}
+
+.kungalgamer-info span {
+  color: rgb(81, 81, 81);
+  margin-left: 20px;
 }

@@ -14,6 +14,13 @@
   /* 可视内容区居中 */
   align-items: center;
 }
+/* 
+----------------------------------
+|
+|整个左侧区域
+|
+----------------------------------
+*/
 /* 侧边栏部分 */
 .aside {
   /* 侧边栏距离文章区域的距离 */
@@ -28,6 +35,13 @@
   /* 方向为竖向 */
   flex-direction: column;
 }
+/* 
+----------------------------------
+|
+|左侧的上部
+|
+----------------------------------
+*/
 /* 侧边栏交互 */
 .nav-aside {
   width: 100%;
@@ -39,6 +53,9 @@
   /* 字体设置 */
   font-size: small;
   color: rgb(77, 77, 77);
+  /* 页面缩小到最小时不换行 */
+  overflow: hidden;
+  white-space: nowrap;
 }
 /* 侧边栏功能区 */
 .item-box {
@@ -67,6 +84,9 @@
   color: rgb(247, 137, 137);
   font-weight: bold;
   font-size: large;
+  /* 页面缩小到最小时不换行 */
+  overflow: hidden;
+  white-space: nowrap;
 }
 /* 发布按钮 hover 效果 */
 .new-article button:hover {
@@ -99,8 +119,15 @@
   background-color: rgb(190, 218, 255);
   border-radius: 5px;
 }
-/* 侧边栏动态推送帖子 */
-.top-topic {
+/* 
+----------------------------------
+|
+|左侧的中部
+|
+----------------------------------
+*/
+/* 侧边栏动态推送帖子的总容器 */
+.top-topic-wrap {
   width: 100%;
   height: 1px;
   /* 设置今日热门帖子占侧边栏的比例 */
@@ -115,59 +142,164 @@
   width: 100%;
   height: 1px;
 }
+/* “今日热门话题”六个字的样式 */
 .top-topic-title-name {
   /* 设置盒子的 border 在内侧显示 */
   box-sizing: border-box;
   border: 3px dashed rgb(216, 238, 255);
   border-bottom: none;
-  /* 设置（今日热门）居中 */
+  /* 设置（今日热门话题）居中 */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* 设置（今日热门占整个热门区域的宽度） */
+  /* 设置（今日热门话题占整个热门区域的宽度） */
   flex-grow: 1;
   color: rgb(77, 77, 77);
+  /* 设置页面缩小到最小时该行不换行 */
+  overflow: hidden;
+  white-space: nowrap;
 }
 /* 展示热门帖子标题的区域 */
 .top-topic-content {
   background-color: rgb(216, 238, 255);
+  /* 热门帖子标题区域占整个左侧页面中部的比例 */
   flex-grow: 10;
+  /* 热门帖子标题部分为弹性盒 */
   display: flex;
   flex-direction: column;
 }
+/* 单个热门帖子的样式 */
 .hot-topic {
   display: flex;
+  /* 设置空白左右居中 */
   justify-content: space-between;
+  /* 设置每个帖子高度相等 */
   flex-grow: 1;
   color: rgb(77, 77, 77);
+  align-items: center;
 }
-.hot-topic .top-topic-title {
+/* 单个帖子的标题样式 */
+.top-topic-title {
+  /* 单个帖子标题左侧的一段距离 */
   padding-left: 10px;
+  /* 设置页面变化时不换行，显示省略号 */
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  /* 设置帖子的字体大小 */
+  font-size: smaller;
 }
-.hot-topic:nth-child(1) {
-  margin-top: 7px;
-}
-.hot-topic .top-topic-title {
-  font-size: small;
-}
+/* 设置单个帖子右侧的热度值盒子 */
 .top-topic-number {
+  /* 热度值距离右侧的距离 */
   margin-right: 10px;
   display: flex;
+  white-space: nowrap;
+  align-items: center;
 }
 .top-topic-number i {
+  /* 设置 fa 图标字体的颜色 */
   color: rgb(219, 120, 115);
 }
+.top-topic-number span {
+    width: 38px;
+    font-size: x-small;
+    margin-left: 5px;
+}
+/* 
+----------------------------------
+|
+|左侧的下部
+|
+----------------------------------
+*/
 /* 最新话题 */
-.new-topic {
+.new-topic-wrap {
   width: 100%;
   height: 1px;
+  /* 设置今日热门帖子占侧边栏的比例 */
   flex-grow: 12.5;
-  background-color: rgb(39, 1, 1);
+  margin-bottom: 5px;
+  /* 今日热门帖子区域为竖直弹性盒 */
+  display: flex;
+  flex-direction: column;
 }
+.new-topic-title-name,
+.new-topic-content {
+  width: 100%;
+  height: 1px;
+}
+.new-topic-title-name {
+  /* 设置盒子的 border 在内侧显示 */
+  box-sizing: border-box;
+  border: 3px dashed rgb(255, 237, 255);
+  border-bottom: none;
+  /* 设置（今日热门话题）居中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 设置（今日热门话题占整个热门区域的宽度） */
+  flex-grow: 1;
+  color: rgb(77, 77, 77);
+  /* 设置页面缩小到最小时该行不换行 */
+  overflow: hidden;
+  white-space: nowrap;
+}
+.new-topic-content {
+  background-color: rgb(255, 237, 255);
+  /* 热门帖子标题区域占整个左侧页面中部的比例 */
+  flex-grow: 10;
+  /* 热门帖子标题部分为弹性盒 */
+  display: flex;
+  flex-direction: column;
+}
+/* 单个新帖子的样式 */
+.new-topic {
+  display: flex;
+  /* 设置空白左右居中 */
+  justify-content: space-between;
+  /* 设置每个帖子高度相等 */
+  flex-grow: 1;
+  color: rgb(77, 77, 77);
+  align-items: center;
+}
+/* 单个帖子的标题样式 */
+.new-topic-title {
+  /* 单个帖子标题左侧的一段距离 */
+  padding-left: 10px;
+  /* 设置页面变化时不换行，显示省略号 */
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  /* 设置帖子的字体大小 */
+  font-size: smaller;
+}
+/* 设置单个帖子右侧的热度值盒子 */
+.new-topic-number {
+  /* 热度值距离右侧的距离 */
+  margin-right: 10px;
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+}
+.new-topic-number i {
+  /* 设置 fa 图标字体的颜色 */
+  color: rgb(174, 115, 219);
+}
+.new-topic-number span {
+    width: 36px;
+    font-size: xx-small;
+    margin-left: 5px;
+}
+/* 
+----------------------------------
+|
+|右侧部分
+|
+----------------------------------
+*/
 /* 文章部分 */
 .article {
   width: 1px;

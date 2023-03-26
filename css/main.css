@@ -1,6 +1,11 @@
 /* 主体部分配置 */
 .main {
   width: 100%;
+  /* 背景图片 */
+/*   background-image: url(../img/bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
 }
 /* 可视内容部分宽度 */
 .content-container {
@@ -13,6 +18,12 @@
   display: flex;
   /* 可视内容区居中 */
   align-items: center;
+  /* 设置背景毛玻璃效果 */
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.5);
+  /* 设置背景边框和圆角 */
+  border-radius: 5px;
+  padding: 5px;
 }
 /* 
 ----------------------------------
@@ -307,34 +318,86 @@
 /* 文章部分 */
 .article {
   width: 1px;
+  /* 文章区域相对于可视区域的占比 */
   flex-grow: 15;
+  /* 文章区域高度 */
   height: 1007px;
-  background-color: orange;
 }
 /* 文章容器 */
 .article-container {
+  /* 左侧文章区的总大小 */
   width: 100%;
   height: 1007px;
+  border: 1px solid #123;
   background-color: yellow;
   display: flex;
+  /* 文章区所有组件居中 */
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
+/* 
+----------------------------------
+|
+|右侧顶部交互栏
+|
+----------------------------------
+*/
 /* 文章顶部交互栏 */
 .nav-article {
-  width: 98%;
+  width: 100%;
   height: 1px;
+  /* 交互栏相对于整个文章区域的占比 */
   flex-grow: 1;
-  background-color: green;
-  margin: 5px auto;
+  /* 设置交互栏的下边距 */
+  margin-bottom: 5px;
+  /* 整体弹性 */
+  display: flex;
 }
+/* 筛选、搜索帖子、更多 */
+.nav-article-sort-container,
+.nav-article-search-container,
+.nav-article-more-topic {
+  height: 100%;
+  width: 1px;
+  /* 居中弹性盒 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 筛选 */
+.nav-article-sort-container {
+  background-color: pink;
+  flex-grow: 1;
+}
+/* 搜索帖子 */
+.nav-article-search-container {
+  background-color: paleturquoise;
+  flex-grow: 2;
+}
+/* 更多 */
+.nav-article-more-topic {
+  background-color: peru;
+  flex-grow: 1;
+}
+/* 
+----------------------------------
+|
+|右侧文章区域
+|
+----------------------------------
+*/
 /* 帖子区容器 */
 .topic-container {
+  /* 帖子区域占文章总区域的宽度 */
   width: 98%;
   height: 1px;
+  /* 帖子区域占文章总区域的比例 */
   flex-grow: 30;
   background-color: pink;
-  margin: 0 auto;
+  /* 所有帖子的总区域占左侧页面的下边距 */
   margin-bottom: 5px;
+  /* 帖子区域弹性盒 */
   display: flex;
   flex-direction: column;
 }
@@ -343,11 +406,13 @@
   width: 100%;
   height: 1px;
   flex-grow: 1;
-  background-color: rgb(78, 161, 255);
+  background-color: rgb(255, 255, 255);
   margin-bottom: 5px;
+  /* 单个帖子横向弹性盒 */
   display: flex;
 }
 .topic:last-child {
+  /* 最后一个帖子的没有下边距 */
   margin-bottom: 0;
 }
 /* 发布者信息 */
@@ -355,27 +420,60 @@
 .topic-info {
   width: 1px;
   height: 100%;
-  flex-grow: 1;
+  /* 单个帖子左右两部分发布人信息和帖子概览均为竖向弹性盒 */
   display: flex;
   flex-direction: column;
+}
+/* 发帖人信息 */
+.kungalgamer-topic-info {
+  /* 发帖人信息距离帖子概览的距离 */
+  margin: 0 5px;
+  flex-grow: 1;
 }
 .kungalgamer-topic-avatar,
 .kungalgamer-name {
   width: 100%;
   height: 1px;
 }
+/* 头像图片容器设置 */
 .kungalgamer-topic-avatar {
-  background-color: rgb(255, 86, 165);
+  /* 头像部分占发布人信息区域的比例 */
   flex-grow: 3;
+  display: flex;
+  justify-content: center;
 }
+/* 头像图片样式设置 */
+.kungalgamer-topic-avatar img {
+  padding: 2px;
+  border-radius: 50%;
+  /* 页面缩小时头像缩小 */
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* 发帖人昵称位置设置 */
 .kungalgamer-name {
-  background-color: darkcyan;
+  border-top: 1px solid #d5d5d5;
   flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 发帖人昵称样式设置 */
+.kungalgamer-name span{
+  /* 页面缩小时省略不换行 */
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  /* 颜色和字体大小 */
+  color: #414141;
+  font-size: x-small;
 }
 /* 帖子信息 */
 .topic-info {
   flex-grow: 8;
-  margin-left: 5px;
   display: flex;
   flex-direction: column;
 }
@@ -404,13 +502,12 @@
 }
 /* 发帖标题 */
 .topic-title {
-  background-color: purple;
-  flex-grow: 1;
+  flex-grow: 5;
 }
 /* 发帖日期 */
 .topic-post-date {
   background-color: rgb(255, 176, 255);
-  flex-grow: 1;
+  flex-grow: 2;
 }
 /* 帖子点赞数等信息 */
 .topic-status {

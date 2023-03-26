@@ -66,6 +66,7 @@
 
     <!-- 主体部分 -->
     <div class="main">
+      <div class="main-container"></div>
       <!-- 内容区容器 -->
       <div class="content-container">
         <!-- 侧边栏 -->
@@ -212,7 +213,9 @@
               </div>
               <div class="new-topic">
                 <!-- 热门帖子的标题 -->
-                <div class="new-topic-title">鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲</div>
+                <div class="new-topic-title">
+                  鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲鲲
+                </div>
                 <!-- 热门帖子的热度值 -->
                 <div class="new-topic-number">
                   <i class="fa-regular fa-clock"></i>
@@ -299,7 +302,31 @@
           <!-- 文章区容器 -->
           <div class="article-container">
             <!-- 文章区顶部交互区 -->
-            <div class="nav-article"></div>
+            <div class="nav-article">
+              <!-- 排序区域容器 -->
+              <div class="nav-article-sort-container">
+                <div class="sort-container-title">
+                  <span>筛选</span>
+                  <i class="fa-solid fa-arrow-down-wide-short"></i>
+                </div>
+                <!-- 根据浏览数排序 -->
+                <div class="sort-by-view"></div>
+                <!-- 根据点赞数排序 -->
+                <div class="sort-by-like"></div>
+                <!-- 根据评论数排序 -->
+                <div class="sort-by-comment"></div>
+              </div>
+              <!-- 交互区搜索框 -->
+              <div class="nav-article-search-container">
+                <span>搜索帖子</span>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <!-- 交互区域进入全部话题 -->
+              <div class="nav-article-more-topic">
+                <span>全部帖子</span>
+                <i class="fa-solid fa-angles-right"></i>
+              </div>
+            </div>
             <!-- 帖子区容器 -->
             <div class="topic-container">
               <!-- 单个帖子 -->
@@ -307,9 +334,13 @@
                 <!-- 帖子发布者个人信息 -->
                 <div class="kungalgamer-topic-info">
                   <!-- 发布者头像 -->
-                  <div class="kungalgamer-topic-avatar"></div>
+                  <div class="kungalgamer-topic-avatar">
+                    <img src="./img/topic.jpg" alt="鲲" />
+                  </div>
                   <!-- 发布者姓名 -->
-                  <div class="kungalgamer-name"></div>
+                  <div class="kungalgamer-name">
+                    <a href="#"><span>鲲最可爱！</span></a>
+                  </div>
                   <!-- 发布者相关信息 -->
                   <!--                   <div class="kungalgamer-rank"></div> -->
                 </div>
@@ -318,7 +349,9 @@
                   <!-- 帖子的概览信息 -->
                   <div class="topic-summary">
                     <!-- 帖子的标题 -->
-                    <div class="topic-title"></div>
+                    <div class="topic-title">
+                      <a href="#"><span>啊这可海星</span></a>
+                    </div>
                     <!-- 帖子发布日期 -->
                     <div class="topic-post-date"></div>
                     <!-- 帖子的状态，点赞数等 -->

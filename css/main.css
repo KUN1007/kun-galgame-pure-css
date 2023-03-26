@@ -2,14 +2,16 @@
 .main {
   width: 100%;
   /* 背景图片 */
-/*   background-image: url(../img/bg.png);
+  background-image: url(../img/bg.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover; */
+  background-size: cover;
 }
 /* 可视内容部分宽度 */
 .content-container {
   width: 61.8%;
+  /* 可视页面的最小宽度 */
+  min-width: 700px;
   height: 1007px;
   margin: 0 auto;
   /* 设置可视内容区不覆盖顶部 shadow */
@@ -214,9 +216,9 @@
   color: rgb(219, 120, 115);
 }
 .top-topic-number span {
-    width: 38px;
-    font-size: small;
-    margin-left: 5px;
+  width: 38px;
+  font-size: small;
+  margin-left: 5px;
 }
 /* 
 ----------------------------------
@@ -303,10 +305,10 @@
 }
 /* 右侧区域的大小 */
 .new-topic-number span {
-    width: 36px;
-    font-size: xx-small;
-    /* 右侧区域距离最右侧的距离 */
-    margin-left: 5px;
+  width: 36px;
+  font-size: xx-small;
+  /* 右侧区域距离最右侧的距离 */
+  margin-left: 5px;
 }
 /* 
 ----------------------------------
@@ -328,8 +330,10 @@
   /* 左侧文章区的总大小 */
   width: 100%;
   height: 1007px;
-  border: 1px solid #123;
-  background-color: yellow;
+  /* 文章区边上的颜色 */
+  border: 1px solid rgb(225, 225, 225);
+  background-color: rgba(187, 240, 255, 0.2);
+  border-radius: 5px;
   display: flex;
   /* 文章区所有组件居中 */
   justify-content: center;
@@ -372,6 +376,7 @@
 .nav-article-sort-container {
   background-color: pink;
   flex-grow: 1;
+  border-radius: 5px 0 0 0;
 }
 /* 搜索帖子 */
 .nav-article-search-container {
@@ -380,8 +385,9 @@
 }
 /* 更多 */
 .nav-article-more-topic {
-  background-color: peru;
+  background-color: rgb(224, 178, 255);
   flex-grow: 1;
+  border-radius: 0 5px 0 0;
 }
 /* 
 ----------------------------------
@@ -397,7 +403,6 @@
   height: 1px;
   /* 帖子区域占文章总区域的比例 */
   flex-grow: 30;
-  background-color: pink;
   /* 所有帖子的总区域占左侧页面的下边距 */
   margin-bottom: 5px;
   /* 帖子区域弹性盒 */
@@ -409,8 +414,9 @@
   width: 100%;
   height: 1px;
   flex-grow: 1;
+  border-radius: 3px;
   background-color: rgb(255, 255, 255);
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   /* 单个帖子横向弹性盒 */
   display: flex;
 }
@@ -445,7 +451,7 @@
   display: flex;
   justify-content: center;
 }
-.kungalgamer-topic-avatar a{
+.kungalgamer-topic-avatar a {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -457,9 +463,6 @@
   border-radius: 50%;
   /* 页面缩小时头像缩小 */
   display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 /* 发帖人昵称位置设置 */
 .kungalgamer-name {
@@ -467,7 +470,7 @@
   flex-grow: 1;
   display: flex;
 }
-.kungalgamer-name a{
+.kungalgamer-name a {
   display: flex;
   width: 1px;
   flex-grow: 1;
@@ -475,7 +478,7 @@
   justify-content: center;
 }
 /* 发帖人昵称样式设置 */
-.kungalgamer-name span{
+.kungalgamer-name span {
   /* 页面缩小时省略不换行 */
   display: inline-block;
   overflow: hidden;
@@ -497,15 +500,12 @@
   width: 100%;
   height: 1px;
 }
+/* 帖子展示的头部 */
 .topic-summary {
   flex-grow: 1;
+  /* 头部三个小部分为弹性盒 */
   display: flex;
   justify-content: space-between;
-}
-/* 帖子的预览介绍 */
-.topic-introduction {
-  background-color: aliceblue;
-  flex-grow: 2;
 }
 /* 帖子的头部信息，标题日期等 */
 .topic-title,
@@ -517,14 +517,77 @@
 /* 发帖标题 */
 .topic-title {
   flex-grow: 5;
+  margin-left: 10px;
+  /* 超出不换行省略 */
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-/* 发帖日期 */
-.topic-post-date {
-  background-color: rgb(255, 176, 255);
-  flex-grow: 2;
+/* 帖子标题的字体颜色 */
+.topic-title span {
+  color: rgb(77, 77, 77);
+  font-weight: 500;
 }
 /* 帖子点赞数等信息 */
 .topic-status {
-  background-color: rgb(0, 81, 255);
+  flex-grow: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* 设置点赞、评论、查看字体和位置 */
+.topic-status ul {
+  display: flex;
+  color: rgb(153, 153, 153);
+  font-size: smaller;
+}
+/* 点赞、评论、查看之间的距离 */
+.topic-status ul li {
+  margin-left: 5px;
+}
+/* 点赞 - 图标字体距离数字的距离 */
+.topic-status ul li i {
+  margin-right: 1px;
+}
+/* 发帖日期 */
+.topic-post-date {
   flex-grow: 1;
+  font-size: x-small;
+  color: rgb(153, 153, 153);
+  /* 居中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 不换行 */
+  overflow: hidden;
+  white-space: nowrap;
+  /* 距离状态的横线 */
+  border-left: 2px dotted #c8c8c8;
+}
+/* 帖子的预览介绍 */
+.topic-introduction {
+  flex-grow: 2;
+  display: flex;
+  align-items: center;
+  /* 文本区域距离发帖人信息的距离 */
+  margin-left: 10px;
+}
+/* 文本域盒子 */
+.topic-introduction-text {
+  width: 95%;
+  /* 设置文本超过两行就显示省略号 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+/* 发帖预览信息的字体 */
+.topic-introduction-text p {
+  font-size: small;
+  color: #414141;
 }

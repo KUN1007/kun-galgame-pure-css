@@ -1,7 +1,13 @@
 /* 头部样式 */
 .header {
-  height: 60px;
+  height: 1px;
+  /* 头部相对于整个网页的占比 */
+  flex-grow: 1;
+  /* 头部下方阴影 */
   box-shadow: 0 2px 4px 0 rgba(0, 140, 255, 0.17);
+  /* 头部背景 */
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,13 +29,13 @@
 .kungal-info span {
   margin-left: 20px;
   margin-right: 7px;
+  color: #242424;
+  font-weight: bold;
 }
 /* 顶部导航栏 */
 .top-bar {
   width: 400px;
-  height: 60px;
   position: relative;
-  background-color: #fff;
   text-align: center;
 }
 .top-bar ul {
@@ -53,9 +59,9 @@
 }
 .top-bar ul li a {
   color: rgb(70, 100, 180);
+  font-weight: bold;
   display: block;
   width: 100%;
-  height: 100%;
   line-height: 60px;
 }
 .top-bar ul li a:hover {

@@ -215,7 +215,7 @@
 }
 .top-topic-number span {
     width: 38px;
-    font-size: x-small;
+    font-size: small;
     margin-left: 5px;
 }
 /* 
@@ -364,6 +364,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* 页面缩小不换行 */
+  overflow: hidden;
+  white-space: nowrap;
 }
 /* 筛选 */
 .nav-article-sort-container {
@@ -442,6 +445,12 @@
   display: flex;
   justify-content: center;
 }
+.kungalgamer-topic-avatar a{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
 /* 头像图片样式设置 */
 .kungalgamer-topic-avatar img {
   padding: 2px;
@@ -457,6 +466,11 @@
   border-top: 1px solid #d5d5d5;
   flex-grow: 1;
   display: flex;
+}
+.kungalgamer-name a{
+  display: flex;
+  width: 1px;
+  flex-grow: 1;
   align-items: center;
   justify-content: center;
 }

@@ -9,114 +9,17 @@
   background-position: center;
   background-size: cover; */
 }
-/* banner */
-.slide-box {
-  margin: 30px auto;
-  height: 300px;
-  max-width: 61.8%;
-  min-width: 700px;
-}
-
-.banner-box {
-  position: relative;
+.main-container {
   height: 100%;
-  width: 100%;
-}
-
-.banner-item {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 600px;
-  height: 90%;
-  background-color: #000;
-  box-sizing: border-box;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: all 0.5s;
-  z-index: 0;
-}
-
-.banner-item>img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-  transform: opacity 0.5s;
-  object-fit: cover;
-}
-
-.banner-item.left {
-  left: 0;
-  transform: translateX(0);
-  z-index: 50;
-}
-
-.banner-item.right {
-  left: 100%;
-  transform: translateX(-100%);
-  z-index: 50;
-}
-
-.banner-item.middle {
-  width: 550px;
-  height: 100%;
-  z-index: 100;
-}
-
-.banner-item.middle>img {
-  opacity: 1;
-}
-
-.fa-chevron-left, .fa-chevron-right {
-  top: 50%;
-  z-index: 200;
-  width: 40px;
-  height: 40px;
-  font-size: 30px;
-  font-weight: 900;
-  color: #b4b4b4;
-  border: none;
-  background: none;
-}
-
-.fa-chevron-left:hover, .fa-chevron-right:hover {
-  color: #fff;
-}
-
-.fa-chevron-left {
-  left: 1%;
-}
-
-.fa-chevron-right {
-  right: 1%;
-}
-
-.pagination-box {
-  margin-top: 10px;
-  width: 100%;
   display: flex;
-  justify-content: center;
-}
-
-.pagination-box>span {
-  width: 20px;
-  height: 6px;
-  border-radius: 3px;
-  margin: 0 4px;
-  background-color: #b4b4b4;
-}
-
-.pagination-box>span.chose {
-  background-color: #ff4444;
+  flex-direction: column;
 }
 /* 可视内容部分宽度 */
 .content-container {
   width: 61.8%;
   /* 可视页面的最小宽度 */
   min-width: 700px;
-  height: 1007px;
+  height: 100%;
   margin: 0 auto;
   /* 设置可视内容区不覆盖顶部 shadow */
   margin-top: 5px;
@@ -146,7 +49,7 @@
   /* 侧边栏相对于整体可视部分的占比 */
   flex-grow: 7;
   /* 侧边栏高度 */
-  height: 1007px;
+  height: 100%;
   /* 设置侧边栏为弹性盒子 */
   display: flex;
   /* 方向为竖向 */
@@ -427,13 +330,13 @@
   /* 文章区域相对于可视区域的占比 */
   flex-grow: 15;
   /* 文章区域高度 */
-  height: 1007px;
+  height: 100%;
 }
 /* 文章容器 */
 .article-container {
   /* 左侧文章区的总大小 */
   width: 100%;
-  height: 1007px;
+  height: 100%;
   /* 文章区边上的颜色 */
   border: 1px solid rgb(225, 225, 225);
   background-color: rgba(187, 240, 255, 0.2);
@@ -623,6 +526,11 @@
   flex-grow: 5;
   margin-left: 10px;
   /* 超出不换行省略 */
+  display: flex;
+  align-items: center;
+}
+/* 设置标题容器不换行显示省略号 */
+.topic-title-container {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;

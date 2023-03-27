@@ -32,8 +32,8 @@
         height: 1500px;
         display: flex;
         flex-direction: column;
-        /*         background-image: url(./img/bg.png); */
-                background-image: url(./img/bg-dark.png);
+        background-image: url(./img/bg.png);
+        /* background-image: url(./img/bg-dark.png); */
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -81,15 +81,6 @@
 
         <!-- 主体部分 -->
         <div class="main">
-          <div class="banner">
-            <div class="slide-box">
-              <div class="banner-box"></div>
-              <i class="fa-solid fa-chevron-left"></i>
-              <i class="fa-solid fa-chevron-right"></i>
-              <div class="pagination-box"></div>
-            </div>
-            <script src="./js/banner.js"></script>
-          </div>
           <div class="main-container">
             <!-- 内容区容器 -->
             <div class="content-container">
@@ -374,11 +365,13 @@
                         <div class="topic-summary">
                           <!-- 帖子的标题 -->
                           <div class="topic-title">
-                            <a href="#"
-                              ><span
-                                >啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星</span
-                              ></a
-                            >
+                            <div class="topic-title-container">
+                              <a href="#"
+                                ><span
+                                  >啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星</span
+                                ></a
+                              >
+                            </div>
                           </div>
                           <!-- 帖子发布日期 -->
                           <div class="topic-status">
@@ -425,7 +418,9 @@
                         <div class="topic-summary">
                           <!-- 帖子的标题 -->
                           <div class="topic-title">
-                            <a href="#"><span>啊这可海星</span></a>
+                            <div class="topic-title-container">
+                              <a href="#"><span>啊这可海星</span></a>
+                            </div>
                           </div>
                           <!-- 帖子发布日期 -->
                           <div class="topic-status">

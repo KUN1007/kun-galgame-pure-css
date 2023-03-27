@@ -11,6 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-right: 50px;
 }
 .nav-top {
   display: flex;
@@ -89,7 +90,6 @@
 
 /* 搜索框位置设定 */
 .top-search-container {
-  margin-left: 200px;
   transform: translate(-50%);
 }
 
@@ -165,7 +165,6 @@
 .kungalgamer-info {
   display: flex;
   align-items: center;
-  padding-right: 50px;
 }
 
 .kungalgamer-info img {

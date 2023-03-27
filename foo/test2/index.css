@@ -1,28 +1,46 @@
 * {
-  margin: 0;
+  list-style: none;
   padding: 0;
+  margin: 0;
+  text-decoration: none;
 }
-
+*::-webkit-scrollbar {
+  display: none;
+}
+/* footer 总容器的 flex */
+.kungalgame-footer-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 1000px;
+}
+/* 
+----------------------------------
+|
+|波浪部分
+|
+----------------------------------
+*/
+/* header顶部的波浪的背景 */
 .kungalgame-footer-header {
+  /* 设置波浪的背景色 */
   background: linear-gradient(
     60deg,
     rgba(84, 58, 183, 1) 0%,
     rgba(0, 172, 193, 1) 100%
   );
-  display: flex;
-  flex-direction: column;
 }
+/* 波浪的属性设置 */
 .kun-footer-waves {
   position: relative;
   margin-bottom: -5px;
   border-bottom: 1px solid black;
   width: 100%;
-  height: 15px;
+  /* 设定顶部波浪的高度 */
   min-height: 100px;
   max-height: 150px;
 }
 
-/* Animation */
+/* 波浪的动画 */
 
 .kun-footer-parallax > use {
   animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
@@ -51,7 +69,7 @@
     transform: translate3d(85px, 0, 0);
   }
 }
-/*Shrinking for mobile*/
+/* 移动端适配 */
 @media (max-width: 768px) {
   .waves {
     height: 40px;
@@ -63,4 +81,80 @@
   h1 {
     font-size: 24px;
   }
+}
+/* 
+----------------------------------
+|
+|信息部分
+|
+----------------------------------
+*/
+/* 头部下面的信息展示部分,目的是使信息区域居中且占比 61.8 */
+.kungalgame-footer-info {
+  margin: 0 auto;
+  /* 信息区域总宽度占页面的 61.8% */
+  width: 61.8%;
+  background-color: aqua;
+  /* 信息区域的增长 */
+  flex-grow: 1;
+}
+/* 信息展示部分的容器,目的是把左侧的信息和右侧的网站介绍分开 */
+.kungalgame-footer-info-wrap {
+  margin: 0 auto;
+  height: 300px;
+  background-color: pink;
+  /* 为了左右两部分设置弹性盒 */
+  display: flex;
+  justify-content: center;
+}
+/* 左侧的信息容器 */
+.kungalgame-footer-left-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* 左侧分类信息区相对于右侧网站介绍的比例 */
+  flex-grow: 1;
+}
+/* 左侧顶部的信息 */
+.footer-left-top-info {
+  display: flex;
+  justify-content: center;
+}
+/* 非 galgame 交流 */
+.footer-catalog-other-games {}
+/* 每个信息类别的标题 */
+.kungalgame-footer-catalog-title {}
+/* 左侧下方的信息 */
+.footer-left-bottom-info {
+  display: flex;
+  flex-direction: column;
+}
+/* 下方上面的联系我们 */
+.kungalgame-contact {
+  display: flex;
+  justify-content: center;
+}
+.kungalgame-contact ul{
+  display: flex;
+  align-items: center;
+}
+/* 版权描述,版本号 */
+.kungalgame-footer-copyright {
+  display: flex;
+  justify-content: center;
+}
+/* 右侧的网站信息容器 */
+.kungalgame-footer-right-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* 右侧网站介绍部分相对于左侧的占比 */
+  flex-grow: 1;
+}
+/* 网站名 */
+.kungalgame {}
+/* 网站描述 */
+.kungalgame-describe {
+  max-width: 200px;
 }

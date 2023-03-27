@@ -5,71 +5,138 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
+    <link href="../../fa/css/fontawesome.css" rel="stylesheet" />
+    <link href="../../fa/css/brands.css" rel="stylesheet" />
+    <link href="../../fa/css/solid.css" rel="stylesheet" />
     <title>Document</title>
   </head>
   <body>
-    <div class="kungalgame-footer-header">
-      <div>
-        <!-- 波浪类 -->
-        <svg
-          class="kun-footer-waves"
-          viewBox="0 24 150 28"
-          preserveAspectRatio="none"
-          shape-rendering="auto"
-        >
-          <defs>
-            <path
-              id="kun-footer-gentle-wave"
-              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
-            />
-          </defs>
-          <g class="kun-footer-parallax">
-            <use
-              xlink:href="#kun-footer-gentle-wave"
-              x="48"
-              y="0"
-              fill="rgba(255,255,255,0.7)"
-            />
-            <use
-              xlink:href="#kun-footer-gentle-wave"
-              x="48"
-              y="3"
-              fill="rgba(255,255,255,0.5)"
-            />
-            <use
-              xlink:href="#kun-footer-gentle-wave"
-              x="48"
-              y="5"
-              fill="rgba(255,255,255,0.3)"
-            />
-            <use
-              xlink:href="#kun-footer-gentle-wave"
-              x="48"
-              y="7"
-              fill="#fff"
-            />
-          </g>
-        </svg>
-      </div>
-    </div>
-    <div class="kungalgame-footer-info">
-      <div class="kungalgame-footer-function">
-        <div class="kungalgame-footer-catalog">
-          <div class="kungalgame-footer-catalog-title"></div>
-          <ul class="function">
-            <li><a href="#"></a>啊这可海星</li>
-            <li><a href="#"></a>啊这可海星</li>
-            <li><a href="#"></a>啊这可海星</li>
-          </ul>
-          <ul class="function">
-            <li><a href="#"></a>啊这可海星</li>
-            <li><a href="#"></a>啊这可海星</li>
-            <li><a href="#"></a>啊这可海星</li>
-          </ul>
+    <!-- 页面 footer -->
+    <div class="footer">
+      <!-- footer 的内部容器 -->
+      <div class="kungalgame-footer-wrap">
+        <!-- footer 的波浪头部 -->
+        <div class="kungalgame-footer-header">
+          <div>
+            <!-- 波浪类 -->
+            <svg
+              class="kun-footer-waves"
+              viewBox="0 24 150 28"
+              preserveAspectRatio="none"
+              shape-rendering="auto"
+            >
+              <defs>
+                <path
+                  id="kun-footer-gentle-wave"
+                  d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+                />
+              </defs>
+              <g class="kun-footer-parallax">
+                <use
+                  xlink:href="#kun-footer-gentle-wave"
+                  x="48"
+                  y="0"
+                  fill="rgba(255,255,255,0.7)"
+                />
+                <use
+                  xlink:href="#kun-footer-gentle-wave"
+                  x="48"
+                  y="3"
+                  fill="rgba(255,255,255,0.5)"
+                />
+                <use
+                  xlink:href="#kun-footer-gentle-wave"
+                  x="48"
+                  y="5"
+                  fill="rgba(255,255,255,0.3)"
+                />
+                <use
+                  xlink:href="#kun-footer-gentle-wave"
+                  x="48"
+                  y="7"
+                  fill="#fff"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
-        <div class="kungalgame-footer-QR-code"></div>
+        <!-- 头部下面的信息展示部分,目的是使信息区域居中且占比 61.8 -->
+        <div class="kungalgame-footer-info">
+          <!-- 信息展示部分的容器,目的是把左侧的信息和右侧的网站介绍分开 -->
+          <div class="kungalgame-footer-info-wrap">
+            <!-- 左侧的信息容器 -->
+            <div class="kungalgame-footer-left-wrap">
+              <!-- 左侧顶部的信息 -->
+              <div class="footer-left-top-info">
+                <!-- 非 galgame 交流 -->
+                <div class="footer-catalog-other-games">
+                  <!-- 每个信息类别的标题 -->
+                  <h2 class="kungalgame-footer-catalog-title">
+                    <span>非galgame交流</span>
+                  </h2>
+                  <ul class="function">
+                    <li><a href="#">日常交流</a></li>
+                    <li><a href="#">闲聊灌水</a></li>
+                  </ul>
+                </div>
+                <!-- 技术相关 -->
+                <div class="footer-catalog-technology">
+                  <h2 class="kungalgame-footer-catalog-title">
+                    <span>技术相关</span>
+                  </h2>
+                  <ul class="function">
+                    <li><a href="#">galgame运行相关</a></li>
+                    <li><a href="#">galgame汉化相关</a></li>
+                    <li><a href="#">galgame制作相关</a></li>
+                  </ul>
+                </div>
+                <!-- 关于我们 -->
+                <div class="footer-catalog-about-us">
+                  <h2 class="kungalgame-footer-catalog-title">
+                    <span>关于我们</span>
+                  </h2>
+                  <ul class="function">
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">运营理念</a></li>
+                    <li><a href="#">收支公示</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 左侧下方的信息 -->
+              <div class="footer-left-bottom-info">
+                <!-- 下方上面的联系我们 -->
+                <div class="kungalgame-contact">
+                  <h2>联系我们</h2>
+                  <!-- QQ, 微信, telegram 的图标列表 -->
+                  <ul>
+                    <li><i class="fa-brands fa-qq"></i></li>
+                    <li><i class="fa-brands fa-weixin"></i></li>
+                    <li><i class="fa-brands fa-telegram"></i></li>
+                  </ul>
+                </div>
+                <!-- 版权描述,版本号 -->
+                <div class="kungalgame-footer-copyright">
+                  <p>
+                    Copyright © 2023 KUNgalgame All rights reserved | Version
+                    0.01
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- 右侧的网站信息容器 -->
+            <div class="kungalgame-footer-right-wrap">
+              <!-- 网站名 -->
+              <div class="kungalgame">
+                <span>KUNgalgame</span>
+              </div>
+              <!-- 网站描述 -->
+              <div class="kungalgame-describe">
+                <p>世界上最萌的 galgame 网站!<br>KUNgalgame以营造最良好的氛围为理念<br>KUNgalgame永远不会有广告<br>KUNgalgame永远不会收费</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="kungalgame-footer-copyright"></div>
     </div>
   </body>
 </html>

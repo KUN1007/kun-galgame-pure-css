@@ -240,7 +240,6 @@
   height: 1px;
   /* 设置今日热门帖子占侧边栏的比例 */
   flex-grow: 12.5;
-  margin-bottom: 5px;
   /* 今日热门帖子区域为竖直弹性盒 */
   display: flex;
   flex-direction: column;
@@ -337,6 +336,8 @@
   /* 左侧文章区的总大小 */
   width: 100%;
   height: 100%;
+  /* 盒子的边显示在内侧 */
+  box-sizing: border-box;
   /* 文章区边上的颜色 */
   border: 1px solid rgb(225, 225, 225);
   background-color: rgba(187, 240, 255, 0.2);

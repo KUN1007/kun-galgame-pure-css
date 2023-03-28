@@ -63,11 +63,12 @@
   font-weight: bold;
   display: block;
   width: 100%;
-  line-height: 60px;
+  line-height: 58px;
 }
 .top-bar ul li a:hover {
   background-color: #ecf3ff;
   transition: 0.5s;
+  border-radius: 2px;
 }
 .top-bar ul li:nth-child(1):hover ~ .top-bar-box {
   left: calc(100% / 4 * 0);
@@ -87,79 +88,11 @@
 }
 
 /* 顶部搜索框 */
+/* 
 
-/* 搜索框位置设定 */
-.top-search-container {
-  transform: translate(-50%);
-}
+TODO:
 
-.top-search-box input[type="text"] {
-  border: none;
-  background: none;
-  z-index: 1;
-  width: 20px;
-  height: 20px;
-  transition: all 0.25s ease-in 0.25s;
-  color: transparent;
-  font-size: 0.75rem;
-  line-height: 25px;
-  margin-right: 0px;
-}
-
-.top-search-box input[type="text"]:hover {
-  cursor: pointer;
-}
-
-.top-search-box input[type="text"]:hover:focus {
-  cursor: text;
-}
-
-.top-search-box input[type="text"]:hover + span {
-  background: rgba(255, 0, 0, 0.2);
-}
-
-.top-search-box input[type="text"]:focus {
-  width: 250px;
-  padding: 0 10px;
-  outline: none;
-  color: black;
-  background: none;
-  color: rgb(0, 0, 0);
-}
-
-.top-search-box input[type="text"]:focus + span {
-  width: 250px;
-}
-
-.top-search-box input[type="text"]:focus + span::before {
-  width: 2px;
-  opacity: 0;
-  transition: all 0.25s ease-in;
-}
-
-.top-search-box input[type="text"] + span {
-  z-index: -1;
-  position: absolute;
-  border: 2px solid rgb(0, 0, 0);
-  top: 0;
-  width: 20px;
-  height: 20px;
-  transition: all 0.25s ease-in 0.25s;
-  border-radius: 25px;
-  left: 0;
-}
-
-.top-search-box input[type="text"] + span::before {
-  transition: all 0.25s ease-in 0.5s;
-  transform-origin: left top;
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 5px;
-  border-radius: 5px;
-  background: rgb(0, 0, 0);
-  transform: rotate(45deg) translate(26px, -2px);
-}
+*/
 
 /* 用户个人信息 */
 .kungalgamer-info {

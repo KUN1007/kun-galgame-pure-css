@@ -4,7 +4,7 @@
   height: 1px;
   flex-grow: 21;
   /* 背景图片 */
-/*   background-image: url(../img/bg.png);
+  /*   background-image: url(../img/bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; */
@@ -19,6 +19,8 @@
   width: 61.8%;
   /* 可视页面的最小宽度 */
   min-width: 700px;
+  /* 盒子边线在内部，页面缩小到最小时右侧不留白 */
+  box-sizing: border-box;
   height: 100%;
   margin: 0 auto;
   /* 设置可视内容区不覆盖顶部 shadow */
@@ -69,6 +71,9 @@
   /* 折叠区相当于侧边栏的占比 */
   flex-grow: 1;
   /* 内容居中（折叠左侧区域） */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   /* 字体设置 */
   font-size: small;
@@ -103,7 +108,7 @@
   cursor: pointer;
   color: rgb(247, 137, 137);
   font-weight: bold;
-  font-size: large;
+  font-size: larger;
   /* 页面缩小到最小时不换行 */
   overflow: hidden;
   white-space: nowrap;
@@ -130,8 +135,8 @@
 /* 六个功能之间的距离 */
 .item-box-container div {
   /* 设置六个功能（模式、排行、背景等）之间的间距 */
-  margin: -5px 5px;
-  padding: 1px;
+  margin: -15px 5px;
+  padding: 5px;
 }
 /* 设置六个功能（模式、排行、背景等）的 hover */
 .item-box-container .function:hover {
@@ -152,6 +157,7 @@
   height: 1px;
   /* 设置今日热门帖子占侧边栏的比例 */
   flex-grow: 12.5;
+  /* 热门帖子距离最新帖子的距离 */
   margin-bottom: 5px;
   /* 今日热门帖子区域为竖直弹性盒 */
   display: flex;

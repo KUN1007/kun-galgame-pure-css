@@ -11,7 +11,6 @@
 .kungalgame-footer-wrap {
   display: flex;
   flex-direction: column;
-  height: 1000px;
 }
 /* 
 ----------------------------------
@@ -94,14 +93,14 @@
   margin: 0 auto;
   /* 信息区域总宽度占页面的 61.8% */
   width: 61.8%;
-  background-color: aqua;
   /* 信息区域的增长 */
   flex-grow: 1;
 }
 /* 信息展示部分的容器,目的是把左侧的信息和右侧的网站介绍分开 */
 .kungalgame-footer-info-wrap {
   margin: 0 auto;
-  height: 300px;
+  /* 底部信息的总高度 */
+  height: 200px;
   background-color: pink;
   /* 为了左右两部分设置弹性盒 */
   display: flex;
@@ -111,17 +110,35 @@
 .kungalgame-footer-left-wrap {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   /* 左侧分类信息区相对于右侧网站介绍的比例 */
-  flex-grow: 1;
+  flex-grow: 2;
 }
 /* 左侧顶部的信息 */
 .footer-left-top-info {
   display: flex;
   justify-content: center;
 }
+/* 顶部的三个 ul */
+.footer-catalog-other-games,
+.footer-catalog-technology,
+.footer-catalog-about-us {
+  width: 1px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.footer-catalog-other-games,
+.footer-catalog-technology,
+.footer-catalog-about-us ul li {
+  flex-grow: 1;
+}
 /* 非 galgame 交流 */
 .footer-catalog-other-games {}
+/* 技术相关 */
+.footer-catalog-technology {}
+/* 关于我们 */
+.footer-catalog-about-us {}
 /* 每个信息类别的标题 */
 .kungalgame-footer-catalog-title {}
 /* 左侧下方的信息 */
@@ -153,8 +170,11 @@
   flex-grow: 1;
 }
 /* 网站名 */
-.kungalgame {}
+.kungalgame {
+  font-size: larger;padding-bottom:20px;
+  font-weight: bold;
+}
 /* 网站描述 */
 .kungalgame-describe {
-  max-width: 200px;
+  max-width: 100%;
 }

@@ -13,9 +13,9 @@
       <div class="container__form container--signin">
         <form action="#" class="form" id="form1">
           <h2 class="form__title">登陆</h2>
-          <input type="email" placeholder="邮箱" class="input" />
+          <input type="email" placeholder="用户名或邮箱" class="input" />
           <input type="password" placeholder="密码" class="input" />
-          <a href="#" class="link">忘记密码?</a>
+          <a href="#" class="link">忘记密码? 点击发送重置邮件</a>
           <button class="btn">登陆</button>
         </form>
       </div>
@@ -24,10 +24,17 @@
       <div class="container__form container--signup">
         <form action="#" class="form" id="form2">
           <h2 class="form__title">注册</h2>
-          <input type="text" placeholder="昵称" class="input" />
+          <!--           <input type="text" placeholder="用户名 (中文 < 7个字符, 英文 < 14 个字符)" class="input" />
+          <input type="email" placeholder="邮箱 (gmail, outlook, sina, qq, 163)" class="input" />
+          <input type="password" placeholder="密码 (7 ~ 17位, 数字、字母、符号组合)" class="input" /> -->
+          <input type="text" placeholder="用户名" class="input" />
           <input type="email" placeholder="邮箱" class="input" />
           <input type="password" placeholder="密码" class="input" />
+          <a href="#" class="mail-confirm">点击获取邮箱确认邮件</a>
           <button class="btn">注册</button>
+          <a href="#" class="user-agreement"
+            >点击注册表示您已经同意我们的<span>用户协议</span></a
+          >
         </form>
       </div>
 
@@ -35,13 +42,19 @@
       <div class="container__overlay">
         <div class="overlay">
           <div class="overlay__panel overlay--left">
-            <h2>欢迎注册 KUNgalgame</h2>
-            <h2>世界上最 moe 的 galgame 论坛</h2>
-            <br>
+            <h2>
+              欢迎注册 KUNgalgame <br /><br />—— 世界上最<span>萌</span>的
+              galgame 论坛
+            </h2>
+            <br />
             <button class="btn" id="signIn">登陆</button>
           </div>
           <div class="overlay__panel overlay--right">
-            <h2>欢迎回家</h2>
+            <h2>
+              欢迎回家 <br />
+              <br />
+              KUNgalgame 给你最温暖的拥抱
+            </h2>
             <button class="btn" id="signUp">注册</button>
           </div>
         </div>

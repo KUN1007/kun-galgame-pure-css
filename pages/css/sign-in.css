@@ -1,199 +1,257 @@
 body {
-	align-items: center;
-	background: url("../../img/bg.png");
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	display: grid;
-	height: 100vh;
-	place-items: center;
+  align-items: center;
+  /*     background: url("../../img/bg.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  background: linear-gradient(#fbe7fe, #ffffff);
+  background-repeat: no-repeat;
 }
-
+/* 不显示滚动条 */
+*::-webkit-scrollbar {
+  display: none;
+}
+/* 登录和注册的字体 */
 .form__title {
-	font-weight: 300;
-	margin: 0;
-	margin-bottom: 1.25rem;
+  font-weight: 300;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+  color: #4e4e4e;
 }
 
+/* 获取验证码 */
+.mail-confirm,
 .link {
-	color: #333;
-	font-size: 0.9rem;
-	margin: 1.5rem 0;
+  text-decoration: none;
+  font-size: small;
+  color: #a156db;
+  font-style: oblique;
+}
+/* 忘记密码 */
+.link {
+  margin: 20px 0;
+}
+/* 用户协议 */
+.user-agreement {
+	margin-top: 10px;
+	font-size: x-small;
+	color: #4e4e4e;
 	text-decoration: none;
 }
-
+.user-agreement span {
+	color: red;
+	font-style: oblique;
+}
+/* 总容器 */
 .container {
-	border-radius: 5px;
-	box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25),
-		0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
-	height: 420px;
-	max-width:760px;
-	overflow: hidden;
-	position: relative;
-	width: 100%;
+  /* 背景图片 */
+  background: url("../../img/bg.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* 圆角 */
+  border-radius: 5px;
+  /* 容器的阴影 */
+  box-shadow: 0 0.9rem 1.7rem rgba(150, 189, 255, 0.25),
+    0 0.7rem 0.7rem rgba(151, 186, 255, 0.22);
+  height: 390px;
+  max-width: 700px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
 .container__form {
-	height: 100%;
-	position: absolute;
-	top: 0;
-	transition: all 0.6s ease-in-out;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: all 0.6s ease-in-out;
 }
 
 .container--signin {
-	left: 0;
-	width: 50%;
-	z-index: 2;
+  left: 0;
+  width: 50%;
+  z-index: 2;
 }
 
 .container.right-panel-active .container--signin {
-	transform: translateX(100%);
+  transform: translateX(100%);
 }
 
 .container--signup {
-	left: 0;
-	opacity: 0;
-	width: 50%;
-	z-index: 1;
+  left: 0;
+  opacity: 0;
+  width: 50%;
+  z-index: 1;
 }
 
 .container.right-panel-active .container--signup {
-	animation: show 0.6s;
-	opacity: 1;
-	transform: translateX(100%);
-	z-index: 5;
+  animation: show 0.6s;
+  opacity: 1;
+  transform: translateX(100%);
+  z-index: 5;
 }
 
 .container__overlay {
-	height: 100%;
-	left: 50%;
-	overflow: hidden;
-	position: absolute;
-	top: 0;
-	transition: transform 0.6s ease-in-out;
-	width: 50%;
-	z-index: 100;
+  height: 100%;
+  left: 50%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transition: transform 0.6s ease-in-out;
+  width: 50%;
+  z-index: 100;
 }
 
 .container.right-panel-active .container__overlay {
-	transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
 .overlay {
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100%;
-	left: -100%;
-	position: relative;
-	transform: translateX(0);
-	transition: transform 0.6s ease-in-out;
-	width: 200%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  left: -100%;
+  position: relative;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+  width: 200%;
 }
 
 .container.right-panel-active .overlay {
-	transform: translateX(50%);
-}
-/* 交互页面的盒子 */
-.overlay__panel {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	justify-content: center;
-	position: absolute;
-	text-align: center;
-	top: 0;
-	transform: translateX(0);
-	transition: transform 0.6s ease-in-out;
-	width: 50%;
-	background-color: rgba(255, 255, 255, 0.7);
-}
-
-.overlay__panel h2 {
-	font-size: medium;
-	color: #333;
-}
-
-.overlay--left {
-	transform: translateX(-20%);
-}
-
-.container.right-panel-active .overlay--left {
-	transform: translateX(0);
-}
-
-.overlay--right {
-	right: 0;
-	transform: translateX(0);
-}
-
-.container.right-panel-active .overlay--right {
-	transform: translateX(20%);
+  transform: translateX(50%);
 }
 
 .btn {
-	border-radius: 50px;
-	background-color: #ecf5ff;
-	border: 1px solid #409eff;
-	color: #409eff;
-	cursor: pointer;
-	font-size: 0.9em;
-	letter-spacing: 0.1rem;
-	padding: 0.6rem 4rem;
-	text-transform: uppercase;
-	transition: transform 80ms ease-in;
+  border-radius: 50px;
+  background-color: #ecf5ff;
+  border: 1px solid #409eff;
+  color: #409eff;
+  cursor: pointer;
+  font-size: 0.9em;
+  letter-spacing: 0.1rem;
+  padding: 0.6rem 4rem;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .btn:hover {
-	background-color: #409eff;
-	color: #ecf5ff;
+  background-color: #409eff;
+  color: #ecf5ff;
+}
+/* 交互页面的盒子 */
+.overlay__panel {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.overlay__panel .btn {
+  /* 红色按钮距离底部的距离 */
+  margin-bottom: 36px;
+  background-color: #fef0f0;
+  border: 1px solid #f56c6c;
+  color: #f56c6c;
+}
+.overlay__panel .btn:hover {
+  background-color: #f56c6c;
+  color: #fef0f0;
+}
+
+.overlay__panel h2 {
+  margin-top: 150px;
+  font-size: medium;
+  color: #333;
+}
+.overlay__panel h2 span {
+  color: #f56c6c;
+  padding: 0 5px;
+  font-size: large;
+}
+
+.overlay--left {
+  transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay--left {
+  transform: translateX(0);
+}
+
+.overlay--right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.container.right-panel-active .overlay--right {
+  transform: translateX(20%);
 }
 
 .form > .btn {
-	margin-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+/* 注册按钮的位置 */
+.container--signup .btn {
+  margin-top: 30px;
 }
 
 .btn:active {
-	transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 .btn:focus {
-	outline: none;
+  outline: none;
 }
 /* 表单的设置 */
 .form {
-	background-color: #ffffff;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	padding: 0 3rem;
-	height: 100%;
-	text-align: center;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 3rem;
+  height: 100%;
+  text-align: center;
 }
 
 .input {
-	background-color: #fff;
-	border: none;
-	outline: none;
-	border-bottom: 1px solid #b9bdc5;
-	padding: 0.9rem 0.9rem;
-	margin: 0.5rem 0;
-	width: 100%;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #b9bdc5;
+  padding: 0.9rem 0.9rem;
+  margin: 0.5rem 0;
+  width: 100%;
 }
-
+.input:focus {
+  border-bottom: 2px solid #409eff;
+  box-sizing: border-box;
+  transition: 0.2s linear;
+}
 @keyframes show {
-	0%,
-	49.99% {
-		opacity: 0;
-		z-index: 1;
-	}
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
 
-	50%,
-	100% {
-		opacity: 1;
-		z-index: 5;
-	}
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
 }

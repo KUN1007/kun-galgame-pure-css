@@ -10,12 +10,15 @@ body {
 	place-items: center;
 }
 
-.form__title {
+/* 登陆和注册的标题 */
+.sign-in-title,
+.sign-up-title{
 	font-weight: 300;
 	margin: 0;
 	margin-bottom: 1.25rem;
 }
 
+/* 忘记密码 */
 .link {
 	color: #333;
 	font-size: 0.9rem;
@@ -23,7 +26,7 @@ body {
 	text-decoration: none;
 }
 
-.container {
+.sign-container {
 	border-radius: 5px;
 	box-shadow: 0 0.9rem 1.7rem rgba(0, 0, 0, 0.25),
 		0 0.7rem 0.7rem rgba(0, 0, 0, 0.22);
@@ -34,38 +37,39 @@ body {
 	width: 100%;
 }
 
-.container__form {
+.sign-in-container,
+.sign-up-container {
 	height: 100%;
 	position: absolute;
 	top: 0;
 	transition: all 0.6s ease-in-out;
 }
 
-.container--signin {
+.sign-in-container {
 	left: 0;
 	width: 50%;
 	z-index: 2;
 }
 
-.container.right-panel-active .container--signin {
+.sign-in-container {
 	transform: translateX(100%);
 }
 
-.container--signup {
+.sign-up-container {
 	left: 0;
 	opacity: 0;
 	width: 50%;
 	z-index: 1;
 }
 
-.container.right-panel-active .container--signup {
+.sign-up-container {
 	animation: show 0.6s;
 	opacity: 1;
 	transform: translateX(100%);
 	z-index: 5;
 }
 
-.container__overlay {
+.aside-container {
 	height: 100%;
 	left: 50%;
 	overflow: hidden;
@@ -76,11 +80,11 @@ body {
 	z-index: 100;
 }
 
-.container.right-panel-active .container__overlay {
+.aside-container {
 	transform: translateX(-100%);
 }
 
-.overlay {
+.aside {
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -93,11 +97,11 @@ body {
 	width: 200%;
 }
 
-.container.right-panel-active .overlay {
+.aside {
 	transform: translateX(50%);
 }
 /* 交互页面的盒子 */
-.overlay__panel {
+.aside-left {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
@@ -112,16 +116,16 @@ body {
 	background-color: rgba(255, 255, 255, 0.7);
 }
 
-.overlay__panel h2 {
+.aside-left h2 {
 	font-size: medium;
 	color: #333;
 }
 
-.overlay--left {
+.aside-left {
 	transform: translateX(-20%);
 }
 
-.container.right-panel-active .overlay--left {
+.aside-left {
 	transform: translateX(0);
 }
 
@@ -130,7 +134,7 @@ body {
 	transform: translateX(0);
 }
 
-.container.right-panel-active .overlay--right {
+.aside-right {
 	transform: translateX(20%);
 }
 

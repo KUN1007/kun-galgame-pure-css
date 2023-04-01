@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>帖子详情</title>
+    <!-- 图标字体库 -->
+    <link href="../fa/css/fontawesome.css" rel="stylesheet" />
+    <link href="../fa/css/brands.css" rel="stylesheet" />
+    <link href="../fa/css/solid.css" rel="stylesheet" />
+    <!-- 引入头部样式 -->
+    <link rel="stylesheet" href="../css/header.css" />
+    <!-- 引入内容区的样式 -->
+    <link rel="stylesheet" href="./css/topic.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+      }
+      *::-webkit-scrollbar {
+        display: none;
+      }
+      /* 页面总容器 */
+      .main-wrapper {
+        display: flex;
+        height: 1007px;
+        flex-direction: column;
+      }
+      /* 顶部固定交互栏 */
+      .header {
+        height: 1px;
+        flex-grow: 1;
+      }
+      /* 下面帖子详情区的容器 */
+      .topic-wrapper {
+        height: 1px;
+        flex-grow: 17;
+        display: flex;
+      }
+      /* 下方可视内容区的容器 */
+      .content-wrapper {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+      }
+      /* 左侧内容区 */
+      .content-left-part {
+        height: 100%;
+        width: 1px;
+        background-color: orange;
+        flex-grow: 1;
+      }
+      /* 相同标签下的其它帖子 */
+      .same-tag-topic {
+        height: 200px;
+        width: 100%;
+        background-color: blue;
+      }
+      /* 楼主的其它帖子 */
+      .master-other-topic {
+        height: 200px;
+        width: 100%;
+        background-color: darkmagenta;
+      }
+      /* 右侧内容区 */
+      .content-right-part {
+        height: 100%;
+        width: 1px;
+        flex-grow: 4;
+        /* 右侧内容区为弹性盒（用户可以一直向下滑） */
+        display: flex;
+        flex-direction: column;
+      }
+      /* 楼主帖子容器 */
+      .master-topic-container {
+        width: 100%;
+        min-height: 400px;
+        background-color: pink;
+        display: flex;
+        flex-direction: column;
+      }
+      /* 楼主帖子头部 */
+      .master-topic-header {
+        width: 100%;
+        height: 70px;
+        background-color: green;
+      }
+      /* 楼主帖子标题 */
+      .master-topic-title {}
+      /* 楼主标志 */
+      .master-topic-floor {}
+      /* 楼主帖子内容区 */
+      .master-topic-content {
+        width: 100%;
+        height: 1px;
+        flex-grow: 10;
+        background-color: tomato;
+        display: flex;
+        flex-direction: column;
+      }
+      /* 内容区的顶部 */
+      .master-topic-content-top {
+        width: 100%;
+        height: 40px;
+        background-color: pink;
+      }
+      /* 内容区的中部 */
+      .master-topic-content-center {
+        width: 100%;
+        height: 1px;
+        background-color: rgb(255, 0, 43);
+        flex-grow: 1;
+      }
+      /* 内容区的底部 */
+      .master-topic-content-bottom {
+        width: 100%;
+        height: 20px;
+        background-color: rgb(104, 120, 225);
+      }
+      /* 楼主帖子底部 */
+      .master-topic-footer {
+        width: 100%;
+        height: 50px;
+        background-color: seashell;
+      }
+      /* 底部左侧部分（点赞、推贴、踩） */
+      .master-topic-footer-left {}
+      /* 底部右侧部分（回复、评论、只看、编辑） */
+      .master-topic-footer-right {}
+      /* 其它人的回帖 */
+      .other-topic-container {
+        width: 100%;
+        height: 1px;
+        background-color: yellow;
+        flex-grow: 1;
+      }
+      /* 其它人的回帖 */
+      .other-topic-container {
+        width: 100%;
+        height: 1px;
+        flex-grow: 1;
+        background-color: chartreuse;
+        display: flex;
+        flex-direction: column;
+      }
+      /* 其它人回帖的头部 */
+      .other-topic-header {
+        width: 100%;
+        height: 70px;
+        background-color: mediumslateblue;
+      }
+      /* 其它人的楼层 */
+      .other-topic-floor {}
+      /* 其它人回帖的内容区 */
+      .other-topic-content {
+        width: 100%;
+        height: 1px;
+        background-color: yellow;
+        flex-grow: 1;
+      }
+      /* 其它人回帖的左侧区域 */
+      .other-topic-left {}
+      /* 其它人回帖的右侧区域 */
+      .other-topic-right {}
+      /* 其它人回帖的底部 */
+      .other-topic-footer {
+        width: 100%;
+        min-height: 50px;
+      }
+      /* 顶部的点赞、推贴等 */
+      .other-topic-footer-top {}
+      /* 底部的评论 */
+      .other-topic-footer-bottom {}
+    </style>
+  </head>
+  <body>
+    <!-- 总容器 -->
+    <div class="main-wrapper">
+      <!-- 顶部固定交互栏 -->
+      <div class="header">
+        <!-- 顶部左侧交互栏 -->
+        <div class="nav-top">
+          <div class="kungal-info">
+            <a href="#"><img src="../img/favicon.png" alt="KUNgal" /></a>
+            <a href="#"><span>KUNgal</span></a>
+          </div>
+          <div class="top-bar">
+            <ul>
+              <li><a href="#">帖子发布</a></li>
+              <li><a href="#">长评撰写</a></li>
+              <li><a href="#">技术交流</a></li>
+              <li><a href="#">数据统计</a></li>
+              <div class="top-bar-box"></div>
+            </ul>
+          </div>
+        </div>
+        <!-- 顶部全局搜索框 -->
+        <div class="top-search-bar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <!-- 用户个人信息 -->
+        <div class="kungalgamer-info">
+          <a href="#"><img src="../img/KUN.jpg" alt="KUN" /></a>
+          <span>KUN</span>
+        </div>
+      </div>
+      <!-- 下面帖子详情区的容器 -->
+      <div class="topic-wrapper">
+        <!-- 下方可视内容区的容器 -->
+        <div class="content-wrapper">
+          <!-- 左侧内容区 -->
+          <div class="content-left-part">
+            <!-- 相同标签下的其它帖子 -->
+            <div class="same-tag-topic"></div>
+            <!-- 楼主的其它帖子 -->
+            <div class="master-other-topic"></div>
+          </div>
+          <!-- 右侧内容区 -->
+          <div class="content-right-part">
+            <!-- 楼主帖子容器 -->
+            <div class="master-topic-container">
+              <!-- 楼主帖子头部 -->
+              <div class="master-topic-header">
+                <!-- 楼主帖子标题 -->
+                <div class="master-topic-title"></div>
+                <!-- 楼主标志 -->
+                <div class="master-topic-floor"></div>
+              </div>
+              <!-- 楼主帖子内容区 -->
+              <div class="master-topic-content">
+                <!-- 内容区的顶部 -->
+                <div class="master-topic-content-top"></div>
+                <!-- 内容区的中部 -->
+                <div class="master-topic-content-center"></div>
+                <!-- 内容区的底部 -->
+                <div class="master-topic-content-bottom"></div>
+              </div>
+              <!-- 楼主帖子底部 -->
+              <div class="master-topic-footer">
+                <!-- 底部左侧部分（点赞、推贴、踩） -->
+                <div class="master-topic-footer-left"></div>
+                <!-- 底部右侧部分（回复、评论、只看、编辑） -->
+                <div class="master-topic-footer-right"></div>
+              </div>
+            </div>
+            <!-- 其它人的回帖 -->
+            <div class="other-topic-container">
+              <!-- 其它人回帖的头部 -->
+              <div class="other-topic-header">
+                <!-- 其它人的楼层 -->
+                <div class="other-topic-floor"></div>
+              </div>
+              <!-- 其它人回帖的内容区 -->
+              <div class="other-topic-content">
+                <!-- 其它人回帖的左侧区域 -->
+                <div class="other-topic-left"></div>
+                <!-- 其它人回帖的右侧区域 -->
+                <div class="other-topic-right"></div>
+              </div>
+              <!-- 其它人回帖的底部 -->
+              <div class="other-topic-footer">
+                <!-- 顶部的点赞、推贴等 -->
+                <div class="other-topic-footer-top"></div>
+                <!-- 底部的评论 -->
+                <div class="other-topic-footer-bottom"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

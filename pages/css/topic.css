@@ -1,0 +1,295 @@
+:root {
+  --shadow: 0 1px 2px hsla(0, 0%, 0%, 0.05), 0 1px 4px hsla(0, 0%, 0%, 0.05),
+    0 2px 8px hsla(0, 0%, 0%, 0.05);
+}
+/* 顶部固定交互栏 */
+.header {
+  height: 1px;
+  flex-grow: 1;
+}
+/* 下面帖子详情区的容器 */
+.topic-wrapper {
+  height: 1px;
+  flex-grow: 17;
+  display: flex;
+}
+/* 下方可视内容区的容器 */
+.content-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  /* 设置可视区域内容不覆盖顶部 shadow */
+  margin-top: 5px;
+}
+/* 左侧内容区 */
+.content-left-part {
+  /* 左侧区域的总高度 */
+  height: 700px;
+  /* 左侧区域上下两部分的比例 */
+  width: 1px;
+  flex-grow: 1;
+  /* 左侧内容区为弹性盒，方便分成上下两部分 */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+/* ----------------------------------- */
+/* 相同标签下的其它帖子 */
+.same-tag-topic {
+  height: 1px;
+  flex-grow: 1;
+  width: 100%;
+  /* 上方区域的配色 */
+  border: 1px solid rgba(165, 216, 255, 0.5);
+  border-radius: 5px;
+  background-color: rgba(216, 238, 255, 0.5);
+  /* 左侧两个部分之间的距离 */
+  margin-bottom: 17px;
+  /* 盒子的阴影 */
+  box-shadow: var(--shadow);
+}
+.same-tag-topic ul {
+  height: 100%;
+  /* 整体为一个无序列表，列表为弹性盒 */
+  display: flex;
+  flex-direction: column;
+}
+.same-tag-topic ul li {
+  height: 1px;
+  width: 100%;
+  /* 每个项目相对于标题的占比 */
+  flex-grow: 3;
+  display: flex;
+  /* 垂直居中 */
+  align-items: center;
+  /* 设置左侧的 border 方便制作 hover */
+  border-left: 4px solid transparent;
+  /* 内边距盒子 */
+  box-sizing: border-box;
+}
+/* 上方的 hover 效果 */
+.same-tag-topic ul li:hover {
+  border-left: 4px solid #f78989;
+  background-color: rgba(216, 238, 255, 0.5);
+  transition: 0.3s;
+}
+/* 单个标题的样式 */
+.same-tag-topic ul li a {
+  /* 左右两侧的距离 */
+  margin: 0 17px;
+  color: #4d4d4d;
+  /* 标题显示两行、超出部分隐藏 */
+  overflow: hidden; /* 超出部分隐藏 */
+  text-overflow: ellipsis; /* 显示省略号 */
+  display: -webkit-box; /* 将文本框转化为弹性伸缩盒子 */
+  -webkit-box-orient: vertical; /* 设置为纵向排列 */
+  -webkit-line-clamp: 2; /* 显示两行文本 */
+  /* 标题的字体属性 */
+  font-size: small;
+  line-height: 1.5em;
+  box-sizing: border-box;
+}
+/* 大标题（相同标签下的其它帖子）的样式 */
+.same-tag-topic ul li:nth-child(1) {
+  /* 左侧没有 border，没有 hover */
+  border-left: 0;
+  /* 相对于单个帖子标题的比例 */
+  flex-grow: 2;
+  line-height: 40px;
+  font-size: 1.8ch;
+  font-weight: bold;
+  background-color: rgba(206, 234, 255, 0.5);
+  /* 与单个帖子标题的分割线 */
+  border-bottom: 1px solid rgba(165, 216, 255, 0.5);
+  /* 水平居中 */
+  justify-content: center;
+}
+/* ----------------------------------- */
+/* 楼主的其它帖子 */
+.master-other-topic {
+  width: 100%;
+  height: 1px;
+  flex-grow: 1;
+  /* 上方区域的配色 */
+  border: 1px solid rgba(255, 162, 255, 0.5);
+  border-radius: 5px;
+  background-color: rgba(255, 237, 255, 0.5);
+  box-shadow: var(--shadow);
+}
+.master-other-topic ul {
+  height: 100%;
+  /* 整体为一个无序列表，列表为弹性盒 */
+  display: flex;
+  flex-direction: column;
+}
+.master-other-topic ul li {
+  height: 1px;
+  width: 100%;
+  /* 每个项目相对于标题的占比 */
+  flex-grow: 3;
+  display: flex;
+  /* 垂直居中 */
+  align-items: center;
+  /* 设置左侧的 border 方便制作 hover */
+  border-left: 4px solid transparent;
+  /* 内边距盒子 */
+  box-sizing: border-box;
+}
+/* 上方的 hover 效果 */
+.master-other-topic ul li:hover {
+  border-left: 4px solid #86c2ff;
+  background-color: rgba(255, 227, 255, 0.5);
+  transition: 0.3s;
+}
+/* 单个标题的样式 */
+.master-other-topic ul li a {
+  /* 左右两侧的距离 */
+  margin: 0 17px;
+  color: #4d4d4d;
+  /* 标题显示两行、超出部分隐藏 */
+  overflow: hidden; /* 超出部分隐藏 */
+  text-overflow: ellipsis; /* 显示省略号 */
+  display: -webkit-box; /* 将文本框转化为弹性伸缩盒子 */
+  -webkit-box-orient: vertical; /* 设置为纵向排列 */
+  -webkit-line-clamp: 2; /* 显示两行文本 */
+  /* 标题的字体属性 */
+  font-size: small;
+  line-height: 1.5em;
+  box-sizing: border-box;
+}
+/* 大标题（相同标签下的其它帖子）的样式 */
+.master-other-topic ul li:nth-child(1) {
+  /* 左侧没有 border，没有 hover */
+  border-left: 0;
+  /* 相对于单个帖子标题的比例 */
+  flex-grow: 2;
+  line-height: 40px;
+  font-size: 1.8ch;
+  font-weight: bold;
+  background-color: rgba(255, 216, 255, 0.5);
+  /* 与单个帖子标题的分割线 */
+  border-bottom: 1px solid rgba(255, 162, 255, 0.5);
+  /* 水平居中 */
+  justify-content: center;
+}
+/* ----------------------------------- */
+/* 右侧内容区 */
+.content-right-part {
+  height: 100%;
+  width: 1px;
+  flex-grow: 4;
+  /* 右侧内容区为弹性盒（用户可以一直向下滑） */
+  display: flex;
+  flex-direction: column;
+  /* 右侧部分距离左侧的距离 */
+  margin-left: 10px;
+}
+/* 楼主帖子容器 */
+.master-topic-container {
+  width: 100%;
+  min-height: 400px;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+}
+/* 楼主帖子头部 */
+.master-topic-header {
+  width: 100%;
+  height: 70px;
+  background-color: green;
+}
+/* 楼主帖子标题 */
+.master-topic-title {
+}
+/* 楼主标志 */
+.master-topic-floor {
+}
+/* 楼主帖子内容区 */
+.master-topic-content {
+  width: 100%;
+  height: 1px;
+  flex-grow: 10;
+  background-color: tomato;
+  display: flex;
+  flex-direction: column;
+}
+/* 内容区的顶部 */
+.master-topic-content-top {
+  width: 100%;
+  height: 40px;
+  background-color: pink;
+}
+/* 内容区的中部 */
+.master-topic-content-center {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(255, 0, 43);
+  flex-grow: 1;
+}
+/* 内容区的底部 */
+.master-topic-content-bottom {
+  width: 100%;
+  height: 20px;
+  background-color: rgb(104, 120, 225);
+}
+/* 楼主帖子底部 */
+.master-topic-footer {
+  width: 100%;
+  height: 50px;
+  background-color: seashell;
+}
+/* 底部左侧部分（点赞、推贴、踩） */
+.master-topic-footer-left {
+}
+/* 底部右侧部分（回复、评论、只看、编辑） */
+.master-topic-footer-right {
+}
+/* 其它人的回帖 */
+.other-topic-container {
+  width: 100%;
+  height: 1px;
+  background-color: yellow;
+  flex-grow: 1;
+}
+/* 其它人的回帖 */
+.other-topic-container {
+  width: 100%;
+  height: 1px;
+  flex-grow: 1;
+  background-color: chartreuse;
+  display: flex;
+  flex-direction: column;
+}
+/* 其它人回帖的头部 */
+.other-topic-header {
+  width: 100%;
+  height: 70px;
+  background-color: mediumslateblue;
+}
+/* 其它人的楼层 */
+.other-topic-floor {
+}
+/* 其它人回帖的内容区 */
+.other-topic-content {
+  width: 100%;
+  height: 1px;
+  background-color: yellow;
+  flex-grow: 1;
+}
+/* 其它人回帖的左侧区域 */
+.other-topic-left {
+}
+/* 其它人回帖的右侧区域 */
+.other-topic-right {
+}
+/* 其它人回帖的底部 */
+.other-topic-footer {
+  width: 100%;
+  min-height: 50px;
+}
+/* 顶部的点赞、推贴等 */
+.other-topic-footer-top {
+}
+/* 底部的评论 */
+.other-topic-footer-bottom {
+}

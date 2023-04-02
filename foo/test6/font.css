@@ -1,0 +1,47 @@
+.stroke {
+    -webkit-text-stroke-width: 2px;
+    -moz-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #111827;
+    -moz-text-stroke-color: #111827;
+    color: transparent;
+  }
+  
+  .shadow {
+    text-shadow: 6px 6px #db2777;
+  }
+  
+  .stroke-shadow {
+    color: #fef3c7;
+    text-shadow: -2px 0 #111827, 0 -2px #111827, 2px 0 #111827, 0 2px #111827,
+      2px 2px #111827, -2px -2px #111827, -2px 2px #111827, 2px -2px #111827,
+      6px 6px #db2777;
+  }
+  
+  
+  body {
+    background-color: #fef3c7;
+    display: grid;
+    height: 100vh;
+    place-content: center;
+    text-align: center;
+  }
+  
+  body p {
+    font-size: 15vw;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin: 0;
+  }
+  
+  body .grid {
+    display: grid;
+    grid-gap: 5vw;
+    grid-template-columns: 1fr;
+  }
+  
+  @media screen and (min-width: 768px) {
+    body .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  

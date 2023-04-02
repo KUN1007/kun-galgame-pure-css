@@ -15,11 +15,12 @@
 }
 /* 下方可视内容区的容器 */
 .content-wrapper {
-  width: 80%;
+  width: 90%;
+  height: 100%;
   margin: 0 auto;
   display: flex;
   /* 设置可视区域内容不覆盖顶部 shadow */
-  margin-top: 5px;
+  margin-top: 10px;
 }
 /* 左侧内容区 */
 .content-left-part {
@@ -187,29 +188,81 @@
 /* 楼主帖子容器 */
 .master-topic-container {
   width: 100%;
+  /* 楼主帖子最小高度 */
   min-height: 400px;
-  background-color: pink;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  /* 楼主帖子距离其它人帖子的距离 */
+  margin-bottom: 17px;
+}
+/* 楼主标志位置 */
+.master-topic-floor {
+  /* 标志在最左边 */
+  margin-left: 100%;
+  /* 定位 */
+  margin-bottom: -70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 位于内容上方 */
+  z-index: 1;
+}
+/* 楼主标志属性 */
+.master-btn {
+  border: none;
+  /* 大小 */
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(#f8d1ff, #cbedff);
+  font-size: 37px;
+  font-weight: bold;
+  font-style: oblique;
+  color: #ffd3d3;
+  text-shadow: -1px 0 #0051ff, 0 -1px #0051ff, 1px 0 #0051ff, 0 1px #0051ff,
+    1px 1px #111827, -1px -1px #111827, -1px 1px #111827, 1px -1px #111827,
+    4px 2px 2px #db2777;
+}
+
+/* 楼主帖子内容区的容器 */
+.master-topic-content-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border: 1px solid #4d4d4d;
+  border-radius: 5px;
 }
 /* 楼主帖子头部 */
 .master-topic-header {
   width: 100%;
   height: 70px;
-  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4d4d4d;
+  font-size: 17px;
+  border-bottom: 1px solid #4d4d4d;
+  box-sizing: border-box;
 }
 /* 楼主帖子标题 */
 .master-topic-title {
-}
-/* 楼主标志 */
-.master-topic-floor {
+  font-size: 17px;
+  font-weight: bold;
+  /* 文字间距 */
+  letter-spacing: 1px;
+  /* 文字不换行 */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 /* 楼主帖子内容区 */
 .master-topic-content {
   width: 100%;
   height: 1px;
   flex-grow: 10;
-  background-color: tomato;
   display: flex;
   flex-direction: column;
 }
@@ -217,15 +270,81 @@
 .master-topic-content-top {
   width: 100%;
   height: 40px;
-  background-color: pink;
+  display: flex;
+  text-align: center;
+  /* 时间和标签分居两侧 */
+  justify-content: space-between;
+  /* 下面的分割线 */
+  border-bottom: 1px solid #4d4d4d;
+  box-sizing: border-box;
+}
+/* 帖子的标签 */
+.master-topic-tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 图标字体 */
+.master-topic-tags i {
+  padding: 0 20px;
+  color: #0080ff;
+}
+/* 单个标签的盒子 */
+.master-topic-tags ul {
+  display: flex;
+}
+/* 单个标签的样式 */
+.master-topic-tags ul li {
+  margin-left: 5px;
+  font-size: small;
+  padding: 2px;
+  background-color: #f4f9ff;
+  border-radius: 5px;
+}
+/* 发帖时间 */
+.master-topic-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+  /* 文字间距 */
+  letter-spacing: 1px;
+}
+/* 沙漏的样式 */
+.master-topic-time i {
+  padding: 0 10px;
+  color: #ff004c;
+}
+/* 发帖时间的样式 */
+.master-topic-time div {
+  padding-right: 20px;
 }
 /* 内容区的中部 */
 .master-topic-content-center {
   width: 100%;
   height: 1px;
-  background-color: rgb(255, 0, 43);
   flex-grow: 1;
+  display: flex;
 }
+/* 内容区左侧楼主的信息 */
+.master-topic-content-center-left {
+  display: flex;
+  flex-direction: column;
+}
+/* 楼主的头像 */
+.master-avatar {}
+/* 楼主的头像图片 */
+.master-avatar img {
+  width: 100px;
+}
+/* 楼主的等级 */
+.master-rank {}
+/* 楼主的名字 */
+.master-name {}
+/* 楼主的萌萌点 */
+.master-moemoepoint {}
+/* 内容区右侧的帖子展示区 */
+.master-topic-content-center-right {}
 /* 内容区的底部 */
 .master-topic-content-bottom {
   width: 100%;

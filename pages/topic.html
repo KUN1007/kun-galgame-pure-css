@@ -26,7 +26,7 @@
       /* 页面总容器 */
       .main-wrapper {
         display: flex;
-        height: 1007px;
+        min-height: 1007px;
         flex-direction: column;
       }
     </style>
@@ -44,8 +44,8 @@
           </div>
           <div class="top-bar">
             <ul>
+              <li><a href="#">回到主页</a></li>
               <li><a href="#">帖子发布</a></li>
-              <li><a href="#">长评撰写</a></li>
               <li><a href="#">技术交流</a></li>
               <li><a href="#">数据统计</a></li>
               <div class="top-bar-box"></div>
@@ -72,10 +72,24 @@
             <div class="same-tag-topic">
               <ul>
                 <li><a href="#">相同标签下的其它帖子</a></li>
-                <li><a href="#">啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星</a></li>
-                <li><a href="#">啊这可海星啊这可海星啊这可海星啊这可海星</a></li>
-                <li><a href="#">啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星</a></li>
-                <li><a href="#">啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星</a></li>
+                <li>
+                  <a href="#"
+                    >啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星</a
+                  >
+                </li>
+                <li>
+                  <a href="#">啊这可海星啊这可海星啊这可海星啊这可海星</a>
+                </li>
+                <li>
+                  <a href="#"
+                    >啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    >啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星</a
+                  >
+                </li>
                 <li><a href="#">啊这啊这可海星啊这可海星</a></li>
               </ul>
             </div>
@@ -95,28 +109,76 @@
           <div class="content-right-part">
             <!-- 楼主帖子容器 -->
             <div class="master-topic-container">
-              <!-- 楼主帖子头部 -->
-              <div class="master-topic-header">
-                <!-- 楼主帖子标题 -->
-                <div class="master-topic-title"></div>
-                <!-- 楼主标志 -->
-                <div class="master-topic-floor"></div>
+              <!-- 楼主标志 -->
+              <div class="master-topic-floor">
+                <button class="master-btn">F0</button>
               </div>
-              <!-- 楼主帖子内容区 -->
-              <div class="master-topic-content">
-                <!-- 内容区的顶部 -->
-                <div class="master-topic-content-top"></div>
-                <!-- 内容区的中部 -->
-                <div class="master-topic-content-center"></div>
-                <!-- 内容区的底部 -->
-                <div class="master-topic-content-bottom"></div>
-              </div>
-              <!-- 楼主帖子底部 -->
-              <div class="master-topic-footer">
-                <!-- 底部左侧部分（点赞、推贴、踩） -->
-                <div class="master-topic-footer-left"></div>
-                <!-- 底部右侧部分（回复、评论、只看、编辑） -->
-                <div class="master-topic-footer-right"></div>
+              <!-- 楼主帖子内容区的容器 -->
+              <div class="master-topic-content-container">
+                <!-- 楼主帖子头部 -->
+                <div class="master-topic-header">
+                  <!-- 楼主帖子标题 -->
+                  <div class="master-topic-title">
+                    啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                  </div>
+                </div>
+                <!-- 楼主帖子内容区 -->
+                <div class="master-topic-content">
+                  <!-- 内容区的顶部 -->
+                  <div class="master-topic-content-top">
+                    <!-- 帖子的标签 -->
+                    <div class="master-topic-tags">
+                      <!-- 标签的图标字体 -->
+                      <i class="fa-solid fa-tags"></i>
+                      <ul>
+                        <li>啊这可海星</li>
+                        <li>啊这可海星</li>
+                        <li>啊这可海星</li>
+                        <li>啊这可海星</li>
+                        <li>啊这可海星</li>
+                      </ul>
+                    </div>
+                    <!-- 发帖时间 -->
+                    <div class="master-topic-time">
+                      <!-- 沙漏图标字体 -->
+                      <i class="fa-solid fa-hourglass-half"></i>
+                      <div>2019年10月7日-10:07:00 发布</div>
+                    </div>
+                  </div>
+                  <!-- 内容区的中部 -->
+                  <div class="master-topic-content-center">
+                    <!-- 内容区左侧楼主的信息 -->
+                    <div class="master-topic-content-center-left">
+                      <!-- 楼主的头像 -->
+                      <div class="master-avatar">
+                        <!-- 楼主的头像图片 -->
+                        <img src="../img/KUN.jpg" alt="KUN" />
+                        <!-- 楼主的等级 -->
+                        <div class="master-rank">海星</div>
+                      </div>
+                      <!-- 楼主的名字 -->
+                      <div class="master-name">啊这可海星啊这</div>
+                      <!-- 楼主的萌萌点 -->
+                      <div class="master-moemoepoint">1007</div>
+                    </div>
+                    <!-- 内容区右侧的帖子展示区 -->
+                    <div class="master-topic-content-center-right">
+                      啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                      啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                      啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                      啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                    </div>
+                  </div>
+                  <!-- 内容区的底部 -->
+                  <div class="master-topic-content-bottom"></div>
+                </div>
+                <!-- 楼主帖子底部 -->
+                <div class="master-topic-footer">
+                  <!-- 底部左侧部分（点赞、推贴、踩） -->
+                  <div class="master-topic-footer-left"></div>
+                  <!-- 底部右侧部分（回复、评论、只看、编辑） -->
+                  <div class="master-topic-footer-right"></div>
+                </div>
               </div>
             </div>
             <!-- 其它人的回帖 -->

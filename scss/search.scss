@@ -1,116 +1,92 @@
-$ruler: 16px;
-$color-red: #AE1100;
-$color-bg: #EBECF0;
-$color-shadow: #BABECC;
-$color-white: #FFF;
+$body: #fef3c7;
+$stroke: #111827;
+$shadow: #db2777;
+$halftone: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAHElEQVQYV2NUVFT8f//+fUYGBgYGMAEDcA5IBQCKJQVmn76DhAAAAABJRU5ErkJggg==");
 
-body, html {
-  background-color:$color-bg;
+@mixin stroke-width($property) {
+	-webkit-text-stroke-width: $property;
+	-moz-text-stroke-width: $property;
 }
 
-body, p, input, select, textarea, button {
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: -0.2px;
-    font-size: $ruler;
+@mixin stroke-color($property) {
+	-webkit-text-stroke-color: $property;
+	-moz-text-stroke-color: $property;
 }
 
-div, p {
-  color: $color-shadow;
-  text-shadow: 1px 1px 1px $color-white;
+@mixin background-clip($property) {
+	-webkit-background-clip: $property;
+	-moz-background-clip: $property;
+	background-clip: $property;
 }
 
-
-form {
-  padding: $ruler;
-  width: $ruler*20;
-  margin: 0 auto;
+@mixin fill-color($property) {
+	-webkit-text-fill-color: $property;
+	-moz-text-fill-color: $property;
 }
 
-.segment {
-  padding: $ruler*2 0;
-  text-align: center;
+.stroke {
+	@include stroke-width(2px);
+	@include stroke-color($stroke);
+	color: transparent;
 }
 
-button, input {
-  border: 0;
-  outline: 0;
-  font-size: $ruler;
-  border-radius: $ruler*20;
-  padding: $ruler;
-  background-color:$color-bg;
-  text-shadow: 1px 1px 0 $color-white;
+.shadow {
+	text-shadow: 6px 6px $shadow;
 }
 
-label {
-  display: block;
-  margin-bottom: $ruler*1.5;
-  width: 100%;
+.stroke-shadow {
+	color: $body;
+	text-shadow: -2px 0 $stroke, 0 -2px $stroke, 2px 0 $stroke, 0 2px $stroke,
+		2px 2px $stroke, -2px -2px $stroke, -2px 2px $stroke, 2px -2px $stroke,
+		6px 6px $shadow;
 }
 
-input {
-  margin-right: $ruler/2;
-  box-shadow:  inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-white;
-  width: 100%;
-  box-sizing: border-box;
-  transition: all 0.2s ease-in-out;
-  appearance: none;
-  -webkit-appearance: none;
+.halftone {
+	position: relative;
 
-  &:focus {
-    box-shadow:  inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
-  }
+	&:after {
+		content: "Hello";
+		background: $halftone repeat;
+		font-size: 15vw;
+		letter-spacing: 6px;
+		left: calc(50% + 6px);
+		position: absolute;
+		top: calc(50% + 6px);
+		transform: translate(-50%, -50%);
+		z-index: -1;
+		@include stroke-width(0);
+		@include background-clip(text);
+		@include fill-color(transparent);
+	}
 }
 
-button {
-  color:#61677C;
-  font-weight: bold;
-  box-shadow: -5px -5px 20px $color-white,  5px 5px 20px $color-shadow;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-  font-weight: 600;
-  
-  &:hover {
-    box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
-  }
-  
-  &:active {
-    box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
-  }
-  
-  .icon {
-    margin-right: $ruler/2;
-  }
-  
-  &.unit {
-    border-radius: $ruler/2;
-    line-height: 0;
-    width: $ruler*3;
-    height: $ruler*3;
-    display:inline-flex;
-    justify-content: center;
-    align-items:center;
-    margin: 0 $ruler/2;
-    font-size: $ruler*1.2;
-    
-    .icon {
-      margin-right: 0; 
-    }
-  }
-  
-  &.red {
-    display: block;
-    width: 100%;
-    color:$color-red;
-  }
+.halftone-color {
+	&:after {
+		background-color: $shadow;
+	}
 }
 
-.input-group {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  
-  label {
-    margin: 0;
-    flex: 1;
-  }
+body {
+	background-color: $body;
+	display: grid;
+	height: 100vh;
+	place-content: center;
+	text-align: center;
+
+	p {
+		font-size: 15vw;
+		font-weight: bold;
+		letter-spacing: 5px;
+		margin: 0;
+	}
+
+	.grid {
+		display: grid;
+		grid-gap: 5vw;
+		grid-template-columns: 1fr;
+
+		@media screen and (min-width: 768px) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
 }

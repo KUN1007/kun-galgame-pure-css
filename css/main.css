@@ -47,9 +47,8 @@
 .aside {
   /* 侧边栏距离文章区域的距离 */
   margin-right: 5px;
-  width: 1px;
+  width: 240px;
   /* 侧边栏相对于整体可视部分的占比 */
-  flex-grow: 7;
   /* 侧边栏高度 */
   height: 100%;
   /* 设置侧边栏为弹性盒子 */
@@ -123,26 +122,25 @@
 /* 功能区容器 */
 .item-box-container {
   width: 100%;
-  flex-grow: 1;
   /* 设置六个功能（模式、排行、背景等）的容器为弹性 */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  color: rgb(77, 77, 77);
+  color: #676767;
   font-size: small;
+  font-weight: bold;
 }
 /* 六个功能之间的距离 */
 .item-box-container div {
   /* 设置六个功能（模式、排行、背景等）之间的间距 */
-  margin: -15px 5px;
-  padding: 5px;
+  padding: 10px;
 }
 /* 设置六个功能（模式、排行、背景等）的 hover */
 .item-box-container .function:hover {
   color: rgb(33, 33, 33);
-  background-color: rgba(190, 218, 255, 0.9);
-  border-radius: 5px;
+  background-color: rgba(254, 240, 240, 0.3);
+  cursor: pointer;
 }
 /* 
 ----------------------------------
@@ -209,10 +207,12 @@
   /* 单个帖子标题左侧的一段距离 */
   padding-left: 10px;
   /* 设置页面变化时不换行，显示省略号 */
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  /* 标题显示两行、超出部分隐藏 */
+  overflow: hidden; /* 超出部分隐藏 */
+  text-overflow: ellipsis; /* 显示省略号 */
+  display: -webkit-box; /* 将文本框转化为弹性伸缩盒子 */
+  -webkit-box-orient: vertical; /* 设置为纵向排列 */
+  -webkit-line-clamp: 2; /* 显示两行文本 */
   /* 设置帖子的字体大小 */
   font-size: smaller;
 }
@@ -294,10 +294,11 @@
   /* 单个帖子标题左侧的一段距离 */
   padding-left: 10px;
   /* 设置页面变化时不换行，显示省略号 */
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  overflow: hidden; /* 超出部分隐藏 */
+  text-overflow: ellipsis; /* 显示省略号 */
+  display: -webkit-box; /* 将文本框转化为弹性伸缩盒子 */
+  -webkit-box-orient: vertical; /* 设置为纵向排列 */
+  -webkit-line-clamp: 2; /* 显示两行文本 */
   /* 设置帖子的字体大小 */
   font-size: smaller;
 }
@@ -333,7 +334,7 @@
 .article {
   width: 1px;
   /* 文章区域相对于可视区域的占比 */
-  flex-grow: 15;
+  flex-grow: 1;
   /* 文章区域高度 */
   height: 100%;
 }

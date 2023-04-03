@@ -116,6 +116,9 @@
   color: rgb(77, 77, 77);
   font-size: small;
 }
+.footer-catalog-wrap ul li {
+  margin: 5px 0;
+}
 .footer-catalog-wrap ul li a {
   flex-grow: 1;
   color: rgb(77, 77, 77);
@@ -135,6 +138,7 @@
 .kungalgame-contact {
   width: 180px;
   margin: 0 auto;
+  margin-bottom: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,4 +182,7 @@
 /* 网站描述 */
 .kungalgame-describe {
   max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -4,13 +4,18 @@
 }
 /* 顶部固定交互栏 */
 .header {
-  height: 1px;
-  flex-grow: 1;
+  top: 0;
+  flex-grow: 0;
+  height: 58px;
+  position: sticky;
+  z-index: 1007;
+    /* 设置可视区域内容不覆盖顶部 shadow */
+    margin-bottom: 10px;
 }
 /* 下面帖子详情区的容器 */
 .topic-wrapper {
   height: 1px;
-  flex-grow: 33;
+  flex-grow: 1;
   display: flex;
 }
 /* 下方可视内容区的容器 */
@@ -19,16 +24,22 @@
   height: 100%;
   margin: 0 auto;
   display: flex;
-  /* 设置可视区域内容不覆盖顶部 shadow */
-  margin-top: 10px;
+  /* 设置背景的毛玻璃效果 */
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.5);
+  /* 设置背景边框和圆角 */
+  border-radius: 5px;
+  padding: 5px;
+  box-sizing: border-box;
 }
 /* 左侧内容区 */
 .content-left-part {
+  top: 73px;
+  position: sticky;
   /* 左侧区域的总高度 */
-  height: 700px;
-  /* 左侧区域上下两部分的比例 */
-  width: 1px;
-  flex-grow: 1;
+  height: 1000px;
+  /* 左侧区域宽度 */
+  width: 250px;
   /* 左侧内容区为弹性盒，方便分成上下两部分 */
   display: flex;
   flex-direction: column;
@@ -38,7 +49,7 @@
 /* 相同标签下的其它帖子 */
 .same-tag-topic {
   height: 1px;
-  flex-grow: 1;
+  flex-grow: 4;
   width: 100%;
   /* 上方区域的配色 */
   border: 1px solid rgba(165, 216, 255, 0.5);
@@ -110,7 +121,7 @@
 .master-other-topic {
   width: 100%;
   height: 1px;
-  flex-grow: 1;
+  flex-grow: 4;
   /* 上方区域的配色 */
   border: 1px solid rgba(255, 162, 255, 0.5);
   border-radius: 5px;
@@ -172,6 +183,80 @@
   border-bottom: 1px solid rgba(255, 162, 255, 0.5);
   /* 水平居中 */
   justify-content: center;
+}
+/* ----------------------------------- */
+/* 帖子详情页的交互 */
+.topic-page-nav {
+  top: 73px;
+  position: sticky;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  /* 左边第一个部分的边 */
+  border: 1px solid rgba(255, 96, 96, 0.5);
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+  /* 距离顶部的距离 */
+  margin-bottom: 17px;
+  /* 隐藏溢出的边角 */
+  overflow: hidden;
+}
+/* 两个列表的容器 */
+.topic-page-nav-container {
+  flex-grow: 1;
+  display: flex;
+  background-color: rgba(255, 255, 225, 0.5);
+}
+/* 两列的无序列表 */
+.topic-page-nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+.topic-page-nav ul:nth-child(1) {
+  border-right: 1px dashed #d6caff;
+  box-sizing: border-box;
+}
+/* 每个功能 */
+.topic-page-nav ul li {
+  padding: 0 11px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px dashed #d6caff;
+  box-sizing: border-box;
+  /* 页面变化时不换行 */
+  overflow: hidden;
+  white-space: nowrap;
+}
+.topic-page-nav ul li i {
+  margin-right: 4px;
+  font-size: 17px;
+}
+/* 功能区 hover */
+.topic-page-nav ul li::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background-color: rgba(255, 124, 124, 0.5);
+  z-index: -1;
+  transition: transform .3s ease;
+}
+.topic-page-nav ul:nth-child(1) li:nth-child(1):before {
+  background-color: rgb(252, 0, 0);
+}
+.topic-page-nav ul li:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 /* ----------------------------------- */
 /* 右侧内容区 */

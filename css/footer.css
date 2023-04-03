@@ -156,6 +156,9 @@
 }
 .kungalgame-contact ul li {
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* 版权描述,版本号 */
 .kungalgame-footer-copyright {

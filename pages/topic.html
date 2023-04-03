@@ -9,6 +9,7 @@
     <link href="../fa/css/fontawesome.css" rel="stylesheet" />
     <link href="../fa/css/brands.css" rel="stylesheet" />
     <link href="../fa/css/solid.css" rel="stylesheet" />
+    <link href="../fa/css/regular.css" rel="stylesheet" />
     <!-- 引入头部样式 -->
     <link rel="stylesheet" href="../css/header.css" />
     <!-- 引入内容区的样式 -->
@@ -28,7 +29,14 @@
         display: flex;
         min-height: 1920px;
         flex-direction: column;
-        min-width: 920px;
+        min-width: 1030px;
+        position: relative;
+        /* 背景图片 */
+/*         background-image: url(../img/bg.png); */
+/*         background-image: url(../img/bg-dark.png); */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
       }
     </style>
   </head>
@@ -69,6 +77,22 @@
         <div class="content-wrapper">
           <!-- 左侧内容区 -->
           <div class="content-left-part">
+            <!-- 帖子详情页的交互 -->
+            <div class="topic-page-nav">
+              <!-- 交互区容器 -->
+              <div class="topic-page-nav-container">
+                <ul>
+                  <li><i class="fa-solid fa-people-group fa-bounce"></i>进入帖子池</li>
+                  <li><i class="fa-solid fa-arrows-up-to-line"></i>返回到顶端</li>
+                  <li><i class="fa-solid fa-house"></i>返回到首页</li>
+                </ul>
+                <ul>
+                  <li><i class="fa-regular fa-clock"></i>按时间排序</li>
+                  <li><i class="fa-regular fa-thumbs-up"></i>按点赞排序</li>
+                  <li><i class="fa-regular fa-comment-dots"></i>按回复排序</li>
+                </ul>
+              </div>
+            </div>
             <!-- 相同标签下的其它帖子 -->
             <div class="same-tag-topic">
               <ul>
@@ -204,12 +228,6 @@
                       <!-- 回复 -->
                       <li>
                         <a href="#"><i class="fa-solid fa-reply"></i></a>
-                      </li>
-                      <!-- 评论 -->
-                      <li>
-                        <a href="#"
-                          ><i class="fa-regular fa-comment-dots"></i
-                        ></a>
                       </li>
                       <!-- 只看 -->
                       <li>

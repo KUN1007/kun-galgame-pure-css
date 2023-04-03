@@ -561,7 +561,7 @@
 /* 设置点赞、评论、查看字体和位置 */
 .topic-status ul {
   display: flex;
-  color: rgb(153, 153, 153);
+  color: rgb(77, 77, 77);
   font-size: smaller;
 }
 /* 点赞、评论、查看之间的距离 */

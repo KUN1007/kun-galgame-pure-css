@@ -195,7 +195,7 @@
   flex-direction: column;
   align-items: center;
   /* 楼主帖子距离其它人帖子的距离 */
-  margin-bottom: 17px;
+  margin-bottom: 5px;
 }
 /* 楼主标志位置 */
 .master-topic-floor {
@@ -299,6 +299,8 @@
   font-size: small;
   padding: 2px;
   background-color: #f4f9ff;
+  overflow: hidden;
+  white-space: nowrap;
   border-radius: 5px;
 }
 /* 发帖时间 */
@@ -309,6 +311,9 @@
   font-size: small;
   /* 文字间距 */
   letter-spacing: 1px;
+  /* 窗口缩小不换行 */
+  overflow: hidden;
+  white-space: nowrap;
 }
 /* 沙漏的样式 */
 .master-topic-time i {
@@ -325,82 +330,227 @@
   height: 1px;
   flex-grow: 1;
   display: flex;
+  border-bottom: 1px solid #4d4d4d;
+  box-sizing: border-box;
 }
 /* 内容区左侧楼主的信息 */
 .master-topic-content-center-left {
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
 }
 /* 楼主的头像 */
-.master-avatar {}
+.master-avatar {
+  margin-top: 17px;
+}
+/* 楼主的等级 */
+.master-rank {
+  font-size: 10px;
+  position: absolute;
+  margin-left: 90px;
+}
 /* 楼主的头像图片 */
 .master-avatar img {
   width: 100px;
 }
-/* 楼主的等级 */
-.master-rank {}
 /* 楼主的名字 */
-.master-name {}
+.master-name {
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  margin-top: 17px;
+}
 /* 楼主的萌萌点 */
-.master-moemoepoint {}
+.master-moemoepoint {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
 /* 内容区右侧的帖子展示区 */
-.master-topic-content-center-right {}
+.master-topic-content-center-right {
+  font-size: 15px;
+}
 /* 内容区的底部 */
 .master-topic-content-bottom {
   width: 100%;
   height: 20px;
-  background-color: rgb(104, 120, 225);
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid #4d4d4d;
+}
+/* 内容区域下方字体样式 */
+.master-topic-content-bottom  span {
+  margin-right: 10px;
+  font-size: 12px;
 }
 /* 楼主帖子底部 */
 .master-topic-footer {
   width: 100%;
   height: 50px;
-  background-color: seashell;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 /* 底部左侧部分（点赞、推贴、踩） */
-.master-topic-footer-left {
+.master-topic-footer-left ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 单个图标 */
+.master-topic-footer-left ul li {
+  margin-left: 10px;
+}
+.master-topic-footer-left ul li a {
+  color: #4d4d4d;
 }
 /* 底部右侧部分（回复、评论、只看、编辑） */
-.master-topic-footer-right {
+.master-topic-footer-right ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
 }
+.master-topic-footer-right ul li {
+  margin-right: 10px;
+}
+.master-topic-footer-right ul li a {
+  color: #4d4d4d;
+}
+/* ----------------------------------- */
 /* 其它人的回帖 */
 .other-topic-container {
   width: 100%;
   height: 1px;
-  background-color: yellow;
   flex-grow: 1;
-}
-/* 其它人的回帖 */
-.other-topic-container {
-  width: 100%;
-  height: 1px;
-  flex-grow: 1;
-  background-color: chartreuse;
   display: flex;
   flex-direction: column;
-}
-/* 其它人回帖的头部 */
-.other-topic-header {
-  width: 100%;
-  height: 70px;
-  background-color: mediumslateblue;
+  justify-content: center;
+  align-items: center;
 }
 /* 其它人的楼层 */
 .other-topic-floor {
+  /* 标志在最左边 */
+  margin-left: 100%;
+  /* 定位 */
+  margin-bottom: -25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 位于内容上方 */
+  z-index: 1;
+}
+/* 其他人的楼层样式 */
+.other-btn {
+border: none;
+/* 大小 */
+width: 50px;
+height: 50px;
+border-radius: 50%;
+background: linear-gradient(#f8d1ff, #cbedff);
+font-size: 20px;
+font-weight: bold;
+font-style: oblique;
+color: #ffd3d3;
+text-shadow: -1px 0 #0051ff, 0 -1px #0051ff, 1px 0 #0051ff, 0 1px #0051ff,
+  1px 1px #111827, -1px -1px #111827, -1px 1px #111827, 1px -1px #111827,
+  4px 2px 2px #db2777;
+}
+/* 其他人帖子内容区容器 */
+.other-topic-content-container {
+  width: 100%;
+  height: 1px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid  #4d4d4d;
+  border-radius: 5px;
 }
 /* 其它人回帖的内容区 */
 .other-topic-content {
   width: 100%;
   height: 1px;
-  background-color: yellow;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
-/* 其它人回帖的左侧区域 */
-.other-topic-left {
+/* 其他人回帖的上部 */
+.other-topic-content-top {
+  display: flex;
 }
-/* 其它人回帖的右侧区域 */
-.other-topic-right {
+/* 其它人回帖的上部左侧区域 */
+.other-topic-content-left {
+  padding: 0 20px;
 }
+/* 其他人的头像 */
+.other-avatar {
+  margin-top: 17px;
+}
+/* 其他人的头像图片 */
+.other-avatar img {
+  width: 100px;
+}
+/* 其他人的等级 */
+.other-rank {
+  font-size: 10px;
+  position: absolute;
+  margin-left: 90px;
+}
+/* 其他人的名字 */
+.other-name {
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  margin-top: 17px;
+}
+/* 其他人的萌萌点 */
+.other-moemoepoint {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+/* 其它人回帖的上部右侧区域 */
+.other-topic-content-right {
+  display: flex;
+  flex-direction: column;
+}
+/* 右侧的上部区域 */
+.other-topic-content-right-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* 上部区域的左边 */
+.other-topic-content-right-top-left {
+  font-size: 12px;
+}
+/* 上部区域的右边 */
+.other-topic-content-right-top-right {
+  font-size: 10px;
+}
+.other-topic-content-right-top-right span {
+  margin-right: 30px;
+}
+/* 右侧部分分文本 */
+.other-topic-content-right-text {}
+/* 其他人回帖的下部 */
+.other-topic-content-bottom {}
+/* 其他人回帖的下部分左侧 */
+.other-topic-content-bottom-left {}
+/* 其他人回帖的下部分右侧 */
+.other-topic-content-bottom-right {}
+/* 其他人回帖的时间 */
+.other-topic-time {}
+/* 其它人回帖的底部 */
+.other-topic-footer {}
+/* 顶部的点赞、推贴等 */
+.other-topic-footer-top {}
+/* 点赞、推贴、踩 */
+.other-topic-footer-top-left {}
+/* 回复、评论、编辑 */
+.other-topic-footer-top-right {}
+/* 底部的评论 */
+.other-topic-footer-bottom {}
 /* 其它人回帖的底部 */
 .other-topic-footer {
   width: 100%;

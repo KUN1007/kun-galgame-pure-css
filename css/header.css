@@ -1,3 +1,7 @@
+:root {
+  /* blue */
+  --kungalgame-blue:#0969da;
+}
 /* 头部样式 */
 .header {
   height: 1px;
@@ -59,7 +63,7 @@
   width: 100%;
 }
 .top-bar ul li a {
-  color: rgb(70, 100, 180);
+  color: var(--kungalgame-blue);
   font-weight: bold;
   display: block;
   width: 100%;

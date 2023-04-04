@@ -32,14 +32,16 @@
         display: flex;
         min-height: 1920px;
         flex-direction: column;
-        min-width: 1030px;
+        min-width: 1040px;
         position: relative;
         /* 背景图片 */
-        /*         background-image: url(../img/bg.png); */
+        background-image: url(../img/bg.png);
         /*         background-image: url(../img/bg-dark.png); */
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        font-family: PingFang SC, HarmonyOS_Regular, Helvetica Neue,
+          Microsoft YaHei, sans-serif !important;
       }
     </style>
   </head>
@@ -219,6 +221,12 @@
                   <!-- 底部左侧部分（点赞、推贴、踩） -->
                   <div class="master-topic-footer-left">
                     <ul>
+                      <!-- 推贴 -->
+                      <li>
+                        <a href="#"
+                          ><i class="fa-regular fa-hand-point-up"></i
+                        ></a>
+                      </li>
                       <!-- 点赞 -->
                       <li>
                         <a href="#"><i class="fa-regular fa-thumbs-up"></i></a>
@@ -229,17 +237,20 @@
                           ><i class="fa-regular fa-thumbs-down"></i
                         ></a>
                       </li>
-                      <!-- 推贴 -->
-                      <li>
-                        <a href="#"
-                          ><i class="fa-regular fa-hand-point-up"></i
-                        ></a>
-                      </li>
                     </ul>
                   </div>
                   <!-- 底部右侧部分（回复、评论、只看、编辑） -->
                   <div class="master-topic-footer-right">
                     <ul>
+                      <li>
+                        <div class="kungalgame-reply-btn">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                          回帖
+                        </div>
+                      </li>
                       <!-- 回复 -->
                       <li>
                         <a href="#"><i class="fa-solid fa-reply"></i></a>
@@ -344,6 +355,12 @@
                       <!-- 点赞、推贴、踩 -->
                       <div class="other-topic-footer-top-left">
                         <ul>
+                          <!-- 推贴 -->
+                          <li>
+                            <a href="#"
+                              ><i class="fa-regular fa-hand-point-up"></i
+                            ></a>
+                          </li>
                           <!-- 点赞 -->
                           <li>
                             <a href="#"
@@ -356,17 +373,21 @@
                               ><i class="fa-regular fa-thumbs-down"></i
                             ></a>
                           </li>
-                          <!-- 推贴 -->
-                          <li>
-                            <a href="#"
-                              ><i class="fa-regular fa-hand-point-up"></i
-                            ></a>
-                          </li>
                         </ul>
                       </div>
                       <!-- 回复、评论、编辑 -->
                       <div class="other-topic-footer-top-right">
                         <ul>
+                          <!-- 回复按钮 -->
+                          <li>
+                            <div class="kungalgame-reply-btn">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              回帖
+                            </div>
+                          </li>
                           <!-- 回复 -->
                           <li>
                             <a href="#"><i class="fa-solid fa-reply"></i></a>
@@ -597,6 +618,12 @@
                       <!-- 点赞、推贴、踩 -->
                       <div class="other-topic-footer-top-left">
                         <ul>
+                          <!-- 推贴 -->
+                          <li>
+                            <a href="#"
+                              ><i class="fa-regular fa-hand-point-up"></i
+                            ></a>
+                          </li>
                           <!-- 点赞 -->
                           <li>
                             <a href="#"
@@ -609,17 +636,21 @@
                               ><i class="fa-regular fa-thumbs-down"></i
                             ></a>
                           </li>
-                          <!-- 推贴 -->
-                          <li>
-                            <a href="#"
-                              ><i class="fa-regular fa-hand-point-up"></i
-                            ></a>
-                          </li>
                         </ul>
                       </div>
                       <!-- 回复、评论、编辑 -->
                       <div class="other-topic-footer-top-right">
                         <ul>
+                          <!-- 回复按钮 -->
+                          <li>
+                            <div class="kungalgame-reply-btn">
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              <span></span>
+                              回帖
+                            </div>
+                          </li>
                           <!-- 回复 -->
                           <li>
                             <a href="#"><i class="fa-solid fa-reply"></i></a>

@@ -9,7 +9,7 @@
   /* blue */
   --kungalgame-blue: #0969da;
   /* light-blue */
-  --kungalgame-light-blue:#409eff;
+  --kungalgame-light-blue: #409eff;
   /* red */
   --kungalgame-red: #f56c6c;
   /* green */
@@ -17,7 +17,7 @@
   /* yellow */
   --kungalgame-yellow: #e6a23c;
   /* 文字基本颜色 */
-  --kungalgame-main-font-color:var(--kungalgame-main-font-color);
+  --kungalgame-main-font-color: var(--kungalgame-main-font-color);
 }
 /* 顶部固定交互栏 */
 .header {
@@ -573,7 +573,7 @@
   font-size: 20px;
 }
 .master-topic-footer-right ul li:nth-child(2) a {
-  color: var(--kungalgame-red)
+  color: var(--kungalgame-red);
 }
 /* button 的容器 li */
 .master-topic-footer-right ul li:nth-child(1) {
@@ -614,7 +614,8 @@
   0% {
     left: -100%;
   }
-  50%, 100% {
+  50%,
+  100% {
     left: 100%;
   }
 }
@@ -624,7 +625,11 @@
   right: 0;
   width: 3px;
   height: 100%;
-  background: linear-gradient(180deg, transparent, var(--kungalgame-light-blue));
+  background: linear-gradient(
+    180deg,
+    transparent,
+    var(--kungalgame-light-blue)
+  );
   animation: animate2 1s linear infinite;
   animation-delay: 0.25s;
 }
@@ -632,7 +637,8 @@
   0% {
     top: -100%;
   }
-  50%, 100% {
+  50%,
+  100% {
     top: 100%;
   }
 }
@@ -641,7 +647,11 @@
   bottom: 0;
   right: 0;
   width: 100%;
-  background: linear-gradient(270deg, transparent, var(--kungalgame-light-blue));
+  background: linear-gradient(
+    270deg,
+    transparent,
+    var(--kungalgame-light-blue)
+  );
   animation: animate3 1s linear infinite;
   animation-delay: 0.5s;
 }
@@ -650,7 +660,8 @@
     right: -100%;
     height: 3px;
   }
-  50%, 100% {
+  50%,
+  100% {
     height: 2px;
     right: 100%;
   }
@@ -661,7 +672,11 @@
   left: 0;
   width: 3px;
   height: 100%;
-  background: linear-gradient(360deg, transparent, var(--kungalgame-light-blue));
+  background: linear-gradient(
+    360deg,
+    transparent,
+    var(--kungalgame-light-blue)
+  );
   animation: animate4 1s linear infinite;
   animation-delay: 0.75s;
 }
@@ -669,7 +684,8 @@
   0% {
     bottom: -100%;
   }
-  50%, 100% {
+  50%,
+  100% {
     bottom: 100%;
   }
 }
@@ -921,7 +937,7 @@
   font-size: 20px;
 }
 .other-topic-footer-top-right ul li:nth-child(2) a {
-  color: var(--kungalgame-red)
+  color: var(--kungalgame-red);
 }
 /* 底部的评论 */
 .other-topic-footer-bottom {

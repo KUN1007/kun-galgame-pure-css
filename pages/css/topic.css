@@ -1,6 +1,11 @@
 :root {
+  /* 基本阴影 */
   --shadow: 0 1px 2px hsla(0, 0%, 0%, 0.05), 0 1px 4px hsla(0, 0%, 0%, 0.05),
     0 2px 8px hsla(0, 0%, 0%, 0.05);
+  /* 基本分割线 */
+  --separate: #d3d3d3;
+  /* 基本 border */
+  --border: #b5b5b5;
 }
 /* 顶部固定交互栏 */
 .header {
@@ -9,8 +14,8 @@
   height: 58px;
   position: sticky;
   z-index: 1007;
-    /* 设置可视区域内容不覆盖顶部 shadow */
-    margin-bottom: 10px;
+  /* 设置可视区域内容不覆盖顶部 shadow */
+  margin-bottom: 10px;
 }
 /* 下面帖子详情区的容器 */
 .topic-wrapper {
@@ -26,7 +31,7 @@
   display: flex;
   /* 设置背景的毛玻璃效果 */
   backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   /* 设置背景边框和圆角 */
   border-radius: 5px;
   padding: 5px;
@@ -253,17 +258,20 @@
   font-size: 17px;
 }
 /* 功能区 hover */
-.topic-page-nav ul li::before {  
+.topic-page-nav ul li::before {
   transform: scaleX(0);
   transform-origin: bottom right;
   content: " ";
   display: block;
   position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   inset: 0 0 0 0;
   background-color: rgba(255, 76, 76, 0.5);
   z-index: -1;
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
 }
 .topic-page-nav ul:nth-child(1) li:nth-child(1):before {
   background-color: rgb(252, 0, 0);
@@ -288,7 +296,7 @@
 .master-topic-container {
   width: 100%;
   /* 楼主帖子最小高度 */
-/*   TODO: */
+  /*   TODO: */
   min-height: 400px;
   max-height: 700px;
   flex-grow: 1;
@@ -297,6 +305,12 @@
   align-items: center;
   /* 楼主帖子距离其它人帖子的距离 */
   margin-bottom: 5px;
+  /* TODO: */
+  /* 楼主帖子背景图 */
+  background-image: url(../../img/bg-dark.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 /* 楼主标志位置 */
 .master-topic-floor {
@@ -333,8 +347,11 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  border: 1px solid #4d4d4d;
-  border-radius: 5px;
+  border: 1px solid var(--border);
+  border-radius: 5px;  overflow: hidden;
+  box-shadow: var(--shadow);
+  background-color: rgba(255, 255, 255, 0.77);
+  box-sizing: border-box;
 }
 /* 楼主帖子头部 */
 .master-topic-header {
@@ -345,7 +362,7 @@
   justify-content: center;
   color: #4d4d4d;
   font-size: 17px;
-  border-bottom: 1px solid #4d4d4d;
+  border-bottom: 1px solid var(--border);
   box-sizing: border-box;
 }
 /* 楼主帖子标题 */
@@ -376,7 +393,7 @@
   /* 时间和标签分居两侧 */
   justify-content: space-between;
   /* 下面的分割线 */
-  border-bottom: 1px solid #4d4d4d;
+  border-bottom: 1px solid var(--border);
   box-sizing: border-box;
 }
 /* 帖子的标签 */
@@ -403,6 +420,11 @@
   overflow: hidden;
   white-space: nowrap;
   border-radius: 5px;
+  cursor: pointer;
+}
+.master-topic-tags ul li:hover {
+  background-color: #d8e8fc;
+  transition: 0.2s;
 }
 /* 发帖时间 */
 .master-topic-time {
@@ -431,7 +453,7 @@
   height: 1px;
   flex-grow: 1;
   display: flex;
-  border-bottom: 1px solid #4d4d4d;
+  border-bottom: 1px solid var(--border);
   box-sizing: border-box;
 }
 /* 内容区左侧楼主的信息 */
@@ -470,19 +492,31 @@
 /* 内容区右侧的帖子展示区 */
 .master-topic-content-center-right {
   font-size: 15px;
+  padding: 17px;
+  border-left: 1px solid var(--border);
 }
 /* 内容区的底部 */
 .master-topic-content-bottom {
   width: 100%;
   height: 20px;
   display: flex;
-  justify-content: flex-end;
-  border-bottom: 1px solid #4d4d4d;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
 }
 /* 内容区域下方字体样式 */
 .master-topic-content-bottom span {
-  margin-right: 10px;
+  margin: 0 10px;
   font-size: 12px;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 帖子状态 */
+.master-topic-content-bottom span span {
+  background-color: #67c23a;
+  color: #fff;
 }
 /* 楼主帖子底部 */
 .master-topic-footer {
@@ -566,8 +600,9 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  border: 1px solid #4d4d4d;
+  border: 1px solid var(--border);
   border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.77);
 }
 /* 其它人回帖的内容区 */
 .other-topic-content {
@@ -624,20 +659,30 @@
   justify-content: space-between;
   align-items: center;
   margin: 10px 0;
+  letter-spacing: 1px;
 }
 /* 上部区域的左边 */
 .other-topic-content-right-top-left {
   font-size: 17px;
 }
+/* 被回复的人 */
+.other-topic-content-right-top-left span a {
+  color: #0080ff;
+}
+.other-topic-content-right-top-left span a:hover {
+  text-decoration: underline;
+}
 /* 上部区域的右边 */
 .other-topic-content-right-top-right {
-  font-size: 15px;
+  font-size: 12px;
 }
 .other-topic-content-right-top-right span {
   margin-right: 30px;
 }
 /* 右侧部分分文本 */
 .other-topic-content-right-text {
+  padding: 7px;
+  border-left: 1px solid var(--border);
   font-size: 15px;
 }
 /* 其他人回帖的下部 */
@@ -645,7 +690,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #4d4d4d;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 7px;
 }
 /* 其他人回帖的下部分左侧 */
 .other-topic-content-bottom-left {
@@ -673,6 +719,11 @@
   overflow: hidden;
   white-space: nowrap;
   border-radius: 5px;
+  cursor: pointer;
+}
+.other-topic-content-bottom-left ul li:hover {
+  background-color: #d8e8fc;
+  transition: 0.2s;
 }
 /* 其他人回帖的下部分右侧 */
 .other-topic-content-bottom-right {
@@ -782,7 +833,8 @@
   font-size: 15px;
 }
 /* 顶部吧右侧点赞、踩 */
-.single-comment-right {}
+.single-comment-right {
+}
 .single-comment-right ul {
   display: flex;
   align-items: center;

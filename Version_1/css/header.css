@@ -80,7 +80,7 @@
 }
 .top-bar ul li:nth-child(2):hover ~ .top-bar-box {
   left: calc(100% / 4 * 1);
-  background-color: #e6a23c;
+  background-color: #ffb900;
 }
 .top-bar ul li:nth-child(3):hover ~ .top-bar-box {
   left: calc(100% / 4 * 2);

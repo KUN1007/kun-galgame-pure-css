@@ -61,15 +61,14 @@
 }
 .top-bar ul li {
   width: 100%;
-}
-.top-bar ul li a {
   color: var(--kungalgame-blue);
   font-weight: bold;
   display: block;
   width: 100%;
   line-height: 58px;
+  cursor: pointer;
 }
-.top-bar ul li a:hover {
+.top-bar ul li:hover {
   background-color: #ecf3ff;
   transition: 0.5s;
   border-radius: 2px;

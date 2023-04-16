@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .flex-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 0; /* 确保父元素可以自适应子元素的高度 */
+      }
+
+      .flex-child {
+        flex-shrink: 0; /* 防止子元素缩小 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-child">子元素 1</div>
+      <div class="flex-child">子元素 2</div>
+      <div class="flex-child">子元素 3</div>
+    </div>
+  </body>
+</html>

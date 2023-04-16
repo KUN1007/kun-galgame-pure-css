@@ -5,7 +5,7 @@
   /* 基本分割线 */
   --separate: #d3d3d3;
   /* 基本 border */
-  --border: #b5b5b5;
+  --border: #ffc9c9;
   /* blue */
   --kungalgame-blue: #0969da;
   /* light-blue */
@@ -17,13 +17,11 @@
   /* yellow */
   --kungalgame-yellow: #ffb900;
   /* 文字基本颜色 */
-  --kungalgame-main-font-color: var(--kungalgame-main-font-color);
+  --kungalgame-main-font-color: #3b3b3b;
 }
 /* 顶部固定交互栏 */
 .header {
   top: 0;
-  flex-grow: 0;
-  height: 58px;
   position: sticky;
   z-index: 1007;
   /* 设置可视区域内容不覆盖顶部 shadow */
@@ -31,9 +29,8 @@
 }
 /* 下面帖子详情区的容器 */
 .topic-wrapper {
-  height: 1px;
-  flex-grow: 1;
   display: flex;
+  flex-shrink: 0;
 }
 /* 下方可视内容区的容器 */
 .content-wrapper {
@@ -311,8 +308,6 @@
   /* 楼主帖子最小高度 */
   /*   TODO: */
   min-height: 400px;
-  max-height: 700px;
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -334,6 +329,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   /* 位于内容上方 */
   z-index: 1;
 }
@@ -360,7 +356,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex-shrink: 0;
   border: 1px solid var(--border);
   border-radius: 5px;
   overflow: hidden;
@@ -394,9 +390,8 @@
 /* 楼主帖子内容区 */
 .master-topic-content {
   width: 100%;
-  height: 1px;
-  flex-grow: 10;
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
 }
 /* 内容区的顶部 */
@@ -465,9 +460,8 @@
 /* 内容区的中部 */
 .master-topic-content-center {
   width: 100%;
-  height: 1px;
-  flex-grow: 1;
   display: flex;
+  flex-shrink: 0;
   border-bottom: 1px solid var(--border);
   box-sizing: border-box;
 }
@@ -695,9 +689,9 @@
 .other-topic-container,
 .other-topic-single-container {
   width: 100%;
-  height: 1px;
-  flex-grow: 1;
+  min-height: 300px;
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -734,9 +728,8 @@
 /* 其他人帖子内容区容器 */
 .other-topic-content-container {
   width: 100%;
-  height: 1px;
-  flex-grow: 1;
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
   border: 1px solid var(--border);
   border-radius: 5px;
@@ -746,9 +739,8 @@
 /* 其它人回帖的内容区 */
 .other-topic-content {
   width: 100%;
-  height: 1px;
-  flex-grow: 1;
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
 }
 /* 其他人回帖的上部 */
@@ -811,6 +803,7 @@
 }
 .other-topic-content-right-top-left span a:hover {
   text-decoration: underline;
+  text-decoration-thickness:2px;
 }
 /* 上部区域的右边 */
 .other-topic-content-right-top-right {

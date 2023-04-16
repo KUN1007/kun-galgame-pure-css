@@ -365,9 +365,7 @@
 /* 文章顶部交互栏 */
 .nav-article {
   width: 100%;
-  height: 1px;
-  /* 交互栏相对于整个文章区域的占比 */
-  flex-grow: 1;
+  height: 50px;
   /* 设置交互栏的下边距 */
   margin-bottom: 5px;
   /* 整体弹性 */
@@ -415,20 +413,32 @@
 .topic-container {
   /* 帖子区域占文章总区域的宽度 */
   width: 98%;
-  height: 1px;
-  /* 帖子区域占文章总区域的比例 */
-  flex-grow: 30;
+  min-height: 1150px;
+  overflow-y: scroll;
   /* 所有帖子的总区域占左侧页面的下边距 */
   margin-bottom: 5px;
   /* 帖子区域弹性盒 */
   display: flex;
   flex-direction: column;
 }
+/* 帖子区滚动条 */
+.topic-container::-webkit-scrollbar {
+  display: inline;
+  width: 4px;
+  height: 0;
+  background-color: #aaa;
+  border-radius: 2px;
+}
+.topic-container::-webkit-scrollbar-thumb {
+  background: #0099ff;
+  border-radius: 2px;
+}
 /* 单个帖子 */
 .topic {
   width: 100%;
-  height: 1px;
+  height: 70px;
   flex-grow: 1;
+  flex-shrink: 0;
   border-radius: 3px;
   background-color: rgb(255, 255, 255);
   margin-bottom: 3px;
@@ -592,12 +602,10 @@
   flex-grow: 2;
   display: flex;
   align-items: center;
-  /* 文本区域距离发帖人信息的距离 */
-  margin-left: 10px;
 }
 /* 文本域盒子 */
 .topic-introduction-text {
-  width: 95%;
+  width: 100%;
   /* 设置文本超过两行就显示省略号 */
   overflow: hidden;
   text-overflow: ellipsis;

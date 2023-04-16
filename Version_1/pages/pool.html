@@ -1,13 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>帖子池</title>
-    <link rel="stylesheet" href="./css/pool.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="./css/pool.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <style>
+      * {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+      }
+      *::-webkit-scrollbar {
+        display: none;
+      }
+      .container{
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <!-- 头部 -->
+      <div class="header">
+        <!-- 顶部左侧交互栏 -->
+        <div class="nav-top">
+          <div class="kungal-info">
+            <a href="#"><img src="../img/favicon.png" alt="KUNgal" /></a>
+            <a href="#"><span>KUNgal</span></a>
+          </div>
+          <div class="top-bar">
+            <ul>
+              <li>回到主页</li>
+              <li>帖子发布</li>
+              <li>技术交流</li>
+              <li>数据统计</li>
+              <div class="top-bar-box"></div>
+            </ul>
+          </div>
+        </div>
+        <!-- 顶部全局搜索框 -->
+        <div class="top-search-bar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <!-- 用户个人信息 -->
+        <div class="kungalgamer-info">
+          <a href="#"><img src="../img/KUN.jpg" alt="KUN" /></a>
+          <span>KUN</span>
+        </div>
+      </div>
+      <div class="container">
+        <div class="pool-nav-bar"></div>
+        <div class="content-container">
+            <div class="singel-topic-container"></div>
+            <div class="singel-topic-container"></div>
+            <div class="singel-topic-container"></div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

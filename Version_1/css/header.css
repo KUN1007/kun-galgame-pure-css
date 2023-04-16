@@ -4,9 +4,8 @@
 }
 /* 头部样式 */
 .header {
-  height: 1px;
-  /* 头部相对于整个网页的占比 */
-  flex-grow: 1;
+  /* 头部高度 */
+  height: 58px;
   /* 头部下方阴影 */
   box-shadow: 0 2px 4px 0 rgba(0, 140, 255, 0.17);
   /* 头部背景 */
@@ -29,6 +28,7 @@
 .kungal-info img {
   height: 50px;
   margin-left: 50px;
+  cursor: pointer;
 }
 /* 网站名称 */
 .kungal-info span {
@@ -36,6 +36,7 @@
   margin-right: 7px;
   color: #242424;
   font-weight: bold;
+  cursor: pointer;
 }
 /* 顶部导航栏 */
 .top-bar {

@@ -1,0 +1,109 @@
+/* 顶部导航栏 */
+.header {
+  margin-bottom: 10px;
+}
+/* 帖子池容器 */
+.pool-container {
+  /* 最小高度 */
+  min-height: 400px;
+  /* 最大宽度 */
+  max-width: 1450px;
+  /* 占页面的宽度比例 */
+  width: 90%;
+  background-color: pink;
+  /* 居中 */
+  margin: 0 auto;
+  display: flex;
+  /* 不收缩 */
+  flex-shrink: 0;
+  /* 竖直方向弹性盒 */
+  flex-direction: column;
+}
+/* 帖子池顶部交互栏 */
+.pool-nav-bar {
+  /* 换行弹性盒 */
+  display: flex;
+  flex-wrap: wrap;
+  /* 居中 */
+  justify-content: center;
+  align-items: center;
+}
+/* 热门帖子标签 */
+.nav-tags {
+  /* 单个标签不换行 */
+  white-space: nowrap;
+  /* 距离其它帖子的距离 */
+  margin: 1px;
+  padding: 2px;
+  background-color: red;
+}
+/* 帖子池内容区容器 */
+.content-container {
+  display: flex;
+}
+/* 帖子池单个帖子列容器 */
+.single-topic-column-container {
+  /* 根据页面宽度增长 */
+  width: 1px;
+  flex-grow: 1;
+  background-color: orange;
+  /* 5 行的行距 */
+  margin: 5px;
+}
+/* 帖子池单个帖子 */
+.single-topic-container {
+  /* 单个帖子的最大高度 */
+  max-height: 700px;
+  /* 单个帖子距下方的距离 */
+  margin-bottom: 7px;
+  /* 竖直方向弹性布局 */
+  display: flex;
+  flex-direction: column;
+  /* 圆角 */
+  border-radius: 7px;
+  background-color: azure;
+  border: 1px solid black;
+}
+/* 帖子的标题 */
+.topic-title {
+  /* 标题显示两行、超出部分隐藏 */
+  overflow: hidden; /* 超出部分隐藏 */
+  text-overflow: ellipsis; /* 显示省略号 */
+  display: -webkit-box; /* 将文本框转化为弹性伸缩盒子 */
+  -webkit-box-orient: vertical; /* 设置为纵向排列 */
+  -webkit-line-clamp: 2; /* 显示两行文本 */
+  /* 居中 */
+  margin: 0 auto;
+}
+/* 帖子的内容区 */
+.topic-content {
+  font-size: 14px;
+  padding: 7px;
+}
+/* 右侧的功能栏 */
+.kungalgame-right-bar {
+  /* 高度 */
+  height: 100px;
+  /* 位置 fix */
+  position: fixed;
+  top: 70%;
+  /* 距离右侧的距离 */
+  right: 2%;
+  z-index: 7;
+  /* 居中 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* 排序 */
+.sort,
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sort i,
+.top i {
+  margin-top: 7px;
+  color: blue;
+}

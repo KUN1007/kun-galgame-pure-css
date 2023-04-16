@@ -5,8 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>帖子池</title>
-    <link rel="stylesheet" href="./css/pool.css" />
+    <!-- 图标字体库 -->
+    <link href="../fa/css/fontawesome.css" rel="stylesheet" />
+    <link href="../fa/css/brands.css" rel="stylesheet" />
+    <link href="../fa/css/solid.css" rel="stylesheet" />
+    <link href="../fa/css/regular.css" rel="stylesheet" />
+    <!-- 头部样式 -->
     <link rel="stylesheet" href="../css/header.css" />
+    <!-- 帖子池样式 -->
+    <link rel="stylesheet" href="./css/pool.css" />
     <style>
       * {
         list-style: none;
@@ -17,47 +24,224 @@
       *::-webkit-scrollbar {
         display: none;
       }
-      .container{
-        background-color: pink;
+      .visual-wrapper {
+        height: 1500px;
+        display: flex;
+        flex-direction: column;
+        /* background-image: url(../img/bg.png); */
+        /* background-image: url(./img/bg-dark.png); */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-width: 700px;
+        font-family: "adobe-clean", "Source Sans Pro", -apple-system,
+          "BlinkMacSystemFont", "Segoe UI,Roboto", sans-serif;
       }
     </style>
   </head>
   <body>
-    <div>
-      <!-- 头部 -->
-      <div class="header">
-        <!-- 顶部左侧交互栏 -->
-        <div class="nav-top">
-          <div class="kungal-info">
-            <a href="#"><img src="../img/favicon.png" alt="KUNgal" /></a>
-            <a href="#"><span>KUNgal</span></a>
+    <div class="content-wrapper">
+      <div class="visual-wrapper">
+        <!-- 头部 -->
+        <div class="header">
+          <!-- 顶部左侧交互栏 -->
+          <div class="nav-top">
+            <div class="kungal-info">
+              <a href="#"><img src="../img/favicon.png" alt="KUNgal" /></a>
+              <a href="#"><span>KUNgal</span></a>
+            </div>
+            <div class="top-bar">
+              <ul>
+                <li>回到主页</li>
+                <li>帖子发布</li>
+                <li>技术交流</li>
+                <li>数据统计</li>
+                <div class="top-bar-box"></div>
+              </ul>
+            </div>
           </div>
-          <div class="top-bar">
-            <ul>
-              <li>回到主页</li>
-              <li>帖子发布</li>
-              <li>技术交流</li>
-              <li>数据统计</li>
-              <div class="top-bar-box"></div>
-            </ul>
+          <!-- 顶部全局搜索框 -->
+          <div class="top-search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <!-- 用户个人信息 -->
+          <div class="kungalgamer-info">
+            <a href="#"><img src="../img/KUN.jpg" alt="KUN" /></a>
+            <span>KUN</span>
           </div>
         </div>
-        <!-- 顶部全局搜索框 -->
-        <div class="top-search-bar">
-          <i class="fa-solid fa-magnifying-glass"></i>
+        <!-- 帖子池容器 -->
+        <div class="pool-container">
+          <!-- 帖子池顶部交互栏 -->
+          <div class="pool-nav-bar">
+            <!-- 热门帖子标签，根据所有帖子的总标签数推断 -->
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+            <div class="nav-tags">啊这可海星</div>
+          </div>
+          <!-- 帖子池内容区容器 -->
+          <div class="content-container">
+            <!-- 帖子池单个帖子列容器 -->
+            <div class="single-topic-column-container">
+              <!-- 单个帖子容器 -->
+              <div class="single-topic-container">
+                <!-- 帖子的标题 -->
+                <div class="topic-title">
+                  啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                </div>
+                <!-- 帖子的内容区 -->
+                <div class="topic-content">
+                  啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                  啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                  啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                  啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                  啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                </div>
+                <!-- 帖子的状态 -->
+                <div class="topic-status">
+                  <!-- 浏览数 -->
+                  <span><i class="fa-regular fa-eye">10007</i></span>
+                  <!-- 点赞数 -->
+                  <span><i class="fa-regular fa-thumbs-up">10007</i></span>
+                </div>
+                <!-- 发帖时间 -->
+                <div class="topic-post-time">
+                  <i class="fa-solid fa-hourglass-half"></i>
+                  <div>2019年10月7日-10:07:00 发布</div>
+                </div>
+              </div>
+              <div class="single-topic-container">
+                <!-- 帖子的标题 -->
+                <div class="topic-title">啊这可海星</div>
+                <!-- 帖子的内容区 -->
+                <div class="topic-content">
+                  啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                  啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                  啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                </div>
+                <!-- 帖子的状态 -->
+                <div class="topic-status">
+                  <!-- 浏览数 -->
+                  <span><i class="fa-regular fa-eye">10007</i></span>
+                  <!-- 点赞数 -->
+                  <span><i class="fa-regular fa-thumbs-up">10007</i></span>
+                </div>
+                <!-- 发帖时间 -->
+                <div class="topic-post-time">
+                  <i class="fa-solid fa-hourglass-half"></i>
+                  <div>2019年10月7日-10:07:00 发布</div>
+                </div>
+              </div>
+            </div>
+            <div class="single-topic-column-container">
+              <!-- 单个帖子容器 -->
+              <div class="single-topic-container">
+                <!-- 帖子的标题 -->
+                <div class="topic-title">
+                  啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                </div>
+                <!-- 帖子的内容区 -->
+                <div class="topic-content">
+                  啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                  啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                  啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                  啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                  啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                  啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                  啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                </div>
+                <!-- 帖子的状态 -->
+                <div class="topic-status">
+                  <!-- 浏览数 -->
+                  <span><i class="fa-regular fa-eye">10007</i></span>
+                  <!-- 点赞数 -->
+                  <span><i class="fa-regular fa-thumbs-up">10007</i></span>
+                </div>
+                <!-- 发帖时间 -->
+                <div class="topic-post-time">
+                  <i class="fa-solid fa-hourglass-half"></i>
+                  <div>2019年10月7日-10:07:00 发布</div>
+                </div>
+              </div>
+              <div class="single-topic-container">
+                <!-- 帖子的标题 -->
+                <div class="topic-title">啊这可海星</div>
+                <!-- 帖子的内容区 -->
+                <div class="topic-content">
+                  啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                  啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                </div>
+                <!-- 帖子的状态 -->
+                <div class="topic-status">
+                  <!-- 浏览数 -->
+                  <span><i class="fa-regular fa-eye">10007</i></span>
+                  <!-- 点赞数 -->
+                  <span><i class="fa-regular fa-thumbs-up">10007</i></span>
+                </div>
+                <!-- 发帖时间 -->
+                <div class="topic-post-time">
+                  <i class="fa-solid fa-hourglass-half"></i>
+                  <div>2019年10月7日-10:07:00 发布</div>
+                </div>
+              </div>
+            </div>
+            <div class="single-topic-column-container"></div>
+            <div class="single-topic-column-container"></div>
+            <div class="single-topic-column-container"></div>
+          </div>
         </div>
-        <!-- 用户个人信息 -->
-        <div class="kungalgamer-info">
-          <a href="#"><img src="../img/KUN.jpg" alt="KUN" /></a>
-          <span>KUN</span>
-        </div>
-      </div>
-      <div class="container">
-        <div class="pool-nav-bar"></div>
-        <div class="content-container">
-            <div class="singel-topic-container"></div>
-            <div class="singel-topic-container"></div>
-            <div class="singel-topic-container"></div>
+        <!-- 右侧的功能栏 -->
+        <div class="kungalgame-right-bar">
+          <!-- 对帖子进行排序 -->
+          <div class="sort">
+            <div>排序</div>
+            <div><i class="fa-solid fa-arrow-down-wide-short"></i></div>
+            <!-- 排序选择 -->
+            <div class="sort-detail">
+              <!-- 按照浏览数排序 -->
+              <div class="sort-by-view">
+                <i class="fa-regular fa-eye"></i> 按照浏览数排序
+              </div>
+              <!-- 按照点赞数排序 -->
+              <div class="sort-by-like">
+                <i class="fa-regular fa-thumbs-up"></i> 按照点赞数排序
+              </div>
+              <!-- 按照时间排序 -->
+              <div class="sort-by-time">
+                <i class="fa-solid fa-hourglass-half"></i> 按照时间排序
+              </div>
+            </div>
+          </div>
+          <!-- 返回顶部 -->
+          <div class="top">
+            <div>顶部</div>
+            <div><i class="fa-solid fa-arrows-up-to-line"></i></div>
+          </div>
         </div>
       </div>
     </div>

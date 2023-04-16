@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @property --d-c {
+        syntax: "<number>";
+        inherits: false;
+        initial-value: 1;
+      }
+      body {
+        background: black;
+        display: grid;
+        place-items: center;
+        align-content: center;
+        min-height: 100vh;
+        font-size: max(20px, 10vw);
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+
+      .lines {
+        display: grid;
+        gap: 50px;
+      }
+
+      .row {
+        position: relative;
+        width: 100%;
+      }
+
+      .track {
+        display: flex;
+        white-space: nowrap;
+        transition: 1s;
+        -webkit-animation: slide calc(var(--d) * var(--d-c, 1)) linear infinite;
+        animation: slide calc(var(--d) * var(--d-c, 1)) linear infinite;
+      }
+      @-webkit-keyframes slide {
+        from {
+          translate: var(--from) 0;
+        }
+        to {
+          translate: var(--to) 0;
+        }
+      }
+      @keyframes slide {
+        from {
+          translate: var(--from) 0;
+        }
+        to {
+          translate: var(--to) 0;
+        }
+      }
+
+      .line {
+        display: inline-block;
+        height: 10px;
+        background: var(--bg);
+        flex: 1 0 auto;
+        width: calc(1em * var(--w));
+        margin-right: clamp(30px, 0.5em, 60px);
+      }
+
+      .row:nth-child(1) {
+        --d: 10s;
+      }
+      .row:nth-child(1):nth-child(odd) {
+        --from: -50%;
+        --to: 0%;
+      }
+      .row:nth-child(1):nth-child(even) {
+        --to: -50%;
+      }
+      .row:nth-child(1) .line:nth-child(7n + 1) {
+        --bg: #fff;
+        --w: 2;
+      }
+      .row:nth-child(1) .line:nth-child(7n + 2) {
+        --bg: #fff;
+        --w: 2;
+      }
+      .row:nth-child(1) .line:nth-child(7n + 3) {
+        --bg: #fff;
+        --w: 4;
+      }
+      .row:nth-child(1) .line:nth-child(7n + 4) {
+        --bg: #51da4c;
+        --w: 4;
+      }
+      .row:nth-child(1) .line:nth-child(7n + 5) {
+        --bg: #fff;
+        --w: 3;
+      }
+      .row:nth-child(1) .line:nth-child(7n + 6) {
+        --bg: #51da4c;
+        --w: 2;
+      }
+      .row:nth-child(1) .line:nth-child(7n + 7) {
+        --bg: #51da4c;
+        --w: 4;
+      }
+
+      .row:nth-child(2) {
+        --d: 10s;
+      }
+      .row:nth-child(2):nth-child(odd) {
+        --from: -50%;
+        --to: 0%;
+      }
+      .row:nth-child(2):nth-child(even) {
+        --to: -50%;
+      }
+      .row:nth-child(2) .line:nth-child(7n + 1) {
+        --bg: #fff;
+        --w: 1;
+      }
+      .row:nth-child(2) .line:nth-child(7n + 2) {
+        --bg: #51da4c;
+        --w: 3;
+      }
+      .row:nth-child(2) .line:nth-child(7n + 3) {
+        --bg: #fff;
+        --w: 4;
+      }
+      .row:nth-child(2) .line:nth-child(7n + 4) {
+        --bg: #fff;
+        --w: 2;
+      }
+      .row:nth-child(2) .line:nth-child(7n + 5) {
+        --bg: #fff;
+        --w: 1;
+      }
+      .row:nth-child(2) .line:nth-child(7n + 6) {
+        --bg: #fff;
+        --w: 1;
+      }
+      .row:nth-child(2) .line:nth-child(7n + 7) {
+        --bg: #fff;
+        --w: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lines">
+      <div class="row">
+        <div class="track">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="track">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

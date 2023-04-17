@@ -82,8 +82,6 @@
 }
 /* 右侧的功能栏 */
 .kungalgame-right-bar {
-  /* 高度 */
-  height: 100px;
   /* 位置 fix */
   position: fixed;
   top: 70%;
@@ -92,8 +90,29 @@
   z-index: 7;
   /* 居中 */
   display: flex;
+}
+/* 功能栏的左侧 */
+.kungalgame-right-bar-left {
+  display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+/* 排序 hover 出现 */
+.sort:hover {
+  display: flex;
+}
+/* 左侧距离右侧的距离 */
+.kungalgame-right-bar-left {
+  margin-right: 17px;
+}
+/* 图标字体的颜色 */
+.kungalgame-right-bar-left i {
+  margin-right: 10px;
+  color: red;
+}
+/* 最后一个排序的样式 */
+.kungalgame-right-bar-left div:last-child i {
+  margin-right: 14px;
 }
 /* 排序 */
 .sort,

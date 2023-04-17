@@ -331,7 +331,8 @@
   color: var(--kungalgame-pink-1);
   text-shadow: -1px 0 var(--kungalgame-blue-4), 0 -1px var(--kungalgame-blue-4),
     1px 0 var(--kungalgame-blue-4), 0 1px var(--kungalgame-blue-4),
-    1px 1px #111827, -1px -1px #111827, -1px 1px #111827, 1px -1px #111827,
+    1px 1px var(--kungalgame-black), -1px -1px var(--kungalgame-black),
+    -1px 1px var(--kungalgame-black), 1px -1px var(--kungalgame-black),
     4px 2px 2px var(--kungalgame-red-4);
 }
 
@@ -695,7 +696,8 @@
   color: var(--kungalgame-pink-1);
   text-shadow: -1px 0 var(--kungalgame-blue-5), 0 -1px var(--kungalgame-blue-5),
     1px 0 var(--kungalgame-blue-5), 0 1px var(--kungalgame-blue-5),
-    1px 1px #111827, -1px -1px #111827, -1px 1px #111827, 1px -1px #111827,
+    1px 1px var(--kungalgame-black), -1px -1px var(--kungalgame-black),
+    -1px 1px var(--kungalgame-black), 1px -1px var(--kungalgame-black),
     4px 2px 2px var(--kungalgame-red-4);
 }
 /* 其他人帖子内容区容器 */

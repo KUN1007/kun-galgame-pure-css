@@ -1,3 +1,4 @@
+@import url(./color.css);
 .footer {
   height: 1px;
   width: 100%;
@@ -113,7 +114,7 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  color: rgb(77, 77, 77);
+  color: var(--kungalgame-font-color-2);
   font-size: small;
 }
 .footer-catalog-wrap ul li {
@@ -121,10 +122,10 @@
 }
 .footer-catalog-wrap ul li a {
   flex-grow: 1;
-  color: rgb(77, 77, 77);
+  color: var(--kungalgame-font-color-2);
 }
 .footer-catalog-wrap ul {
-  color: rgb(77, 77, 77);
+  color: var(--kungalgame-font-color-2);
 }
 /* 每个信息类别的标题 */
 .kungalgame-footer-catalog-title {
@@ -142,7 +143,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(77, 77, 77);
+  color: var(--kungalgame-font-color-2);
   font-size: small;
 }
 .kungalgame-contact h2 {
@@ -174,7 +175,7 @@
   align-items: center;
   /* 右侧网站介绍部分相对于左侧的占比 */
   flex-grow: 1;
-  color: rgb(77, 77, 77);
+  color: var(--kungalgame-font-color-2);
 }
 /* 网站名 */
 .kungalgame {

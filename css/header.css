@@ -1,16 +1,13 @@
-:root {
-  /* blue */
-  --kungalgame-blue:#0969da;
-}
+@import url(./color.css);
 /* 头部样式 */
 .header {
   /* 头部高度 */
   height: 58px;
   /* 头部下方阴影 */
-  box-shadow: 0 2px 4px 0 rgba(0, 140, 255, 0.17);
+  box-shadow: 0 2px 4px 0 var(--kungalgame-trans-blue-1);
   /* 头部背景 */
   backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: var(--kungalgame-trans-white-5);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,7 +31,7 @@
 .kungal-info span {
   margin-left: 20px;
   margin-right: 7px;
-  color: #242424;
+  color: var(--kungalgame-font-color-3);
   font-weight: bold;
   cursor: pointer;
 }
@@ -62,7 +59,7 @@
 }
 .top-bar ul li {
   width: 100%;
-  color: var(--kungalgame-blue);
+  color: var(--kungalgame-blue-5);
   font-weight: bold;
   display: block;
   width: 100%;
@@ -70,25 +67,25 @@
   cursor: pointer;
 }
 .top-bar ul li:hover {
-  background-color: #ecf3ff;
+  background-color: var(--kungalgame-blue-0);
   transition: 0.5s;
   border-radius: 2px;
 }
 .top-bar ul li:nth-child(1):hover ~ .top-bar-box {
   left: calc(100% / 4 * 0);
-  background-color: #f56c6c;
+  background-color: var(--kungalgame-red-3);
 }
 .top-bar ul li:nth-child(2):hover ~ .top-bar-box {
   left: calc(100% / 4 * 1);
-  background-color: #ffb900;
+  background-color: var(--kungalgame-yellow-3);
 }
 .top-bar ul li:nth-child(3):hover ~ .top-bar-box {
   left: calc(100% / 4 * 2);
-  background-color: #409eff;
+  background-color: var(--kungalgame-blue-3);
 }
 .top-bar ul li:nth-child(4):hover ~ .top-bar-box {
   left: calc(100% / 4 * 3);
-  background-color: #67c23a;
+  background-color: var(--kungalgame-green-3);
 }
 
 /* 顶部搜索框 */
@@ -110,6 +107,6 @@ TODO:
 }
 
 .kungalgamer-info span {
-  color: rgb(81, 81, 81);
+  color: var(--kungalgame-font-color-2);
   margin-left: 20px;
 }

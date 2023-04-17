@@ -1,3 +1,4 @@
+@import url(./color.css);
 /* 主体部分配置 */
 .main {
   width: 100%;
@@ -31,7 +32,7 @@
   align-items: center;
   /* 设置背景毛玻璃效果 */
   backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: var(--kungalgame-trans-white-5);
   /* 设置背景边框和圆角 */
   border-radius: 5px;
   padding: 5px;
@@ -76,7 +77,7 @@
   text-align: center;
   /* 字体设置 */
   font-size: small;
-  color: rgb(77, 77, 77);
+  color: var(--kungalgame-font-color-3);
   /* 页面缩小到最小时不换行 */
   overflow: hidden;
   white-space: nowrap;
@@ -101,11 +102,11 @@
 .new-article button {
   height: 100%;
   width: 100%;
-  background-color: rgb(254, 240, 240);
-  border: 1px solid rgb(247, 137, 137);
+  background-color: var(--kungalgame-red-0);
+  border: 1px solid var(--kungalgame-red-3);
   border-radius: 5px;
   cursor: pointer;
-  color: rgb(247, 137, 137);
+  color: var(--kungalgame-red-3);
   font-weight: bold;
   font-size: larger;
   /* 页面缩小到最小时不换行 */
@@ -114,8 +115,9 @@
 }
 /* 发布按钮 hover 效果 */
 .new-article button:hover {
-  background-color: rgb(247, 137, 137);
-  color: rgb(254, 240, 240);
+  font-size: xx-large;
+  background-color: var(--kungalgame-red-3);
+  color: var(--kungalgame-red-0);
   /* 效果过渡时长 */
   transition: 0.3s;
 }
@@ -127,7 +129,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  color: #676767;
+  color: var(--kungalgame-font-color-2);
   font-size: small;
   font-weight: bold;
 }
@@ -138,8 +140,8 @@
 }
 /* 设置六个功能（模式、排行、背景等）的 hover */
 .item-box-container .function:hover {
-  color: rgb(33, 33, 33);
-  background-color: rgba(254, 240, 240, 0.3);
+  color: var(--kungalgame-font-color-3);
+  background-color: var(--kungalgame-trans-red-1);
   cursor: pointer;
 }
 /* 
@@ -170,7 +172,7 @@
 .top-topic-title-name {
   /* 设置盒子的 border 在内侧显示 */
   box-sizing: border-box;
-  border: 3px dashed rgba(216, 238, 255, 0.5);
+  border: 3px dashed var(--kungalgame-trans-blue-1);
   border-bottom: none;
   /* 设置（今日热门话题）居中 */
   display: flex;
@@ -178,14 +180,14 @@
   align-items: center;
   /* 设置（今日热门话题占整个热门区域的宽度） */
   flex-grow: 1;
-  color: rgb(77, 77, 77);
+  color: var(--kungalgame-font-color-3);
   /* 设置页面缩小到最小时该行不换行 */
   overflow: hidden;
   white-space: nowrap;
 }
 /* 展示热门帖子标题的区域 */
 .top-topic-content {
-  background-color: rgba(216, 238, 255, 0.5);
+  background-color: var(--kungalgame-trans-blue-1);
   /* 热门帖子标题区域占整个左侧页面中部的比例 */
   flex-grow: 10;
   /* 热门帖子标题部分为弹性盒 */
@@ -199,7 +201,7 @@
   justify-content: space-between;
   /* 设置每个帖子高度相等 */
   flex-grow: 1;
-  color: rgb(77, 77, 77);
+  color: var(--kungalgame-font-color-3);
   align-items: center;
 }
 /* 单个帖子的标题样式 */
@@ -226,7 +228,7 @@
 }
 .top-topic-number i {
   /* 设置 fa 图标字体的颜色 */
-  color: rgb(219, 120, 115);
+  color: var(--kungalgame-red-4);
 }
 .top-topic-number span {
   width: 38px;
@@ -258,7 +260,7 @@
 .new-topic-title-name {
   /* 设置盒子的 border 在内侧显示 */
   box-sizing: border-box;
-  border: 3px dashed rgba(255, 237, 255, 0.5);
+  border: 3px dashed var(--kungalgame-trans-pink-1);
   border-bottom: none;
   /* 设置（今日热门话题）居中 */
   display: flex;
@@ -266,13 +268,13 @@
   align-items: center;
   /* 设置（今日热门话题占整个热门区域的宽度） */
   flex-grow: 1;
-  color: rgb(77, 77, 77);
+  color: var(--kungalgame-font-color-3);
   /* 设置页面缩小到最小时该行不换行 */
   overflow: hidden;
   white-space: nowrap;
 }
 .new-topic-content {
-  background-color: rgba(255, 237, 255, 0.5);
+  background-color: var(--kungalgame-trans-pink-1);
   /* 热门帖子标题区域占整个左侧页面中部的比例 */
   flex-grow: 10;
   /* 热门帖子标题部分为弹性盒 */
@@ -286,7 +288,7 @@
   justify-content: space-between;
   /* 设置每个帖子高度相等 */
   flex-grow: 1;
-  color: rgb(77, 77, 77);
+  color: var(--kungalgame-font-color-3);
   align-items: center;
 }
 /* 单个帖子的标题样式 */
@@ -314,7 +316,7 @@
 /* 时钟图标的颜色 */
 .new-topic-number i {
   /* 设置 fa 图标字体的颜色 */
-  color: rgb(174, 115, 219);
+  color: var(--kungalgame-purple-4);
 }
 /* 右侧区域的大小 */
 .new-topic-number span {
@@ -346,8 +348,8 @@
   /* 盒子的边显示在内侧 */
   box-sizing: border-box;
   /* 文章区边上的颜色 */
-  border: 1px solid rgb(225, 225, 225);
-  background-color: rgba(187, 240, 255, 0.2);
+  border: 1px solid var(--kungalgame-trans-blue-4);
+  background-color: var(--kungalgame-trans-blue-0);
   border-radius: 5px;
   display: flex;
   /* 文章区所有组件居中 */
@@ -387,18 +389,18 @@
 }
 /* 筛选 */
 .nav-article-sort-container {
-  background-color: pink;
+  background-color: var(--kungalgame-trans-red-3);
   flex-grow: 1;
   border-radius: 5px 0 0 0;
 }
 /* 搜索帖子 */
 .nav-article-search-container {
-  background-color: paleturquoise;
+  background-color: var(--kungalgame-trans-blue-3);
   flex-grow: 2;
 }
 /* 更多 */
 .nav-article-more-topic {
-  background-color: rgb(224, 178, 255);
+  background-color: var(--kungalgame-trans-purple-3);
   flex-grow: 1;
   border-radius: 0 5px 0 0;
 }
@@ -426,11 +428,11 @@
   display: inline;
   width: 4px;
   height: 0;
-  background-color: #aaa;
+  background-color: var(--kungalgame-red-2);
   border-radius: 2px;
 }
 .topic-container::-webkit-scrollbar-thumb {
-  background: #0099ff;
+  background: var(--kungalgame-blue-4);
   border-radius: 2px;
 }
 /* 单个帖子 */
@@ -440,7 +442,7 @@
   flex-grow: 1;
   flex-shrink: 0;
   border-radius: 3px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--kungalgame-white);
   margin-bottom: 3px;
   /* 单个帖子横向弹性盒 */
   display: flex;
@@ -491,7 +493,7 @@
 }
 /* 发帖人昵称位置设置 */
 .kungalgamer-name {
-  border-top: 1px solid #d5d5d5;
+  border-top: 1px solid var(--kungalgame-gray-3);
   flex-grow: 1;
   display: flex;
 }
@@ -510,12 +512,12 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   /* 颜色和字体大小 */
-  color: #414141;
+  color: var(--kungalgame-font-color-3);
   font-size: x-small;
 }
 /* 帖子信息 */
 .topic-info {
-  flex-grow: 8;
+  flex-grow: 7;
   display: flex;
   flex-direction: column;
 }
@@ -542,7 +544,6 @@
 /* 发帖标题 */
 .topic-title {
   flex-grow: 5;
-  margin-left: 10px;
   /* 超出不换行省略 */
   display: flex;
   align-items: center;
@@ -556,7 +557,7 @@
 }
 /* 帖子标题的字体颜色 */
 .topic-title span {
-  color: rgb(77, 77, 77);
+  color: var(--kungalgame-font-color-3);
   font-weight: 500;
 }
 /* 帖子点赞数等信息 */
@@ -571,7 +572,7 @@
 /* 设置点赞、评论、查看字体和位置 */
 .topic-status ul {
   display: flex;
-  color: rgb(77, 77, 77);
+  color: var(--kungalgame-gray-7);
   font-size: smaller;
 }
 /* 点赞、评论、查看之间的距离 */
@@ -586,7 +587,7 @@
 .topic-post-date {
   flex-grow: 1;
   font-size: x-small;
-  color: rgb(153, 153, 153);
+  color: var(--kungalgame-gray-4);
   /* 居中 */
   display: flex;
   justify-content: center;
@@ -594,8 +595,6 @@
   /* 不换行 */
   overflow: hidden;
   white-space: nowrap;
-  /* 距离状态的横线 */
-  border-left: 2px dotted #c8c8c8;
 }
 /* 帖子的预览介绍 */
 .topic-introduction {
@@ -616,6 +615,6 @@
 }
 /* 发帖预览信息的字体 */
 .topic-introduction-text p {
-  font-size: small;
-  color: #414141;
+  font-size: 14px;
+  color: var(--kungalgame-font-color-2);
 }

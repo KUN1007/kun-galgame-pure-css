@@ -1,7 +1,3 @@
-/* 顶部导航栏 */
-.header {
-  margin-bottom: 10px;
-}
 /* 帖子池容器 */
 .pool-container {
   /* 最小高度 */
@@ -10,7 +6,6 @@
   max-width: 1450px;
   /* 占页面的宽度比例 */
   width: 90%;
-  background-color: pink;
   /* 居中 */
   margin: 0 auto;
   display: flex;
@@ -27,15 +22,19 @@
   /* 居中 */
   justify-content: center;
   align-items: center;
+  margin: 10px 0;
 }
 /* 热门帖子标签 */
 .nav-tags {
   /* 单个标签不换行 */
   white-space: nowrap;
   /* 距离其它帖子的距离 */
+  font-size: 13px;
   margin: 1px;
-  padding: 2px;
-  background-color: red;
+  padding: 7px;
+  background-color: #63b6ff;
+  border-radius: 17px;
+  cursor: pointer;
 }
 /* 帖子池内容区容器 */
 .content-container {
@@ -46,14 +45,11 @@
   /* 根据页面宽度增长 */
   width: 1px;
   flex-grow: 1;
-  background-color: orange;
   /* 5 行的行距 */
   margin: 5px;
 }
 /* 帖子池单个帖子 */
 .single-topic-container {
-  /* 单个帖子的最大高度 */
-  max-height: 700px;
   /* 单个帖子距下方的距离 */
   margin-bottom: 7px;
   /* 竖直方向弹性布局 */
@@ -74,11 +70,35 @@
   -webkit-line-clamp: 2; /* 显示两行文本 */
   /* 居中 */
   margin: 0 auto;
+  padding: 0 7px;
 }
 /* 帖子的内容区 */
 .topic-content {
+  /* 单个帖子的最大高度 */
+  max-height: 700px;
+  overflow: hidden;
   font-size: 14px;
-  padding: 7px;
+  padding: 10px;
+}
+/* 帖子的状态 */
+.topic-status {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+    /* 窗口缩小不换行 */
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+.topic-post-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: small;
+  /* 文字间距 */
+  letter-spacing: 1px;
+  /* 窗口缩小不换行 */
+  overflow: hidden;
+  white-space: nowrap;
 }
 /* 右侧的功能栏 */
 .kungalgame-right-bar {
@@ -86,24 +106,30 @@
   position: fixed;
   top: 70%;
   /* 距离右侧的距离 */
-  right: 2%;
+  right: 1%;
   z-index: 7;
   /* 居中 */
   display: flex;
 }
 /* 功能栏的左侧 */
 .kungalgame-right-bar-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  position: absolute;
+  white-space: nowrap;
+  right: 50px;
+  cursor: pointer;
+  display: none;
+  background-color: salmon;
+  bottom: 0;
+}
+.kungalgame-right-bar-left > div {
+  padding: 7px;
+}
+.kungalgame-right-bar-left > div:hover {
+  background-color: cornflowerblue;
 }
 /* 排序 hover 出现 */
-.sort:hover {
-  display: flex;
-}
-/* 左侧距离右侧的距离 */
-.kungalgame-right-bar-left {
-  margin-right: 17px;
+.kungalgame-right-bar .sort:hover .kungalgame-right-bar-left {
+  display: block;
 }
 /* 图标字体的颜色 */
 .kungalgame-right-bar-left i {
@@ -114,15 +140,26 @@
 .kungalgame-right-bar-left div:last-child i {
   margin-right: 14px;
 }
+/* 右侧部分 */
+.kungalgame-right-bar-right {
+  position: relative;
+}
 /* 排序 */
 .sort,
 .top {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 50px;
+  padding: 0 9px;
+  background-color: aqua;
+  cursor: pointer;
+}
+.top {
+  margin-top: 14px;
 }
 .sort i,
 .top i {
-  margin-top: 7px;
+  margin-top: 5px;
   color: blue;
 }

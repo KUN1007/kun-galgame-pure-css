@@ -139,7 +139,7 @@
   padding: 10px;
 }
 /* 设置六个功能（模式、排行、背景等）的 hover */
-.item-box-container .function:hover {
+.item-box-container > div:hover {
   color: var(--kungalgame-font-color-3);
   background-color: var(--kungalgame-trans-red-1);
   cursor: pointer;

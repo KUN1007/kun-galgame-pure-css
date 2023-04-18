@@ -136,7 +136,8 @@
 /* 六个功能之间的距离 */
 .item-box-container div {
   /* 设置六个功能（模式、排行、背景等）之间的间距 */
-  padding: 10px;
+  padding: 14px;
+  border-radius: 5px;
 }
 /* 设置六个功能（模式、排行、背景等）的 hover */
 .item-box-container > div:hover {
@@ -356,6 +357,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
 /* 
 ----------------------------------
@@ -368,10 +370,9 @@
 .nav-article {
   width: 100%;
   height: 50px;
-  /* 设置交互栏的下边距 */
-  margin-bottom: 5px;
   /* 整体弹性 */
   display: flex;
+  flex-shrink: 0;
 }
 /* 筛选、搜索帖子、更多 */
 .nav-article-sort-container,
@@ -384,14 +385,62 @@
   justify-content: center;
   align-items: center;
   /* 页面缩小不换行 */
-  overflow: hidden;
   white-space: nowrap;
 }
 /* 筛选 */
 .nav-article-sort-container {
+  /* 筛选按钮的颜色 */
   background-color: var(--kungalgame-trans-red-3);
   flex-grow: 1;
   border-radius: 5px 0 0 0;
+  /* 相对于二级菜单的定位 */
+  position: relative;
+  cursor: pointer;
+}
+/* 筛选按钮的 hover */
+.nav-article-sort-container:hover {
+  background-color: var(--kungalgame-trans-white-2);
+}
+/* 二级菜单 */
+.sort-container {
+  /* 宽度 100% */
+  width: 100%;
+  /* 相对位置 100% */
+  top: 100%;
+  /* 对于相对定位的元素绝对定位 */
+  position: absolute;
+}
+/* 二级菜单的容器 */
+.sort-submenu {
+  display: none;
+  /* 竖直弹性盒 */
+  flex-direction: column;
+  /* 二级菜单的阴影 */
+  box-shadow:1px 2px 1px 1px var(--kungalgame-trans-blue-4);
+}
+.nav-article-sort-container:hover .sort-submenu {
+  display: flex;
+}
+/* 单个二级菜单的选项 */
+.sort-submenu > div {
+  padding: 10px 0;
+  background-color: var(--kungalgame-trans-white-2);
+  font-size: 14px;
+  color: var(--kungalgame-font-color-3);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 单个二级菜单 hover */
+.sort-submenu > div:hover {
+  background-color: var(--kungalgame-red-2);
+}
+/* 二级菜单图标字体颜色 */
+.sort-submenu > div i {
+  color: var(--kungalgame-font-color-2);
+  /* 图标距离文字的距离 */
+  padding-right: 3px;
 }
 /* 搜索帖子 */
 .nav-article-search-container {
@@ -418,7 +467,7 @@
   min-height: 1150px;
   overflow-y: scroll;
   /* 所有帖子的总区域占左侧页面的下边距 */
-  margin-bottom: 5px;
+  margin: 5px 0;
   /* 帖子区域弹性盒 */
   display: flex;
   flex-direction: column;
@@ -439,7 +488,6 @@
 .topic {
   width: 100%;
   height: 70px;
-  flex-grow: 1;
   flex-shrink: 0;
   border-radius: 3px;
   background-color: var(--kungalgame-white);
@@ -451,20 +499,15 @@
   /* 最后一个帖子的没有下边距 */
   margin-bottom: 0;
 }
-/* 发布者信息 */
-.kungalgamer-topic-info,
-.topic-info {
-  width: 1px;
+/* 发帖人信息 */
+.kungalgamer-topic-info {
+  width: 70px;
   height: 100%;
   /* 单个帖子左右两部分发布人信息和帖子概览均为竖向弹性盒 */
   display: flex;
   flex-direction: column;
-}
-/* 发帖人信息 */
-.kungalgamer-topic-info {
   /* 发帖人信息距离帖子概览的距离 */
   margin: 0 5px;
-  flex-grow: 1;
 }
 .kungalgamer-topic-avatar,
 .kungalgamer-name {
@@ -493,7 +536,7 @@
 }
 /* 发帖人昵称位置设置 */
 .kungalgamer-name {
-  border-top: 1px solid var(--kungalgame-gray-3);
+  border-top: 1px solid var(--kungalgame-gray-2);
   flex-grow: 1;
   display: flex;
 }
@@ -517,7 +560,10 @@
 }
 /* 帖子信息 */
 .topic-info {
-  flex-grow: 7;
+  width: 1px;
+  height: 100%;
+  /* 单个帖子左右两部分发布人信息和帖子概览均为竖向弹性盒 */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
@@ -535,9 +581,7 @@
   justify-content: space-between;
 }
 /* 帖子的头部信息，标题日期等 */
-.topic-title,
-.topic-post-date,
-.topic-status {
+.topic-title {
   height: 100%;
   width: 1px;
 }
@@ -562,9 +606,8 @@
 }
 /* 帖子点赞数等信息 */
 .topic-status {
-  flex-grow: 3;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   overflow: hidden;
   white-space: nowrap;
@@ -585,7 +628,7 @@
 }
 /* 发帖日期 */
 .topic-post-date {
-  flex-grow: 1;
+  width: 45px;
   font-size: x-small;
   color: var(--kungalgame-gray-4);
   /* 居中 */

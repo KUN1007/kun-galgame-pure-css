@@ -35,8 +35,8 @@
         height: 1500px;
         display: flex;
         flex-direction: column;
-        background-image: url(./img/bg.png);
-        /* background-image: url(./img/bg-dark.png); */
+        background-image: url(./img/bg/bg1.png);
+        /* background-image: url(./img/bg/bg2.png); */
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -100,12 +100,50 @@
                 </div>
                 <!-- 功能盒子容器 -->
                 <div class="item-box-container">
-                  <div>模式切换</div>
-                  <div>游戏排行</div>
-                  <div>坛友排行</div>
-                  <div>加入我们</div>
-                  <div>背景设置</div>
+                  <!-- 模式切换容器 -->
+                  <div class="kungalgame-model-container">
+                    模式切换
+                    <ul class="kungalgame-model">
+                      <li><i class="fa-regular fa-sun"></i>白天</li>
+                      <li><i class="fa-regular fa-moon"></i>黑夜</li>
+                    </ul>
+                  </div>
                   <div>其它游戏</div>
+                  <div>排行榜</div>
+                  <!-- 背景容器 -->
+                  <div class="kungalgame-background">
+                    背景设置
+                    <ul class="kungalgame-background-container">
+                      <li>
+                        <span>使用我们的预设的背景</span>
+                        <!-- 预设背景集 -->
+                        <ul class="kungalgame-reset-bg">
+                          <li><img src="./img/bg/bg1-m.png"></li>
+                          <li><img src="./img/bg/bg2-m.png"></li>
+                          <li><img src="./img/bg/bg3-m.png"></li>
+                          <li><img src="./img/bg/bg4-m.png"></li>
+                          <li><img src="./img/bg/bg5-m.png"></li>
+                          <li><img src="./img/bg/bg6-m.png"></li>
+                          <li><img src="./img/bg/bg7-m.png"></li>
+                          <li><img src="./img/bg/bg8-m.png"></li>
+                          <li><img src="./img/bg/bg9-m.png"></li>
+                        </ul>
+                      </li>
+                      <!-- 用户自定义背景 -->
+                      <li>
+                        <span>自定义背景</span>
+                        <div class="kungalgamer-bg">
+                          <span>请在这里粘贴图片url</span>
+                          <div class="bg-url-input">
+                            <input type="text" required/>
+                            <button>确定</button>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>加入我们</div>
+                  <div>帖子池</div>
                 </div>
               </div>
               <!-- 侧边栏动态推送今日热度帖子 -->

@@ -49,7 +49,7 @@ body {
 /* 总容器 */
 .container {
   /* 背景图片 */
-  background: url("../../img/bg.png");
+  background: url("../../img/bg/bg1.png");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;

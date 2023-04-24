@@ -1,12 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="./css/user.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+      }
+      input:focus {
+        outline: none;
+      }
+      *::-webkit-scrollbar {
+        display: none;
+      }
+      .root {
+        height: 100vh;
+        width: 100vw;
+        min-width: 700px;
+        min-height: 800px;
+        display: flex;
+        background-image: url(../img/bg/bg1.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="root">
+      <div class="container">
+        <!-- 页面头部 -->
+        <div class="header">
+          <!-- 用户名 -->
+          <div class="kungalgamer-name">
+            <ul>
+              <li>啊这可海星</li>
+              <li>No. 1007</li>
+            </ul>
+          </div>
+          <!-- 用户头像 -->
+          <div class="kungalgamer-avatar">
+            <img src="../img/KUN.jpg" alt="KUN" />
+          </div>
+          <!-- 用户萌萌点 -->
+          <div class="moemoepoint">1007</div>
+        </div>
+        <!-- 内容区 -->
+        <div class="content">
+          <!-- 左侧交互区 -->
+          <div class="nav">
+            <ul>
+              <li>个人信息</li>
+              <li>回过的贴</li>
+              <li>赞过的帖</li>
+              <li>推过的帖</li>
+            </ul>
+          </div>
+          <!-- 右侧内容区 -->
+          <div class="article">
+            <!-- 用户个人信息 -->
+            <ul class="kungalgamer-info">
+              <!-- 用户名 -->
+              <li>用户名: KUN</li>
+              <!-- 萌萌点 -->
+              <li>moemoepoint: 1007</li>
+              <!-- 注册序号 -->
+              <li>注册序号: 1007</li>
+              <!-- 注册时间 -->
+              <li>注册时间: 2019/10/07</li>
+              <li class="kungalgamer-info-topic">
+                <ul>
+                  <li>发帖数量: 1007</li>
+                  <li>回复数量: 1007</li>
+                  <li>评论数量: 1007</li>
+                </ul>
+              </li>
+              <!-- 用户签名 -->
+              <li class="kungalgamer-sign">
+                <div>用户签名: 啊这可海星</div>
+                <div><button>更改签名</button></div>
+              </li>
+              <!-- 密码信息 -->
+              <li class="kungalgamer-pwd">
+                <form>
+                  <div>更改密码</div>
+                  <div>请输入你的旧密码: <input type="text" /></div>
+                  <div>请输入你的新密码: <input type="text" /></div>
+                  <button>确定更改密码</button>
+                </form>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

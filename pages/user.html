@@ -22,7 +22,7 @@
       .root {
         height: 100vh;
         width: 100vw;
-        min-width: 700px;
+        min-width: 900px;
         min-height: 800px;
         display: flex;
         background-image: url(../img/bg/bg1.png);
@@ -38,19 +38,17 @@
       <div class="container">
         <!-- 页面头部 -->
         <div class="header">
-          <!-- 用户名 -->
-          <div class="kungalgamer-name">
-            <ul>
-              <li>啊这可海星</li>
-              <li>No. 1007</li>
-            </ul>
-          </div>
           <!-- 用户头像 -->
           <div class="kungalgamer-avatar">
             <img src="../img/KUN.jpg" alt="KUN" />
           </div>
+          <!-- 用户名 -->
+          <div class="kungalgamer-name"><span>啊这可海星</span></div>
           <!-- 用户萌萌点 -->
-          <div class="moemoepoint">1007</div>
+          <div class="moemoepoint">
+            <div class="mp-progress"></div>
+            <span>MP: 1007</span>
+          </div>
         </div>
         <!-- 内容区 -->
         <div class="content">
@@ -66,37 +64,46 @@
           <!-- 右侧内容区 -->
           <div class="article">
             <!-- 用户个人信息 -->
-            <ul class="kungalgamer-info">
-              <!-- 用户名 -->
-              <li>用户名: KUN</li>
-              <!-- 萌萌点 -->
-              <li>moemoepoint: 1007</li>
-              <!-- 注册序号 -->
-              <li>注册序号: 1007</li>
-              <!-- 注册时间 -->
-              <li>注册时间: 2019/10/07</li>
-              <li class="kungalgamer-info-topic">
+            <div class="kungalgamer-info">
+              <ul class="kungalgamer-basic">
+                <!-- 用户名 -->
+                <li>用户名: KUN</li>
+                <!-- 萌萌点 -->
+                <li>moemoepoint: 1007</li>
+                <!-- 注册序号 -->
+                <li>注册序号: 1007</li>
+                <!-- 注册时间 -->
+                <li>注册时间: 2019/10/07</li>
+              </ul>
+              <!-- 用户签名 -->
+              <ul class="kungalgamer-sign">
+                <div>
+                  用户签名:
+                  啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                  啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                </div>
+                <button>更改签名</button>
+              </ul>
+            </div>
+            <div class="change-pwd">
+              <div class="kungalgame-topic">
                 <ul>
                   <li>发帖数量: 1007</li>
                   <li>回复数量: 1007</li>
                   <li>评论数量: 1007</li>
                 </ul>
-              </li>
-              <!-- 用户签名 -->
-              <li class="kungalgamer-sign">
-                <div>用户签名: 啊这可海星</div>
-                <div><button>更改签名</button></div>
-              </li>
+              </div>
               <!-- 密码信息 -->
-              <li class="kungalgamer-pwd">
-                <form>
-                  <div>更改密码</div>
-                  <div>请输入你的旧密码: <input type="text" /></div>
-                  <div>请输入你的新密码: <input type="text" /></div>
+              <div>
+                <form class="pwd-form">
+                  <div>更改密码:</div>
+                  <div>请输入你的旧密码: <input type="password" /></div>
+                  <div>请输入你的新密码: <input type="password" /></div>
+                  <div>请再次输入新密码: <input type="password" /></div>
                   <button>确定更改密码</button>
                 </form>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

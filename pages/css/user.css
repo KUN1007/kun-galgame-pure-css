@@ -1,55 +1,81 @@
 @import url(../../css/color.css);
 /* 页面头部 */
 .container {
-  width: 1000px;
-  height: 700px;
+  width: 60%;
+  height: 70%;
   background-color: var(--kungalgame-trans-white-2);
+  border: 1px solid var(--kungalgame-blue-4);
+  box-shadow: var(--shadow);
   border-radius: 7px;
   margin: auto;
   display: flex;
   flex-direction: column;
+  color: var(--kungalgame-font-color-3);
 }
 .header {
-  flex-grow: 1;
+  height: 150px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 /* 用户名 */
 .kungalgamer-name {
-    border-radius: 7px;
+  flex-grow: 2;
+  width: 100%;
   background-color: var(--kungalgame-trans-blue-0);
 }
-.kungalgamer-name > ul {
+.kungalgamer-name span {
   position: absolute;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px;
-  bottom: 40%;
-  left: 23%;
-}
-.kungalgamer-name > ul li:nth-child(1) {
   font-size: 22px;
-}
-.kungalgamer-name > ul li:nth-child(2) {
-  font-size: 14px;
+  margin-left: 200px;
+  margin-top: 60px;
 }
 /* 用户头像 */
 .kungalgamer-avatar {
   position: absolute;
-  top: 0;
-  left: 7%;
+  top: 5px;
+  left: 50px;
 }
 .kungalgamer-avatar img {
-  width: 150px;
+  width: 140px;
   border-radius: 50%;
+  box-shadow: 0px 0px 2px 4px var(--kungalgame-trans-red-2);
+}
+.kungalgamer-avatar img:hover {
+  animation: spin 1s;
+}
+@keyframes spin {
+  50% {
+    transform: rotate(360deg);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  80% {
+    box-shadow: 0px 0px 2px 7px var(--kungalgame-trans-red-2);
+  }
 }
 /* 用户萌萌点 */
 .moemoepoint {
-    
+  height: 1px;
+  flex-grow: 1;
   border-top: 2px solid var(--kungalgame-blue-4);
   border-bottom: 1px solid var(--kungalgame-blue-4);
-  background-color: var(--kungalgame-trans-blue-2);
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.mp-progress {
+  height: 100%;
+  width: 50%;
+  background-color: var(--kungalgame-trans-blue-2);
+}
+.moemoepoint span {
+  position: absolute;
+  right: 0;
+  font-size: 17px;
+  padding-right: 20px;
+  font-style: italic;
 }
 /* 
 
@@ -57,44 +83,85 @@
 
 */
 .content {
-    flex-grow: 2;
+  flex-grow: 1;
   display: flex;
 }
 /* 左侧交互区 */
 .nav {
-  background-color: var(--kungalgame-trans-red-1);
+  height: 100%;
+  width: 120px;
+  background-color: var(--kungalgame-trans-red-0);
 }
 .nav > ul {
   display: flex;
   flex-direction: column;
 }
 .nav > ul li {
-  background-color: var(--kungalgame-trans-blue-2);
+  height: 40px;
+  background-color: var(--kungalgame-trans-blue-0);
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.nav > ul li:hover {
+  background-color: var(--kungalgame-trans-blue-4);
+  transition: .1s;
+}
 .article {
-
+  flex-grow: 1;
+  padding: 7px 27px;
 }
 .kungalgamer-info {
-  margin: 6px 45px;
+  display: flex;
+}
+.kungalgamer-basic {
+  flex-grow: 1;
+}
+.kungalgamer-basic li {
+  margin-bottom: 7px;
+}
+.kungalgamer-sign {
+  width: 1px;
+  flex-grow: 6;
   display: flex;
   flex-direction: column;
-}
-.kungalgamer-info > li {
-  display: flex;
-  align-items: center;
-}
-.kungalgamer-info > li:nth-child(5) > ul {
-
-  display: flex;
   justify-content: space-between;
 }
-.kungalgamer-info > li:nth-child(6) {
+.kungalgamer-sign button {
+  width: 100%;
+  border: 1px solid var(--kungalgame-blue-4);
+  background-color: var(--kungalgame-trans-blue-0);
+}
+.kungalgamer-sign button:hover {
+  background-color: var(--kungalgame-trans-blue-4);
+}
+.kungalgamer-sign button:active {
+  background-color: var(--kungalgame-trans-blue-0);
+}
+.change-pwd > div {
+  margin-top: 30px;
+}
+.kungalgame-topic ul {
   display: flex;
+  width: 100%;
   justify-content: space-between;
 }
-.kungalgamer-info > li:nth-child(7) {
-
+.pwd-form > div {
+  margin-bottom: 7px;
+}
+.pwd-form input {
+  height: 20px;
+  border: 1px solid var(--kungalgame-blue-4);
+  background-color: var(--kungalgame-trans-white-5);
+}
+.pwd-form button {
+  width: 310px;
+  border: 1px solid var(--kungalgame-red-4);
+  background-color: var(--kungalgame-trans-red-0);
+}
+.pwd-form button:hover {
+  background-color: var(--kungalgame-trans-red-4);
+}
+.pwd-form button:active {
+  background-color: var(--kungalgame-trans-red-0);
 }

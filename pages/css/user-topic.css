@@ -118,6 +118,8 @@
 
 */
 .content {
+  /* 使帖子不溢出 */
+  height: 1px;
   flex-grow: 1;
   display: flex;
 }
@@ -147,87 +149,51 @@
 /* 单个项目的 hover */
 .nav > ul li:hover {
   background-color: var(--kungalgame-trans-blue-4);
-  transition: .1s;
+  transition: 0.1s;
 }
 /* 内容区 */
 .article {
+  width: 50%;
   flex-grow: 1;
   padding: 7px 27px;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
+  position: relative;
 }
-/* 用户个人信息 */
-.kungalgamer-info {
-  display: flex;
+.article::-webkit-scrollbar {
+  display: inline;
+  width: 4px;
+  height: 0;
+  background-color: var(--kungalgame-red-2);
+  border-radius: 2px;
 }
-/* 用户基本信息 */
-.kungalgamer-basic {
-  /* 用户基本信息区相对于签名区的比例 */
-  flex-grow: 1;
+.article::-webkit-scrollbar-thumb {
+  background: var(--kungalgame-blue-4);
+  border-radius: 2px;
 }
-/* 对单个基本信息设置间距 */
-.kungalgamer-basic li {
-  margin-bottom: 7px;
-}
-/* 用户签名 */
-.kungalgamer-sign {
-  width: 1px;
-  /* 签名区域相对于用户基本信息的比例 */
-  flex-grow: 6;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-/* 更改签名 */
-.change-btn {
-  display: flex;
-  justify-content: space-between;
-}
-/* 用户更改签名的按钮 */
-.change-btn button {
-  width: 49%;
-  border: 1px solid var(--kungalgame-blue-4);
-  background-color: var(--kungalgame-trans-blue-0);
-  cursor: pointer;
-}
-.change-btn button:hover {
-  background-color: var(--kungalgame-trans-blue-4);
-}
-.change-btn button:active {
-  background-color: var(--kungalgame-trans-blue-0);
-}
-/* 更改按钮距离签名的距离 */
-.change-pwd > div {
-  margin-top: 30px;
-}
-/* 用户发帖有关信息 */
-.kungalgame-topic ul {
-  display: flex;
+.topic {
   width: 100%;
+  height: 30px;
+  padding: 2px 0;
+  margin: 5px 0;
+  display: flex;
   justify-content: space-between;
-}
-/* 密码信息 */
-.pwd-form > div {
-  margin-bottom: 7px;
-}
-/* 密码输入框 */
-.pwd-form input {
-  height: 20px;
-  border: 1px solid var(--kungalgame-blue-4);
-  background-color: var(--kungalgame-trans-white-5);
-}
-/* 更改密码 button */
-.pwd-form button {
-  width: 300px;
-  border: 1px solid var(--kungalgame-red-4);
-  background-color: var(--kungalgame-trans-red-0);
+  align-items: center;
+  border-bottom: 1px solid var(--kungalgame-blue-1);
+  box-sizing: border-box;
+  border-left: 2px solid var(--kungalgame-blue-4);
   cursor: pointer;
 }
-.pwd-form button:hover {
-  background-color: var(--kungalgame-trans-red-4);
+.topic:hover {
+  border-bottom: 1px solid var(--kungalgame-blue-4);
+  background-color: var(--kungalgame-trans-blue-0);
 }
-.pwd-form button:active {
-  background-color: var(--kungalgame-trans-red-0);
+.topic-title {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 /* 版权 */
 .copyright {

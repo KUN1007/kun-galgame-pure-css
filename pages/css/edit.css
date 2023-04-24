@@ -1,0 +1,36 @@
+@import url(../../css/color.css);
+#editor—wrapper {
+  border: 1px solid var(--kungalgame-blue-4);
+  width: 50vw;
+  margin: 0 auto;
+  z-index: 100; /* 按需定义 */
+}
+#toolbar-container {
+  border-bottom: 1px solid var(--kungalgame-blue-4);
+}
+#editor-container {
+  min-height: 80vh;
+}
+.container {
+  width: 52vw;
+  border-radius: 7px;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 7px;
+  background-color: var(--kungalgame-trans-white-2);
+}
+.content-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+.topic-title {
+  width: 50vw;
+}
+.topic-title input {
+  width: 100%;
+  font-size: 40px;
+  border: 1px solid var(--kungalgame-blue-4);
+}

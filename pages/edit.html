@@ -9,24 +9,92 @@
       href="https://unpkg.com/@wangeditor/editor@latest/dist/css/style.css"
       rel="stylesheet"
     />
+    <!-- 编辑页面样式 -->
+    <link rel="stylesheet" href="./css/edit.css" />
+    <!-- header -->
+    <link rel="stylesheet" href="../css/header.css" />
     <style>
-      #editor—wrapper {
-        border: 1px solid #ccc;
-        z-index: 100; /* 按需定义 */
+      * {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
       }
-      #toolbar-container {
-        border-bottom: 1px solid #ccc;
+      input:focus {
+        outline: none;
       }
-      #editor-container {
-        height: 90vh;
+      .content-wrapper::-webkit-scrollbar {
+        display: none;
+      }
+      .container::-webkit-scrollbar {
+        display: none;
+      }
+      .content-wrapper {
+        margin: 0 auto;
+      }
+      .root {
+        min-width: 700px;
+        background-image: url(../img/bg/bg1.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
       }
     </style>
   </head>
   <body>
-    <div id="editor—wrapper">
-      <div id="toolbar-container"><!-- 工具栏 --></div>
-      <div id="editor-container"><!-- 编辑器 --></div>
+    <div class="root">
+      <!-- 头部 -->
+      <div class="header">
+        <!-- 顶部左侧交互栏 -->
+        <div class="nav-top">
+          <div class="kungal-info">
+            <img src="../img/favicon.png" alt="KUNgal" />
+            <span>KUNGalgame</span>
+          </div>
+          <div class="top-bar">
+            <ul>
+              <li>所有帖子</li>
+              <li>发布帖子</li>
+              <li>技术交流</li>
+              <li>数据统计</li>
+              <div class="top-bar-box"></div>
+            </ul>
+          </div>
+        </div>
+        <!-- 顶部全局搜索框 -->
+        <!--           <div class="top-search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </div> -->
+        <!-- 用户个人信息 -->
+        <div class="kungalgamer-info">
+          <img src="../img/KUN.jpg" alt="KUN" />
+          <span>KUN</span>
+        </div>
+      </div>
+      <!-- 内容区容器 -->
+      <div class="container">
+        <!-- 内容区容器 -->
+        <div class="content-wrapper">
+          <!-- 内容区的头部 -->
+          <div class="content-header">
+            <!-- 帖子的标题 -->
+            <div class="topic-title">
+              <input type="text" placeholder="请输入帖子的标题（40字以内）" />
+            </div>
+          </div>
+          <!-- 编辑器 -->
+          <div id="editor—wrapper">
+            <div id="toolbar-container"><!-- 工具栏 --></div>
+            <div id="editor-container"><!-- 编辑器 --></div>
+          </div>
+        </div>
+
+        <!-- 内容区的底部 -->
+        <div class="content-footer"></div>
+      </div>
     </div>
+
     <script src="https://unpkg.com/@wangeditor/editor@latest/dist/index.js"></script>
     <script>
       const { createEditor, createToolbar } = window.wangEditor;

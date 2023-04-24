@@ -6,20 +6,20 @@
   background-color: var(--kungalgame-trans-white-2);
   border-radius: 7px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 .header {
-  height: 150px;
+  flex-grow: 1;
   position: relative;
 }
 /* 用户名 */
 .kungalgamer-name {
     border-radius: 7px;
   background-color: var(--kungalgame-trans-blue-0);
-  height: 100px;
 }
 .kungalgamer-name > ul {
   position: absolute;
-  width: 600px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,7 +27,7 @@
   bottom: 40%;
   left: 23%;
 }
-.kungalgamer-name > ul li {
+.kungalgamer-name > ul li:nth-child(1) {
   font-size: 22px;
 }
 .kungalgamer-name > ul li:nth-child(2) {
@@ -45,7 +45,7 @@
 }
 /* 用户萌萌点 */
 .moemoepoint {
-  height: 50px;
+    
   border-top: 2px solid var(--kungalgame-blue-4);
   border-bottom: 1px solid var(--kungalgame-blue-4);
   background-color: var(--kungalgame-trans-blue-2);
@@ -57,13 +57,11 @@
 
 */
 .content {
-  height: 550px;
+    flex-grow: 2;
   display: flex;
 }
 /* 左侧交互区 */
 .nav {
-  width: 145px;
-  height: 100%;
   background-color: var(--kungalgame-trans-red-1);
 }
 .nav > ul {
@@ -71,15 +69,13 @@
   flex-direction: column;
 }
 .nav > ul li {
-  height: 40px;
   background-color: var(--kungalgame-trans-blue-2);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .article {
-  width: 855px;
-  height: 100%;
+
 }
 .kungalgamer-info {
   margin: 6px 45px;
@@ -87,13 +83,11 @@
   flex-direction: column;
 }
 .kungalgamer-info > li {
-  height: 40px;
-  width: 100%;
   display: flex;
   align-items: center;
 }
 .kungalgamer-info > li:nth-child(5) > ul {
-  width: 100%;
+
   display: flex;
   justify-content: space-between;
 }
@@ -102,5 +96,5 @@
   justify-content: space-between;
 }
 .kungalgamer-info > li:nth-child(7) {
-  height: 100px;
+
 }

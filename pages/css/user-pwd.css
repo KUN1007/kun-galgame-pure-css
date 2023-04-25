@@ -154,49 +154,10 @@
 /* 内容区 */
 .article {
   flex-grow: 1;
-  padding: 7px 27px;
   display: flex;
   flex-direction: column;
-}
-/* 用户个人信息 */
-.kungalgamer-info {
-  display: flex;
-}
-/* 用户基本信息 */
-.kungalgamer-basic {
-  /* 用户基本信息区相对于签名区的比例 */
-  flex-grow: 1;
-}
-/* 对单个基本信息设置间距 */
-.kungalgamer-basic li {
-  margin-bottom: 7px;
-}
-/* 用户签名 */
-.kungalgamer-sign {
-  width: 1px;
-  /* 签名区域相对于用户基本信息的比例 */
-  flex-grow: 6;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-/* 更改签名 */
-.change-btn {
-  display: flex;
-  justify-content: space-between;
-}
-/* 用户更改签名的按钮 */
-.change-btn button {
-  width: 49%;
-  border: 1px solid var(--kungalgame-blue-4);
-  background-color: var(--kungalgame-trans-blue-0);
-  cursor: pointer;
-}
-.change-btn button:hover {
-  background-color: var(--kungalgame-trans-blue-4);
-}
-.change-btn button:active {
-  background-color: var(--kungalgame-trans-blue-0);
+  align-items: center;
+  justify-content: center;
 }
 /* 更改按钮距离签名的距离 */
 .change-pwd > div {
@@ -234,6 +195,13 @@
 }
 .pwd-form button:active {
   background-color: var(--kungalgame-trans-red-0);
+}
+/* 更改邮箱 */
+.change-mail {
+    margin-bottom: 27px;
+}
+.mail-form button {
+    margin-bottom: 10px;
 }
 /* 版权 */
 .copyright {

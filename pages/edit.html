@@ -23,17 +23,18 @@
       input:focus {
         outline: none;
       }
-      .content-wrapper::-webkit-scrollbar {
-        display: none;
-      }
-      .container::-webkit-scrollbar {
+      body::-webkit-scrollbar {
         display: none;
       }
       .content-wrapper {
         margin: 0 auto;
       }
       .root {
-        min-width: 700px;
+        height: 100vh;
+        min-height: 1000px;
+        min-width: 800px;
+        display: flex;
+        flex-direction: column;
         background-image: url(../img/bg/bg1.png);
         background-repeat: no-repeat;
         background-position: center;
@@ -91,7 +92,36 @@
         </div>
 
         <!-- 内容区的底部 -->
-        <div class="content-footer"></div>
+        <div class="content-footer">
+          <div class="tags-container">
+            <input
+              type="text"
+              placeholder="请输入帖子的关键词（至少选择一个、最多 7 个）, 输入文字按下 ' Enter ' 创建关键词"
+            />
+            <div class="tags">
+              <div class="tags-info">热门关键词（点击选择）:</div>
+              <span>啊这可海星</span>
+              <span>啊这可海星</span>
+              <span>啊这可海星</span>
+              <span>啊这可海星</span>
+              <span>啊这可海星</span>
+              <span>啊这可海星</span>
+              <span>啊这可海星</span>
+              <span>啊这可海星</span>
+              <span>啊这可海星</span>
+              <span>啊这可海星</span>
+            </div>
+          </div>
+          <div class="btn-container">
+            <button class="confirm-btn">确认发布</button>
+            <button class="save-btn">保存草稿</button>
+          </div>
+        </div>
+      </div>
+      <!-- 版权 -->
+      <div class="copyright">
+        <span>Copyright © 2023 KUNgalgame</span>
+        <span>All rights reserved | Version 0.01</span>
       </div>
     </div>
 

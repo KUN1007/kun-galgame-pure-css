@@ -180,7 +180,7 @@
   /* 单个帖子高度 */
   height: 30px;
   /* 帖子之间的距离 */
-  padding: 2px 0;
+  padding: 2px;
   margin: 5px 0;
   display: flex;
   justify-content: space-between;
@@ -192,7 +192,7 @@
 }
 .topic:hover {
   border-bottom: 1px solid var(--kungalgame-blue-4);
-  background-color: var(--kungalgame-trans-blue-0);
+  background-color: var(--kungalgame-trans-blue-1);
 }
 /* 单个帖子的标题 */
 .topic-title {
@@ -205,5 +205,5 @@
 /* 版权 */
 .copyright {
   margin: 0 auto;
-  padding-bottom: 7px;
+  padding-bottom: 17px;
 }

@@ -1,7 +1,8 @@
 @import url(../../css/color.css);
 #editor—wrapper {
   border: 1px solid var(--kungalgame-blue-4);
-  width: 50vw;
+  box-sizing: border-box;
+  width: 75vw;
   margin: 0 auto;
   z-index: 100; /* 按需定义 */
 }
@@ -9,28 +10,120 @@
   border-bottom: 1px solid var(--kungalgame-blue-4);
 }
 #editor-container {
-  min-height: 80vh;
+  height: 500px;
 }
 .container {
-  width: 52vw;
-  border-radius: 7px;
-  height: 100%;
-  margin: 0 auto;
+  width: 77vw;
+  margin: auto;
   margin-top: 7px;
+  box-shadow: var(--shadow);
   background-color: var(--kungalgame-trans-white-2);
+  color: var(--kungalgame-font-color-3);
 }
 .content-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+  height: 90px;
 }
 .topic-title {
-  width: 50vw;
+  width: 75vw;
 }
 .topic-title input {
+  color: var(--kungalgame-font-color-2);
+  padding: 7px;
+  box-sizing: border-box;
   width: 100%;
   font-size: 40px;
   border: 1px solid var(--kungalgame-blue-4);
+  background-color: var(--kungalgame-trans-white-9);
+}
+.topic-title input:focus {
+  box-shadow: 0px 0px 5px var(--kungalgame-blue-4);
+}
+.content-footer{
+  height: 177px;
+  margin-top: 17px;
+  padding: 0 1vw;
+  display: flex;
+  flex-direction: column;
+}
+.tags-container {
+  flex-grow: 1;
+}
+.tags-container input {
+  background-color: var(--kungalgame-trans-white-9);
+  font-size: 17px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--kungalgame-blue-4);
+  padding: 5px;
+}
+.tags-container input:focus {
+  box-shadow: 0px 0px 3px var(--kungalgame-blue-4);
+}
+.tags {
+  margin-top: 17px;
+}
+.tags div {
+  margin-bottom: 7px;
+}
+.tags > span {
+  font-size: 14px;
+  padding: 3px;
+  background-color: var(--kungalgame-trans-blue-1);
+  cursor: pointer;
+}
+.tags > span:hover {
+  background-color: var(--kungalgame-trans-red-1);
+}
+.btn-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.btn-container button {
+  height: 40px;
+  width: 27%;
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+.confirm-btn {
+  color: var(--kungalgame-blue-4);
+  background-color: var(--kungalgame-trans-blue-1);
+  border: 1px solid var(--kungalgame-blue-4);
+}
+.confirm-btn:hover {
+  color: var(--kungalgame-trans-white-1);
+  background-color: var(--kungalgame-blue-4);
+  transition: .1s;
+}
+.confirm-btn:active {
+  background-color: var(--kungalgame-red-4);
+  border: 1px solid var(--kungalgame-red-4);
+  font-size: 17px;
+}
+.save-btn {
+  color: var(--kungalgame-orange-4);
+  background-color: var(--kungalgame-trans-orange-1);
+  border: 1px solid var(--kungalgame-orange-4);
+}
+.save-btn:hover {
+  color: var(--kungalgame-trans-white-1);
+  background-color: var(--kungalgame-orange-4);
+  transition: .1s;
+}
+.save-btn:active {
+  background-color: var(--kungalgame-trans-orange-1);
+  color: var(--kungalgame-orange-4);
+}
+/* 版权 */
+.copyright {
+  margin: 0 auto;
+  margin-bottom: 17px;
 }

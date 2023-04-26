@@ -1,17 +1,28 @@
+/* 
+  纪念一下，从一开始的两行一个注释到现在一个都不写，写了 400 行之后一起写，啊哈哈哈
+*/
 @import url(../../css/color.css);
+/* 内容区 */
 .content {
+  /* 距离内部的距离 */
   padding: 10px;
   height: 1400px;
-  width: 96%;
+  /* 占总页面的宽度 */
+  width: 95%;
+  /* 最小宽度 */
   min-width: 700px;
+  /* 水平垂直居中 */
   margin: auto;
   display: flex;
   background-color: var(--kungalgame-trans-white-5);
+  /* 全局字体颜色 */
   color: var(--kungalgame-font-color-3);
   border: 1px solid var(--kungalgame-trans-blue-1);
   border-radius: 5px;
 }
+/* 侧边的交互栏 */
 .aside {
+  /* 固定宽度 */
   width: 200px;
   height: 100%;
   background-color: var(--kungalgame-trans-white-5);
@@ -19,16 +30,22 @@
   box-sizing: border-box;
   border-radius: 5px;
 }
+/* 侧边栏容器，调透明色用 */
 .aside-container {
   height: 100%;
-  background: linear-gradient(var(--kungalgame-trans-blue-1), var(--kungalgame-trans-red-1));
+  background: linear-gradient(
+    var(--kungalgame-trans-blue-1),
+    var(--kungalgame-trans-red-1)
+  );
   display: flex;
   flex-direction: column;
   /* 相对于版权定位 */
   position: relative;
   border-radius: 5px;
 }
+/* “技术交流几个字” */
 .page-title {
+  /* 固定高度 */
   height: 70px;
   display: flex;
   justify-content: center;
@@ -42,7 +59,6 @@
 .nav-search {
   background-color: var(--kungalgame-trans-blue-2);
   display: flex;
-  border: 1px solid var(--kungalgame-trans-blue-4);
   box-sizing: border-box;
 }
 .nav-search:hover {
@@ -87,7 +103,7 @@
   height: 40px;
   width: 40px;
   flex-shrink: 0;
-  border-left: 1px solid var(--kungalgame-trans-blue-4);
+  border-left: 1px solid var(--kungalgame-trans-blue-3);
   /* 搜索图标居中 */
   display: flex;
   justify-content: center;
@@ -108,7 +124,9 @@
   display: flex;
   flex-direction: column;
 }
+/* 单个推荐标签的样式 */
 .recommend span {
+  /* 固定高度 */
   height: 40px;
   width: 100%;
   display: flex;
@@ -120,27 +138,43 @@
 .recommend span:hover {
   background-color: var(--kungalgame-trans-red-2);
 }
+/* 热门标签池 */
 .tags-container {
+  /* 左右间距 */
   padding: 10px;
 }
+/* “热门标签几个字” */
 .tags-container > div {
   display: flex;
   justify-content: center;
   font-size: 17px;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
+/* 单个标签容器 */
 .tags {
   display: flex;
   flex-direction: column;
 }
+/* 单个标签 */
 .tags > li {
   height: 30px;
+  /* 不换行 */
   white-space: nowrap;
 }
+/* 标签的图标字体 */
 .tags > li i {
   color: var(--kungalgame-red-3);
   margin-right: 5px;
 }
+/* 标签的文字部分 */
+.tags > li > span {
+  cursor: pointer;
+  border-bottom: 2px solid var(--kungalgame-trans-white-8);
+}
+.tags > li > span:hover {
+  border-bottom: 2px solid var(--kungalgame-blue-4);
+}
+/* 版权 */
 .copyright {
   /* 绝对定位于侧边栏 */
   position: absolute;
@@ -161,33 +195,229 @@
 .article {
   height: 100%;
   width: 1px;
+  /* 随页面大小变化自增长 */
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  /* 距离左侧交互的距离 */
   margin-left: 10px;
 }
+/* 所有文章的容器 */
 .article-container {
   height: 1px;
   flex-grow: 1;
   display: grid;
+  /* 自填充自增长子元素 */
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  grid-template-rows: repeat(5, 1fr);
+  /* 固定 5 行，行高固定 */
+  grid-template-rows: repeat(5, 255px);
   /* 设置 grid 布局的块间距，gap 取代了之前的 grid-gap */
   gap: 10px;
 }
+/* 单个帖子 */
 .topic {
-  /* 相对于帖子标签定位 */
-  position: relative;
   border: 1px solid var(--kungalgame-trans-blue-4);
   border-radius: 5px;
+  /* 帖子内容距离边的距离 */
+  padding: 0 10px;
+  background-color: var(--kungalgame-trans-white-2);
+  /* 相对于底部状态的定位 */
+  position: relative;
+  display: inline-block;
+  /* 隐藏 hover 的颜色露出 */
+  overflow: hidden;
+  box-sizing: border-box;
 }
-.topic-tags {
+/* 单个帖子 hover */
+.topic:hover {
+  box-shadow: var(--shadow);
+  /* 放大、旋转 */
+  transform: scale(1.2) rotate(1deg);
+  transition: 0.2s;
+  z-index: 7;
+}
+/* 帖子边的光效 */
+.topic:hover > span {
   position: absolute;
-  background-color: aqua;
+  display: block;
+  z-index: 7;
 }
+.topic:hover > span:nth-child(1) {
+  filter: hue-rotate(0deg);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--kungalgame-blue-4));
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+.topic:hover > span:nth-child(2) {
+  filter: hue-rotate(60deg);
+  top: -100%;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--kungalgame-blue-4));
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+.topic:hover > span:nth-child(3) {
+  filter: hue-rotate(120deg);
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background: linear-gradient(270deg, transparent, var(--kungalgame-blue-4));
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+@keyframes animate3 {
+  0% {
+    right: -100%;
+    height: 3px;
+  }
+  50%,
+  100% {
+    height: 2px;
+    right: 100%;
+  }
+}
+.topic:hover > span:nth-child(4) {
+  filter: hue-rotate(300deg);
+  bottom: -100%;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, var(--kungalgame-blue-4));
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+/* 帖子标题 */
+.topic-title {
+  height: 30px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 帖子内容预览 */
+.topic-content {
+  font-size: 13px;
+  max-height: 200px;
+  /* 超过 11 行显示省略号 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 11;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+/* 帖子的状态 */
+.topic-status {
+  height: 30px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* 相对于帖子绝对定位 */
+  position: absolute;
+  bottom: 0;
+}
+/* 图标字体距离数字的距离 */
+.topic-status > div > i {
+  margin-right: 5px;
+}
+/* 帖子的标签 */
+.topic-tags {
+  /* 占满单个帖子区域 */
+  width: 100%;
+  font-size: 12px;
+  padding: 7px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* 竖直分布 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: var(--kungalgame-trans-white-9);
+  /* 起初看不见文字 */
+  opacity: 0;
+  cursor: pointer;
+}
+.topic-tags > span {
+  display: block;
+  margin-bottom: 3px;
+}
+.topic-tags > span > i {
+  color: var(--kungalgame-red-4);
+  margin-right: 5px;
+}
+/* 单个帖子 hover 时显示帖子标签 */
+.topic:hover .topic-tags {
+  background-color: var(--kungalgame-trans-blue-0);
+  backdrop-filter: blur(5px);
+  /* 放大、旋转回正 */
+  transform: scale(1.1) rotate(-1deg);
+  /* 完全不透明，可视 */
+  opacity: 1;
+  transition: .2s;
+}
+/* 切换页数 */
 .page-switch {
   height: 77px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.topic {
-  background-color: var(--kungalgame-trans-white-2);
+/* 切换按钮 */
+.page-switch > button {
+  /* 宽高固定 */
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  border: 1px solid var(--kungalgame-blue-4);
+  background-color: var(--kungalgame-trans-blue-0);
+}
+.page-switch > button:hover {
+  background-color: var(--kungalgame-blue-4);
+  color: var(--kungalgame-white);
+}
+.page-switch > button:active {
+  background-color: var(--kungalgame-blue-3);
+}
+/* 上一页和下一页两个按钮更宽 */
+.page-switch > button:first-child {
+  width: 60px;
+}
+.page-switch > button:last-child {
+  width: 60px;
 }

@@ -1,15 +1,211 @@
 <!-- 
-    这是 KUNGalgame 的技术交流页面
+    这是 KUNGalgame 的技术交流页面，整体将会采用 grid 布局
  -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>技术交流</title>
-</head>
-<body>
-    
-</body>
+    <!-- 图标字体库 -->
+    <link href="../fa/css/fontawesome.css" rel="stylesheet" />
+    <link href="../fa/css/brands.css" rel="stylesheet" />
+    <link href="../fa/css/solid.css" rel="stylesheet" />
+    <!-- 引入头部样式文件 -->
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="./css/technology.css" />
+    <style>
+      * {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+      }
+      *::-webkit-scrollbar {
+        display: none;
+      }
+      .root {
+        height: 1500px;
+        display: flex;
+        flex-direction: column;
+        background-image: url(../img/bg/bg1.png);
+        /* background-image: url(./img/bg/bg2.png); */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-width: 700px;
+        font-family: "adobe-clean", "Source Sans Pro", -apple-system,
+          "BlinkMacSystemFont", "Segoe UI,Roboto", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="root">
+      <!-- 头部 -->
+      <div class="header">
+        <!-- 顶部左侧交互栏 -->
+        <div class="nav-top">
+          <div class="kungal-info">
+            <img src="../img/favicon.png" alt="KUNgal" />
+            <span>KUNGalgame</span>
+          </div>
+          <div class="top-bar">
+            <ul>
+              <li>所有帖子</li>
+              <li>发布帖子</li>
+              <li>技术交流</li>
+              <li>数据统计</li>
+              <div class="top-bar-box"></div>
+            </ul>
+          </div>
+        </div>
+        <!-- 顶部全局搜索框 -->
+        <!--           <div class="top-search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div> -->
+        <!-- 用户个人信息 -->
+        <div class="kungalgamer-info">
+          <img src="../img/KUN.jpg" alt="KUN" />
+          <span>KUN</span>
+        </div>
+      </div>
+      <!-- 内容区 -->
+      <div class="content">
+        <!-- 侧边的交互栏 -->
+        <div class="aside">
+          <div class="aside-container">
+            <!-- 页面的标题 -->
+            <div class="page-title">技术交流</div>
+            <!-- 侧边的搜索框 -->
+            <div class="nav-search">
+              <!-- 搜索框表单 -->
+              <form class="article-search-form">
+                <!-- 搜索框内容 -->
+                <div class="nav-search-content">
+                  <!-- 框体 -->
+                  <input
+                    type="search"
+                    class="nav-search-input"
+                    placeholder="搜索帖子"
+                  />
+                </div>
+                <!-- 搜索框图标 -->
+                <div class="nav-search-btn">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </form>
+            </div>
+            <!-- 推荐标签 -->
+            <div class="recommend">
+              <span>galgame 汉化相关</span>
+              <span>galgame 运行相关</span>
+              <span>galgame 制作相关</span>
+            </div>
+            <!-- 热门标签池 -->
+            <div class="tags-container">
+              <div>热门标签</div>
+              <!-- 单个帖子容器 -->
+              <ul class="tags">
+                <!-- 单个标签，最大输入文字为 10 个 -->
+                <li>
+                  <i class="fa-solid fa-tag"></i
+                  ><span>啊这可海星啊这可海星</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-tag"></i><span>azkhxazkhxazkhx</span>
+                </li>
+                <li><i class="fa-solid fa-tag"></i><span>啊海星</span></li>
+                <li><i class="fa-solid fa-tag"></i><span>啊星</span></li>
+                <li><i class="fa-solid fa-tag"></i><span>啊这可海星</span></li>
+                <li><i class="fa-solid fa-tag"></i><span>啊这可星</span></li>
+                <li><i class="fa-solid fa-tag"></i><span>啊这海星</span></li>
+                <li><i class="fa-solid fa-tag"></i><span>啊这星</span></li>
+                <li>
+                  <i class="fa-solid fa-tag"></i
+                  ><span>啊这啊这可海星可海星</span>
+                </li>
+                <li><i class="fa-solid fa-tag"></i><span>啊这可海</span></li>
+                <li>
+                  <i class="fa-solid fa-tag"></i
+                  ><span>啊这可海星啊这可海星</span>
+                </li>
+              </ul>
+            </div>
+            <!-- 版权 -->
+            <div class="copyright">
+              <span>Copyright © 2023</span>
+              <span>KUNgalgame</span>
+              <span>All rights reserved</span>
+              <span>Version 0.01</span>
+            </div>
+          </div>
+        </div>
+        <!-- 文章容器 -->
+        <div class="article">
+          <!-- 所有文章的容器 -->
+          <div class="article-container">
+            <!-- 单个帖子 -->
+            <div class="topic">
+              <!-- 帖子的标题 -->
+              <div class="topic-title">啊这可海星</div>
+              <!-- 帖子的内容 预览 -->
+              <div class="topic-content">
+                啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+                啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+              </div>
+              <!-- 帖子的标签 -->
+              <div class="topic-tags">
+                <span>啊这可海星</span>
+                <span>啊这可海星</span>
+                <span>啊这可海星</span>
+                <span>啊这可海星</span>
+                <span>啊这可海星</span>
+                <span>啊这可海星</span>
+                <span>啊这可海星</span>
+                <span>啊这可海星</span>
+                <span>啊这可海星</span>
+                <span>啊这可海星</span>
+              </div>
+              <!-- 帖子的状态 -->
+              <div class="topic-status">
+                <!-- 帖子的点击数 -->
+                <div class="view"><i class="fa-regular fa-eye"></i>1007</div>
+                <!-- 帖子的点赞数 -->
+                <div class="like">
+                  <i class="fa-regular fa-thumbs-up"></i>1007
+                </div>
+                <!-- 帖子的回复数 -->
+                <div class="reply">
+                  <i class="fa-regular fa-comment-dots"></i>1007
+                </div>
+              </div>
+            </div>
+            <div class="topic"></div>
+            <div class="topic"></div>
+            <div class="topic"></div>
+            <div class="topic"></div>
+            <div class="topic"></div>
+            <div class="topic"></div>
+            <div class="topic"></div>
+            <div class="topic"></div>
+            <div class="topic"></div>
+            <div class="topic"></div>
+            <div class="topic"></div>
+            <div class="topic"></div>
+            <div class="topic"></div>
+            <div class="topic"></div>
+            <div class="topic"></div>
+            <div class="topic"></div>
+            <div class="topic"></div>
+            <div class="topic"></div>
+            <div class="topic"></div>
+          </div>
+          <!-- 下一页 -->
+          <div class="page-switch"></div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

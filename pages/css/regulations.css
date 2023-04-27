@@ -1,0 +1,74 @@
+@import url(../../css/color.css);
+/* 总容器 */
+.container {
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 17px;
+  width: 700px;
+  height: 1300px;
+  background-color: var(--kungalgame-trans-white-5);
+  border-radius: 7px;
+  color: var(--kungalgame-font-color-3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+/* 文章容器 */
+.content {
+  padding: 10px;
+  height: 100%;
+  border: 1px solid var(--kungalgame-trans-blue-4);
+  border-radius: 7px;
+  box-sizing: border-box;
+  background-color: var(--kungalgame-trans-white-2);
+  box-shadow: var(--shadow);
+}
+.title-0 {
+    font-size: 30px;
+    margin: 17px 0;
+}
+.tips {
+    border-top: 2px solid var(--kungalgame-blue-4);
+    padding-top: 10px;
+    margin-bottom: 47px;
+}
+.tips span {
+    cursor: pointer;
+    color: var(--kungalgame-blue-4);
+    border-bottom: 1px solid var(--kungalgame-blue-4);
+}
+.title-1 {
+    font-size: 25px;
+    margin: 20px 0;
+    border-left: 2px solid var(--kungalgame-blue-4);
+    padding-left: 5px;
+}
+.title-2 {
+    font-size: 17px;
+    text-indent: 1em;
+}
+.moemoepoint ul {
+    margin: 10px 0;
+    margin-left: 40px;
+}
+.moemoepoint ul li {
+    margin: 5px 0;
+}
+.kungalgamer > ul {
+    margin-left: 20px;
+}
+.kungalgamer > ul li {
+    margin: 5px 0;
+}
+.topic > ul {
+    margin-left: 20px;
+}
+.topic > ul li {
+    margin: 5px 0;
+}
+.copyright {
+    position: absolute;
+    bottom: 2%;
+}

@@ -4,9 +4,14 @@
   display: grid;
   height: 100vh;
   place-items: center;
-  background: linear-gradient(var(--kungalgame-pink-0), var(--kungalgame-blue-0));
+  min-height: 500px;
+  min-width: 800px;
+  background: linear-gradient(
+    var(--kungalgame-pink-0),
+    var(--kungalgame-blue-0)
+  );
   background-repeat: no-repeat;
-  overflow: hidden;
+  position: relative;
 }
 /* 登录和注册的字体 */
 .form__title {
@@ -101,6 +106,19 @@
   opacity: 1;
   transform: translateX(100%);
   z-index: 5;
+}
+@keyframes show {
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
 }
 
 .container__overlay {
@@ -250,16 +268,8 @@
   border-bottom: 1.5px solid var(--kungalgame-blue-4);
   transition: 0.2s linear;
 }
-@keyframes show {
-  0%,
-  49.99% {
-    opacity: 0;
-    z-index: 1;
-  }
-
-  50%,
-  100% {
-    opacity: 1;
-    z-index: 5;
-  }
+.copyright {
+  position: absolute;
+  bottom: 2%;
+  white-space: nowrap;
 }

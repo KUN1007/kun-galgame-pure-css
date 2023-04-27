@@ -11,39 +11,46 @@
   );
   display: flex;
 }
-
+/* 内容区容器 */
 .container {
+    /* 固定宽高 */
     width: 400px;
     height: 300px;
+    /* 居中 */
     margin: auto;
     position: relative;
     background-color: var(--kungalgame-trans-blue-0);
     border: 1px solid var(--kungalgame-trans-blue-4);
     border-radius: 7px;
-    box-shadow: 5px 5px 7px var(--kungalgame-trans-gray-4),
-    -5px -5px 7px var(--kungalgame-trans-white-1);
+    box-shadow: var(--kungalgame-shadow-0);
+    /* 竖直方向弹性分布 */
     display: flex;
     flex-direction: column;
     align-items: center;
     color: var(--kungalgame-font-color-3);
 }
+/* 内容区容器 hover */
 .container:hover {
-    box-shadow: 2px 2px 4px var(--kungalgame-trans-gray-4),
-    -2px -2px 4px var(--kungalgame-trans-white-1);
+    box-shadow: var(--kungalgame-shadow-1);
     transition: .3s;
 }
+/* 页面的标题 */
 .title{
+    /* 固定高度 */
     height: 77px;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* 距离下一个项目的距离 */
     margin-bottom: 30px;
 }
+/* 加入 / 联系我们 */
 .contact-us {
     position: relative;
     font-size: 30px;
     z-index: 1;
 }
+/* 网站的名字 */
 .kungalgame {
     position: absolute;
     bottom: 15%;
@@ -57,21 +64,26 @@
     color: var(--kungalgame-blue-4);
     transition: .1s;
 }
+/* 联系方式容器 */
 .content {
     display: flex;
     font-size: 20px;
 }
+/* 单个项目 */
 .content > div {
+    /* 固定宽度 */
     width: 110px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+/* 文字提示 */
 .content span {
     margin-bottom: 20px;
     cursor: pointer;
 }
+/* 图标字体 */
 .content i {
     height: 100%;
     color: var(--kungalgame-blue-4);
@@ -83,6 +95,7 @@
     transform: scale(1.2);
     transition: .1s;
 }
+/* 返回主页 */
 .return {
     position: absolute;
     bottom: 1%;
@@ -93,7 +106,7 @@
 .return:hover {
     color: var(--kungalgame-blue-4);
 }
-
+/* 版权 */
 .copyright {
     position: absolute;
     bottom: -20%;

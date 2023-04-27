@@ -1,26 +1,19 @@
-body {
+@import url(../../css/color.css);
+.root {
   align-items: center;
-  /*     background: url("../../img/bg.png");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
   display: grid;
   height: 100vh;
   place-items: center;
-  background: linear-gradient(#fbe7fe, #ffffff);
+  background: linear-gradient(var(--kungalgame-pink-0), var(--kungalgame-blue-0));
   background-repeat: no-repeat;
-}
-/* 不显示滚动条 */
-*::-webkit-scrollbar {
-  display: none;
+  overflow: hidden;
 }
 /* 登录和注册的字体 */
 .form__title {
   font-weight: 300;
   font-weight: bold;
   margin-bottom: 1.25rem;
-  color: #4e4e4e;
+  color: var(--kungalgame-font-color-2);
 }
 
 /* 获取验证码 */
@@ -28,8 +21,21 @@ body {
 .link {
   text-decoration: none;
   font-size: small;
-  color: #a156db;
-  font-style: oblique;
+  color: var(--kungalgame-blue-4);
+}
+.mail-confirm {
+  position: absolute;
+  padding: 5px;
+  height: 30px;
+  top: 52%;
+  right: 12%;
+  border: 1px solid var(--kungalgame-blue-1);
+  background-color: var(--kungalgame-white);
+  cursor: pointer;
+}
+.mail-confirm:hover {
+  background-color: var(--kungalgame-blue-4);
+  color: var(--kungalgame-white);
 }
 /* 忘记密码 */
 .link {
@@ -37,14 +43,15 @@ body {
 }
 /* 用户协议 */
 .user-agreement {
-	margin-top: 10px;
-	font-size: x-small;
-	color: #4e4e4e;
-	text-decoration: none;
+  position: absolute;
+  bottom: 2%;
+  font-size: x-small;
+  color: var(--kungalgame-font-color-1);
+  text-decoration: none;
 }
 .user-agreement span {
-	color: red;
-	font-style: oblique;
+  color: var(--kungalgame-red-4);
+  font-style: oblique;
 }
 /* 总容器 */
 .container {
@@ -56,8 +63,8 @@ body {
   /* 圆角 */
   border-radius: 5px;
   /* 容器的阴影 */
-  box-shadow: 0 0.9rem 1.7rem rgba(150, 189, 255, 0.25),
-    0 0.7rem 0.7rem rgba(151, 186, 255, 0.22);
+  box-shadow: 0 0.9rem 1.7rem var(--kungalgame-blue-0),
+    0 0.7rem 0.7rem var(--kungalgame-blue-0);
   height: 390px;
   max-width: 700px;
   overflow: hidden;
@@ -129,10 +136,12 @@ body {
 }
 
 .btn {
+  position: absolute;
+  bottom: 7%;
   border-radius: 50px;
-  background-color: #ecf5ff;
-  border: 1px solid #409eff;
-  color: #409eff;
+  background-color: var(--kungalgame-trans-white-1);
+  border: 1px solid var(--kungalgame-blue-4);
+  color: var(--kungalgame-blue-4);
   cursor: pointer;
   font-size: 0.9em;
   letter-spacing: 0.1rem;
@@ -143,8 +152,8 @@ body {
   white-space: nowrap;
 }
 .btn:hover {
-  background-color: #409eff;
-  color: #ecf5ff;
+  background-color: var(--kungalgame-blue-4);
+  color: var(--kungalgame-trans-white-1);
 }
 /* 交互页面的盒子 */
 .overlay__panel {
@@ -159,18 +168,19 @@ body {
   transform: translateX(0);
   transition: transform 0.6s ease-in-out;
   width: 50%;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: var(--kungalgame-trans-white-5);
 }
 .overlay__panel .btn {
   /* 红色按钮距离底部的距离 */
-  margin-bottom: 36px;
-  background-color: #fef0f0;
-  border: 1px solid #f56c6c;
-  color: #f56c6c;
+  position: absolute;
+  bottom: 7%;
+  background-color: var(--kungalgame-red-0);
+  border: 1px solid var(--kungalgame-red-4);
+  color: var(--kungalgame-red-4);
 }
 .overlay__panel .btn:hover {
-  background-color: #f56c6c;
-  color: #fef0f0;
+  background-color: var(--kungalgame-red-4);
+  color: var(--kungalgame-trans-white-1);
 }
 
 .overlay__panel h2 {
@@ -179,7 +189,7 @@ body {
   color: #333;
 }
 .overlay__panel h2 span {
-  color: #f56c6c;
+  color: var(--kungalgame-red-4);
   padding: 0 5px;
   font-size: large;
 }
@@ -218,7 +228,7 @@ body {
 }
 /* 表单的设置 */
 .form {
-  background-color: #ffffff;
+  background-color: var(--kungalgame-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -229,17 +239,15 @@ body {
 }
 
 .input {
-  background-color: #fff;
   border: none;
   outline: none;
-  border-bottom: 1px solid #b9bdc5;
+  border-bottom: 1.5px solid var(--kungalgame-blue-0);
   padding: 0.9rem 0.9rem;
   margin: 0.5rem 0;
   width: 100%;
 }
 .input:focus {
-  border-bottom: 2px solid #409eff;
-  box-sizing: border-box;
+  border-bottom: 1.5px solid var(--kungalgame-blue-4);
   transition: 0.2s linear;
 }
 @keyframes show {

@@ -1,9 +1,12 @@
 @import url(../../css/color.css);
 /* 总容器 */
 .container {
+  /* 居中 */
   margin: 0 auto;
   padding: 10px;
+  /* 距离顶部固定交互栏的距离 */
   margin-top: 17px;
+  /* 固定宽高 */
   width: 700px;
   height: 1300px;
   background-color: var(--kungalgame-trans-white-5);
@@ -25,50 +28,61 @@
   background-color: var(--kungalgame-trans-white-2);
   box-shadow: var(--shadow);
 }
+/* 一级标题 */
 .title-0 {
-    font-size: 30px;
-    margin: 17px 0;
+  font-size: 30px;
+  margin: 17px 0;
 }
+/* 提示消息 */
 .tips {
-    border-top: 2px solid var(--kungalgame-blue-4);
-    padding-top: 10px;
-    margin-bottom: 47px;
+  border-top: 2px solid var(--kungalgame-blue-4);
+  padding-top: 10px;
+  margin-bottom: 47px;
 }
+/* 规则跳转页面 */
 .tips span {
-    cursor: pointer;
-    color: var(--kungalgame-blue-4);
-    border-bottom: 1px solid var(--kungalgame-blue-4);
+  cursor: pointer;
+  color: var(--kungalgame-blue-4);
+  border-bottom: 1px solid var(--kungalgame-blue-4);
 }
+/* 二级标题 */
 .title-1 {
-    font-size: 25px;
-    margin: 20px 0;
-    border-left: 2px solid var(--kungalgame-blue-4);
-    padding-left: 5px;
+  font-size: 25px;
+  margin: 20px 0;
+  border-left: 2px solid var(--kungalgame-blue-4);
+  /* 距离左侧的缩进距离 */
+  padding-left: 5px;
 }
+/* 三级标题 */
 .title-2 {
-    font-size: 17px;
-    text-indent: 1em;
+  font-size: 17px;
+  /* 文字缩进 */
+  text-indent: 1em;
 }
+/* 萌萌点 */
 .moemoepoint ul {
-    margin: 10px 0;
-    margin-left: 40px;
+  margin: 10px 0;
+  margin-left: 40px;
 }
 .moemoepoint ul li {
-    margin: 5px 0;
+  margin: 5px 0;
 }
+/* 用户 */
 .kungalgamer > ul {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 .kungalgamer > ul li {
-    margin: 5px 0;
+  margin: 5px 0;
 }
+/* 帖子 */
 .topic > ul {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 .topic > ul li {
-    margin: 5px 0;
+  margin: 5px 0;
 }
+/* 版权 */
 .copyright {
-    position: absolute;
-    bottom: 2%;
+  position: absolute;
+  bottom: 2%;
 }

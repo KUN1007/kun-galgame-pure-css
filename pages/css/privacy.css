@@ -1,0 +1,64 @@
+@import url(../../css/color.css);
+.root {
+  height: 100vh;
+  width: 100vw;
+  min-width: 700px;
+  min-height: 600px;
+  background: linear-gradient(
+    var(--kungalgame-trans-pink-1),
+    var(--kungalgame-trans-blue-1)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 内容区容器 */
+.container {
+  /* 固定宽高 */
+  width: 600px;
+  height: 500px;
+  /* 居中 */
+  margin: auto;
+  position: relative;
+  background-color: var(--kungalgame-trans-blue-0);
+  border: 1px solid var(--kungalgame-trans-blue-4);
+  border-radius: 7px;
+  box-shadow: var(--kungalgame-shadow-0);
+  /* 竖直方向弹性分布 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--kungalgame-font-color-3);
+}
+/* 内容区容器 hover */
+.container:hover {
+  box-shadow: var(--kungalgame-shadow-1);
+  transition: 0.3s;
+}
+/* 内容区 */
+.article {
+  padding: 20px;
+  box-sizing: border-box;
+}
+/* 单个项目之间的距离 */
+.list > li {
+  margin: 7px 0;
+  list-style: inside;
+}
+/* 页面的标题 */
+.title {
+  /* 固定高度 */
+  font-size: 30px;
+  height: 77px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 距离下一个项目的距离 */
+  margin: 10px 0;
+}
+/* 版权 */
+.copyright {
+  position: absolute;
+  bottom: -40px;
+  white-space: nowrap;
+}

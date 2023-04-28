@@ -8,16 +8,44 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
 }
 .content {
     width: 100%;
+    height: 100%;
   display: flex;
+  background-color: aqua;
 }
 .next-ver {
-    flex-grow: 1;
+    width: 50%;
 }
 .history-ver {
-    flex-grow: 1;
+  height: 100%;
+  width: 50%;
+}
+.title {
+  height: 40px;
+  font-size: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.article-history ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid var(--kungalgame-blue-4);
+}
+.article-history ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.update-time {
+  display: flex;
+  justify-content: end;
+  font-size: 13px;
 }
 .copyright {
   position: absolute;

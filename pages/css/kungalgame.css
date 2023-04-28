@@ -1,35 +1,90 @@
 @import url(../../css/color.css);
 /* 内容区容器 */
 .content-container {
-    background-color: var(--kungalgame-trans-white-1);
-    height: 800px;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 17px;
-    padding: 10px;
+  background-color: var(--kungalgame-trans-white-2);
+  border-radius: 7px;
+  height: 1500px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 17px;
+  padding: 10px;
+  position: relative;
 }
 .content {
-    height: 100%;
-    border: 1px solid var(--kungalgame-blue-4);
-    display: flex;
+  height: 100%;
+  border: 1px solid var(--kungalgame-blue-4);
+  border-radius: 7px;
+  display: flex;
 }
 .aside {
-    width: 122px;
-    height: 100%;
-    border-right: 1px solid var(--kungalgame-blue-4);
+  width: 122px;
+  height: 100%;
+  border-right: 1px solid var(--kungalgame-blue-4);
+}
+.aside > div {
+  height: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .aside > ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 17px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .aside > ul li {
-    height: 40px;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.aside > ul li:hover {
+  background-color: var(--kungalgame-trans-blue-2);
 }
 .article {
-    width: 1px;
-    flex-grow: 1;
-    margin-top: 17px;
-    margin-left: 30px;
+  margin-left: 30px;
+}
+/* 网站标题的字体颜色 */
+h1,
+h2,
+h3,
+p,
+.list {
+  color: var(--kungalgame-font-color-2);
+}
+h1 {
+  margin-top: 17px;
+}
+h2 {
+  margin-top: 77px;
+  margin-bottom: 30px;
+  text-indent: 1em;
+}
+h3 {
+  text-indent: 2em;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+p {
+  text-indent: 3em;
+  margin: 5px;
+}
+p > span {
+  border-bottom: 1px solid var(--kungalgame-blue-4);
+  cursor: pointer;
+}
+.list > li {
+  list-style: inside;
+  text-indent: 4em;
+}
+.copyright {
+  width: 100%;
+  position: absolute;
+  bottom: 1%;
+  display: flex;
+  justify-content: center;
 }

@@ -1,10 +1,15 @@
 @import url(../../css/color.css);
+/* 内容区容器 */
 .content-container {
+  /* 固定宽高 */
   height: 500px;
   width: 900px;
+  /* 相对于版权定位 */
   position: relative;
+  /* 居中 */
   margin: auto;
   background-color: var(--kungalgame-trans-white-2);
+  /* 模糊背景 */
   backdrop-filter: blur(5px);
   border-radius: 7px;
   display: flex;
@@ -15,18 +20,17 @@
   border: 1px solid var(--kungalgame-trans-blue-2);
   box-shadow: var(--shadow);
 }
+/* 内容区 */
 .content {
   width: 100%;
   height: 100%;
   display: flex;
 }
+/* 下个版本计划更新 */
 .next-ver {
   width: 50%;
 }
-.history-ver {
-  height: 100%;
-  width: 50%;
-}
+/* 标题 */
 .title {
   height: 40px;
   font-size: 27px;
@@ -35,19 +39,23 @@
   align-items: center;
   margin-bottom: 20px;
 }
+/* 更新的内容 */
 .article-next {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+/* 更新信息 */
 .describe > div {
   font-size: 20px;
   margin: 10px;
   margin-bottom: 30px;
 }
+/* 单个更新信息 */
 .describe > p {
   text-indent: 2em;
 }
+/* 更新预览 */
 .preview {
   margin-top: 100px;
   display: flex;
@@ -55,6 +63,7 @@
   justify-content: center;
   align-items: center;
 }
+/* 访问 github */
 .preview > span {
   margin-top: 10px;
   color: var(--kungalgame-blue-4);
@@ -64,23 +73,33 @@
 .preview > span:hover {
   border-bottom: 2px solid var(--kungalgame-blue-4);
 }
+/* 预计更新时间 */
 .time {
   margin-top: 80px;
   display: flex;
   justify-content: center;
 }
+/* 历史版本 */
+.history-ver {
+  height: 100%;
+  width: 50%;
+}
+/* 历史更新的内容 */
 .article-history {
   border-left: 1px solid var(--kungalgame-blue-4);
   height: 75%;
   padding: 10px;
 }
+/* 历史更新列表 */
 .history-list {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
+  /* y 轴溢出滚动 */
   overflow-y: scroll;
 }
+/* 单条更新内容 */
 .performance > p {
   margin: 5px 0;
 }
@@ -96,6 +115,7 @@
   background: var(--kungalgame-blue-4);
   border-radius: 2px;
 }
+/* 单个更新历史 */
 .article-history ul > li {
   margin-top: 20px;
   display: flex;
@@ -106,6 +126,7 @@
 .article-history ul > li:first-child {
   margin-top: 10px;
 }
+/* 更新时间和版本 */
 .update-time {
   display: flex;
   justify-content: end;
@@ -114,6 +135,7 @@
   margin-right: 10px;
   letter-spacing: 1px;
 }
+/* 版权 */
 .copyright {
   position: absolute;
   bottom: 10px;

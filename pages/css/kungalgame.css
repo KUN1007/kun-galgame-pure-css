@@ -4,7 +4,7 @@
   background-color: var(--kungalgame-trans-white-2);
   border-radius: 7px;
   /* 固定高度 */
-  height: 1500px;
+  height: 2500px;
   width: 90%;
   /* 居中 */
   margin: 0 auto;
@@ -24,6 +24,7 @@
 .aside {
   width: 122px;
   height: 100%;
+  flex-shrink: 0;
   border-right: 1px solid var(--kungalgame-blue-4);
 }
 /* 侧边的标题 */
@@ -31,7 +32,7 @@
   /* 固定高度 */
   height: 50px;
   /* 字体设置 */
-  font-size: 18px;
+  font-size: 17px;
   font-weight: bold;
   /* 居中 */
   display: flex;
@@ -59,6 +60,7 @@
 }
 /* 文章区距离侧边的距离 */
 .article {
+  width: 100%;
   margin-left: 30px;
 }
 /* 网站标题的字体颜色 */
@@ -71,11 +73,16 @@ p,
 }
 /* da标题的字体 */
 h1 {
-  margin-top: 17px;
+  margin-right: 30px;
+  margin-top: 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 h2 {
   margin-top: 77px;
   margin-bottom: 30px;
+  border-left: 4px solid var(--kungalgame-blue-4);
   text-indent: 1em;
 }
 h3 {
@@ -88,9 +95,11 @@ p {
   margin: 5px;
 }
 /* 被划出来的链接字体 */
-p > span {
+p > span,
+.skip {
   border-bottom: 1px solid var(--kungalgame-blue-4);
   cursor: pointer;
+  color: var(--kungalgame-blue-4);
 }
 .list > li {
   list-style: inside;

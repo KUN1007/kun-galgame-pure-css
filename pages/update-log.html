@@ -3,13 +3,135 @@
  -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>站点更新记录</title>
-</head>
-<body>
-    
-</body>
+    <!-- 引入页面样式 -->
+    <link rel="stylesheet" href="./css/update-log.css" />
+    <!-- 引入头部样式 -->
+    <link rel="stylesheet" href="../css/header.css" />
+    <style>
+      * {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+      }
+      *::-webkit-scrollbar {
+        display: none;
+      }
+      .root {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        /* background-image: url(../img/bg/bg1.png); */
+        /* background-image: url(./img/bg/bg2.png); */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-width: 700px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="root">
+      <!-- 头部 -->
+      <div class="header">
+        <!-- 顶部左侧交互栏 -->
+        <div class="nav-top">
+          <div class="kungal-info">
+            <img src="../img/favicon.png" alt="KUNgal" />
+            <span>KUNGalgame</span>
+          </div>
+          <div class="top-bar">
+            <ul>
+              <li>所有帖子</li>
+              <li>发布帖子</li>
+              <li>技术交流</li>
+              <li>数据统计</li>
+              <div class="top-bar-box"></div>
+            </ul>
+          </div>
+        </div>
+        <!-- 顶部全局搜索框 -->
+        <!--           <div class="top-search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div> -->
+        <!-- 用户个人信息 -->
+        <div class="kungalgamer-info">
+          <img src="../img/KUN.jpg" alt="KUN" />
+          <span>KUN</span>
+        </div>
+      </div>
+      <!-- 内容区容器 -->
+      <div class="content-container">
+        <!-- 内容区 -->
+        <div class="content">
+          <!-- 下个版本计划更新 -->
+          <div class="next-ver">
+            <!-- 标题 -->
+            <div class="title">下个版本</div>
+            <!-- 更新的内容 -->
+            <div class="article-next">
+              <div class="discribe">
+                <p>1. 添加数据统计页面</p>
+                <p>2. 修复关于我们页面布局</p>
+                <p>3. 其他细节修复</p>
+              </div>
+              <div class="preview">
+                <div>更新预览</div>
+                <span>点击访问</span>
+              </div>
+              <!-- 预计更新时间 -->
+              <div class="time">
+                <div>预计更新时间</div>
+                <span>2019/10/7</span>
+              </div>
+            </div>
+          </div>
+          <!-- 历史版本 -->
+          <div class="history-ver">
+            <!-- 标题 -->
+            <div class="title">历史版本</div>
+            <!-- 历史更新的内容 -->
+            <div class="article-history">
+              <ul>
+                <li>
+                  <!-- 更新内容 -->
+                  <div class="proformance">
+                    <p>1. 添加新页面 rank page</p>
+                    <p>2. 修复关于我们页面缩放 BUG</p>
+                    <p>3. 页面颜色调整</p>
+                  </div>
+                  <!-- 更新时间和版本 -->
+                  <div class="update-time">
+                    <span>2019/10/7 - Version 0.0.1</span>
+                  </div>
+                </li>
+                <li>
+                  <!-- 更新内容 -->
+                  <div class="proformance">
+                    <p>1. 添加新页面 rank page</p>
+                    <p>2. 修复关于我们页面缩放 BUG</p>
+                    <p>3. 页面颜色调整</p>
+                  </div>
+                  <!-- 更新时间和版本 -->
+                  <div class="update-time">
+                    <span>2019/10/7 - Version 0.0.1</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 版权 -->
+        <div class="copyright">
+          <span>Copyright © 2023 KUNgalgame</span>
+          <span>All rights reserved | Version 0.01</span>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

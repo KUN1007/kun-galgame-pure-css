@@ -3,37 +3,48 @@
 .content-container {
   background-color: var(--kungalgame-trans-white-2);
   border-radius: 7px;
+  /* 固定高度 */
   height: 1500px;
   width: 90%;
+  /* 居中 */
   margin: 0 auto;
   margin-top: 17px;
   padding: 10px;
+  /* 相对于版权定位 */
   position: relative;
 }
+/* 内容区 */
 .content {
   height: 100%;
   border: 1px solid var(--kungalgame-blue-4);
   border-radius: 7px;
   display: flex;
 }
+/* 侧边的文章结构索引 */
 .aside {
   width: 122px;
   height: 100%;
   border-right: 1px solid var(--kungalgame-blue-4);
 }
+/* 侧边的标题 */
 .aside > div {
+  /* 固定高度 */
   height: 50px;
+  /* 字体设置 */
   font-size: 18px;
   font-weight: bold;
+  /* 居中 */
   display: flex;
   justify-content: center;
   align-items: center;
 }
+/* 侧边总体的列表 */
 .aside > ul {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+/* 侧边的单个项目 */
 .aside > ul li {
   width: 100%;
   height: 40px;
@@ -42,9 +53,11 @@
   align-items: center;
   cursor: pointer;
 }
+/* 单个项目的 hover */
 .aside > ul li:hover {
   background-color: var(--kungalgame-trans-blue-2);
 }
+/* 文章区距离侧边的距离 */
 .article {
   margin-left: 30px;
 }
@@ -56,6 +69,7 @@ p,
 .list {
   color: var(--kungalgame-font-color-2);
 }
+/* da标题的字体 */
 h1 {
   margin-top: 17px;
 }
@@ -73,6 +87,7 @@ p {
   text-indent: 3em;
   margin: 5px;
 }
+/* 被划出来的链接字体 */
 p > span {
   border-bottom: 1px solid var(--kungalgame-blue-4);
   cursor: pointer;
@@ -81,6 +96,7 @@ p > span {
   list-style: inside;
   text-indent: 4em;
 }
+/* 版权 */
 .copyright {
   width: 100%;
   position: absolute;

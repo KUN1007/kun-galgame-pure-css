@@ -9,7 +9,7 @@
   /* 居中 */
   margin: 0 auto;
   margin-top: 17px;
-  padding: 10px;
+  padding: 7px;
   /* 相对于版权定位 */
   position: relative;
 }
@@ -19,6 +19,7 @@
   border: 1px solid var(--kungalgame-blue-4);
   border-radius: 7px;
   display: flex;
+  box-shadow: var(--shadow);
 }
 /* 侧边的文章结构索引 */
 .aside {

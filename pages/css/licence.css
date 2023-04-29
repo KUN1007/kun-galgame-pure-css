@@ -1,0 +1,61 @@
+@import url(../../css/color.css);
+/* 根容器 */
+.root {
+  height: 100vh;
+  width: 100vw;
+  min-width: 600px;
+  min-height: 500px;
+  background: linear-gradient(
+    var(--kungalgame-trans-pink-1),
+    var(--kungalgame-trans-blue-1)
+  );
+  display: flex;
+}
+/* 内容区容器 */
+.container {
+  /* 固定宽高 */
+  width: 500px;
+  height: 400px;
+  /* 居中 */
+  margin: auto;
+  position: relative;
+  border-radius: 7px;
+  box-shadow: var(--kungalgame-shadow-0);
+  /* 竖直方向弹性分布 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--kungalgame-font-color-3);
+  padding: 20px;
+  box-sizing: border-box;
+}
+/* 内容区容器 hover */
+.container:hover {
+  box-shadow: var(--kungalgame-shadow-1);
+  transition: 0.3s;
+}
+/* 页面的标题 */
+.title {
+  /* 固定高度 */
+  height: 77px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 距离下一个项目的距离 */
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.article > p {
+  margin: 5px;
+}
+.article > p:nth-child(2) {
+  margin-top: 20px;
+}
+.article > p:last-child {
+  margin-top: 50px;
+  margin-left: 160px;
+}
+.copyright {
+  position: absolute;
+  bottom: -40px;
+}

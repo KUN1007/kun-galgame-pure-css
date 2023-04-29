@@ -3,13 +3,995 @@
  -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>排行榜</title>
-</head>
-<body>
-    
-</body>
+    <!-- 图标字体库 -->
+    <link href="../fa/css/fontawesome.css" rel="stylesheet" />
+    <link href="../fa/css/brands.css" rel="stylesheet" />
+    <link href="../fa/css/solid.css" rel="stylesheet" />
+    <link href="../fa/css/regular.css" rel="stylesheet" />
+    <!-- 引入头部样式 -->
+    <link rel="stylesheet" href="../css/header.css" />
+    <!-- 引入页面样式 -->
+    <link rel="stylesheet" href="./css/rank.css" />
+    <style>
+      * {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+      }
+      *::-webkit-scrollbar {
+        display: none;
+      }
+      .root {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-image: url(../img/bg/bg1.png);
+        /* background-image: url(./img/bg/bg2.png); */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-width: 1000px;
+        min-height: 1000px;
+        font-family: "adobe-clean", "Source Sans Pro", -apple-system,
+          "BlinkMacSystemFont", "Segoe UI,Roboto", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 根容器 -->
+    <div class="root">
+      <!-- 头部 -->
+      <div class="header">
+        <!-- 顶部左侧交互栏 -->
+        <div class="nav-top">
+          <div class="kungal-info">
+            <img src="../img/favicon.png" alt="KUNgal" />
+            <span>KUNGalgame</span>
+          </div>
+          <div class="top-bar">
+            <ul>
+              <li>所有帖子</li>
+              <li>发布帖子</li>
+              <li>技术交流</li>
+              <li>数据统计</li>
+              <div class="top-bar-box"></div>
+            </ul>
+          </div>
+        </div>
+        <!-- 顶部全局搜索框 -->
+        <!--           <div class="top-search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div> -->
+        <!-- 用户个人信息 -->
+        <div class="kungalgamer-info">
+          <img src="../img/KUN.jpg" alt="KUN" />
+          <span>KUN</span>
+        </div>
+      </div>
+      <!-- 内容区 -->
+      <div class="article">
+        <!-- 用户排行 -->
+        <div class="kungalgamer-rank">
+          <!-- 用户排行标题 -->
+          <div class="kungalgamer-title">最萌的萝莉</div>
+          <!-- 用户排行的交互 -->
+          <div class="kungalgamer-nav">
+            <!-- 萌萌点 -->
+            <div class="moemoepoint">按萌萌点排序</div>
+            <!-- 获赞数 -->
+            <div class="praise">按获赞数排序</div>
+            <!-- 发布主题数 -->
+            <div class="topic">按发帖数排序</div>
+            <!-- 回贴数 -->
+            <div class="reply">按回贴数排序</div>
+          </div>
+          <!-- 单个用户的容器 -->
+          <div class="kungalgamer-container">
+            <!-- 单个用户 -->
+            <div class="single-kungalgamer">
+              <!-- 头像和名字 -->
+              <div class="avatar-name">
+                <img src="../img/KUN.jpg" alt="KUN" />
+                <span>鲲最可爱！</span>
+              </div>
+              <!-- 其它信息 -->
+              <div class="m-p-t-r">
+                <!-- 萌萌点 -->
+                <span>MP: 1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 贴子数 -->
+                <span><i class="fa-regular fa-newspaper"></i>1007</span>
+                <!-- 回复数 -->
+                <span><i class="fa-solid fa-reply"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个用户 -->
+            <div class="single-kungalgamer">
+              <!-- 头像和名字 -->
+              <div class="avatar-name">
+                <img src="../img/KUN.jpg" alt="KUN" />
+                <span>鲲最可爱！</span>
+              </div>
+              <!-- 其它信息 -->
+              <div class="m-p-t-r">
+                <!-- 萌萌点 -->
+                <span>MP: 1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 贴子数 -->
+                <span><i class="fa-regular fa-newspaper"></i>1007</span>
+                <!-- 回复数 -->
+                <span><i class="fa-solid fa-reply"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个用户 -->
+            <div class="single-kungalgamer">
+              <!-- 头像和名字 -->
+              <div class="avatar-name">
+                <img src="../img/KUN.jpg" alt="KUN" />
+                <span>鲲最可爱鲲最可爱</span>
+              </div>
+              <!-- 其它信息 -->
+              <div class="m-p-t-r">
+                <!-- 萌萌点 -->
+                <span>MP: 1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 贴子数 -->
+                <span><i class="fa-regular fa-newspaper"></i>1007</span>
+                <!-- 回复数 -->
+                <span><i class="fa-solid fa-reply"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个用户 -->
+            <div class="single-kungalgamer">
+              <!-- 头像和名字 -->
+              <div class="avatar-name">
+                <img src="../img/KUN.jpg" alt="KUN" />
+                <span>鲲最可爱！</span>
+              </div>
+              <!-- 其它信息 -->
+              <div class="m-p-t-r">
+                <!-- 萌萌点 -->
+                <span>MP: 1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 贴子数 -->
+                <span><i class="fa-regular fa-newspaper"></i>1007</span>
+                <!-- 回复数 -->
+                <span><i class="fa-solid fa-reply"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个用户 -->
+            <div class="single-kungalgamer">
+              <!-- 头像和名字 -->
+              <div class="avatar-name">
+                <img src="../img/KUN.jpg" alt="KUN" />
+                <span>鲲最可爱！</span>
+              </div>
+              <!-- 其它信息 -->
+              <div class="m-p-t-r">
+                <!-- 萌萌点 -->
+                <span>MP: 1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 贴子数 -->
+                <span><i class="fa-regular fa-newspaper"></i>1007</span>
+                <!-- 回复数 -->
+                <span><i class="fa-solid fa-reply"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个用户 -->
+            <div class="single-kungalgamer">
+              <!-- 头像和名字 -->
+              <div class="avatar-name">
+                <img src="../img/KUN.jpg" alt="KUN" />
+                <span>鲲最可爱！</span>
+              </div>
+              <!-- 其它信息 -->
+              <div class="m-p-t-r">
+                <!-- 萌萌点 -->
+                <span>MP: 1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 贴子数 -->
+                <span><i class="fa-regular fa-newspaper"></i>1007</span>
+                <!-- 回复数 -->
+                <span><i class="fa-solid fa-reply"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个用户 -->
+            <div class="single-kungalgamer">
+              <!-- 头像和名字 -->
+              <div class="avatar-name">
+                <img src="../img/KUN.jpg" alt="KUN" />
+                <span>鲲最可爱！</span>
+              </div>
+              <!-- 其它信息 -->
+              <div class="m-p-t-r">
+                <!-- 萌萌点 -->
+                <span>MP: 1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 贴子数 -->
+                <span><i class="fa-regular fa-newspaper"></i>1007</span>
+                <!-- 回复数 -->
+                <span><i class="fa-solid fa-reply"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个用户 -->
+            <div class="single-kungalgamer">
+              <!-- 头像和名字 -->
+              <div class="avatar-name">
+                <img src="../img/KUN.jpg" alt="KUN" />
+                <span>鲲最可爱！</span>
+              </div>
+              <!-- 其它信息 -->
+              <div class="m-p-t-r">
+                <!-- 萌萌点 -->
+                <span>MP: 1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 贴子数 -->
+                <span><i class="fa-regular fa-newspaper"></i>1007</span>
+                <!-- 回复数 -->
+                <span><i class="fa-solid fa-reply"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个用户 -->
+            <div class="single-kungalgamer">
+              <!-- 头像和名字 -->
+              <div class="avatar-name">
+                <img src="../img/KUN.jpg" alt="KUN" />
+                <span>鲲最可爱！</span>
+              </div>
+              <!-- 其它信息 -->
+              <div class="m-p-t-r">
+                <!-- 萌萌点 -->
+                <span>MP: 1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 贴子数 -->
+                <span><i class="fa-regular fa-newspaper"></i>1007</span>
+                <!-- 回复数 -->
+                <span><i class="fa-solid fa-reply"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个用户 -->
+            <div class="single-kungalgamer">
+              <!-- 头像和名字 -->
+              <div class="avatar-name">
+                <img src="../img/KUN.jpg" alt="KUN" />
+                <span>鲲最可爱！</span>
+              </div>
+              <!-- 其它信息 -->
+              <div class="m-p-t-r">
+                <!-- 萌萌点 -->
+                <span>MP: 1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 贴子数 -->
+                <span><i class="fa-regular fa-newspaper"></i>1007</span>
+                <!-- 回复数 -->
+                <span><i class="fa-solid fa-reply"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个用户 -->
+            <div class="single-kungalgamer">
+              <!-- 头像和名字 -->
+              <div class="avatar-name">
+                <img src="../img/KUN.jpg" alt="KUN" />
+                <span>鲲最可爱！</span>
+              </div>
+              <!-- 其它信息 -->
+              <div class="m-p-t-r">
+                <!-- 萌萌点 -->
+                <span>MP: 1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 贴子数 -->
+                <span><i class="fa-regular fa-newspaper"></i>1007</span>
+                <!-- 回复数 -->
+                <span><i class="fa-solid fa-reply"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个用户 -->
+            <div class="single-kungalgamer">
+              <!-- 头像和名字 -->
+              <div class="avatar-name">
+                <img src="../img/KUN.jpg" alt="KUN" />
+                <span>鲲最可爱！</span>
+              </div>
+              <!-- 其它信息 -->
+              <div class="m-p-t-r">
+                <!-- 萌萌点 -->
+                <span>MP: 1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 贴子数 -->
+                <span><i class="fa-regular fa-newspaper"></i>1007</span>
+                <!-- 回复数 -->
+                <span><i class="fa-solid fa-reply"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个用户 -->
+            <div class="single-kungalgamer">
+              <!-- 头像和名字 -->
+              <div class="avatar-name">
+                <img src="../img/KUN.jpg" alt="KUN" />
+                <span>鲲最可爱！</span>
+              </div>
+              <!-- 其它信息 -->
+              <div class="m-p-t-r">
+                <!-- 萌萌点 -->
+                <span>MP: 1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 贴子数 -->
+                <span><i class="fa-regular fa-newspaper"></i>1007</span>
+                <!-- 回复数 -->
+                <span><i class="fa-solid fa-reply"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个用户 -->
+            <div class="single-kungalgamer">
+              <!-- 头像和名字 -->
+              <div class="avatar-name">
+                <img src="../img/KUN.jpg" alt="KUN" />
+                <span>鲲最可爱！</span>
+              </div>
+              <!-- 其它信息 -->
+              <div class="m-p-t-r">
+                <!-- 萌萌点 -->
+                <span>MP: 1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 贴子数 -->
+                <span><i class="fa-regular fa-newspaper"></i>1007</span>
+                <!-- 回复数 -->
+                <span><i class="fa-solid fa-reply"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个用户 -->
+            <div class="single-kungalgamer">
+              <!-- 头像和名字 -->
+              <div class="avatar-name">
+                <img src="../img/KUN.jpg" alt="KUN" />
+                <span>鲲最可爱！</span>
+              </div>
+              <!-- 其它信息 -->
+              <div class="m-p-t-r">
+                <!-- 萌萌点 -->
+                <span>MP: 1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 贴子数 -->
+                <span><i class="fa-regular fa-newspaper"></i>1007</span>
+                <!-- 回复数 -->
+                <span><i class="fa-solid fa-reply"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个用户 -->
+            <div class="single-kungalgamer">
+              <!-- 头像和名字 -->
+              <div class="avatar-name">
+                <img src="../img/KUN.jpg" alt="KUN" />
+                <span>鲲最可爱！</span>
+              </div>
+              <!-- 其它信息 -->
+              <div class="m-p-t-r">
+                <!-- 萌萌点 -->
+                <span>MP: 1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 贴子数 -->
+                <span><i class="fa-regular fa-newspaper"></i>1007</span>
+                <!-- 回复数 -->
+                <span><i class="fa-solid fa-reply"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个用户 -->
+            <div class="single-kungalgamer">
+              <!-- 头像和名字 -->
+              <div class="avatar-name">
+                <img src="../img/KUN.jpg" alt="KUN" />
+                <span>鲲最可爱！</span>
+              </div>
+              <!-- 其它信息 -->
+              <div class="m-p-t-r">
+                <!-- 萌萌点 -->
+                <span>MP: 1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 贴子数 -->
+                <span><i class="fa-regular fa-newspaper"></i>1007</span>
+                <!-- 回复数 -->
+                <span><i class="fa-solid fa-reply"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个用户 -->
+            <div class="single-kungalgamer">
+              <!-- 头像和名字 -->
+              <div class="avatar-name">
+                <img src="../img/KUN.jpg" alt="KUN" />
+                <span>鲲最可爱！</span>
+              </div>
+              <!-- 其它信息 -->
+              <div class="m-p-t-r">
+                <!-- 萌萌点 -->
+                <span>MP: 1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 贴子数 -->
+                <span><i class="fa-regular fa-newspaper"></i>1007</span>
+                <!-- 回复数 -->
+                <span><i class="fa-solid fa-reply"></i>1007</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 帖子排行 -->
+        <div class="topic-rank">
+          <!-- 帖子排行标题 -->
+          <div class="topic-title">最萌的帖子</div>
+          <!-- 帖子排行的交互 -->
+          <div class="topic-nav">
+            <!-- 浏览数 -->
+            <div class="view">按浏览数排序</div>
+            <!-- 点赞数 -->
+            <div class="like">按点赞数排序</div>
+            <!-- 按回复数排序 -->
+            <div class="comment">按回复数排序</div>
+            <!-- 按推贴数排序 -->
+            <div class="top">按推贴数排序</div>
+          </div>
+          <!-- 单个帖子的容器 -->
+          <div class="topic-container">
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">
+                啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星啊这可海星
+              </div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+            <!-- 单个帖子 -->
+            <div class="single-topic">
+              <!-- 帖子的名字 -->
+              <div class="topic-name">啊这可海星</div>
+              <!-- 帖子的其它信息 -->
+              <div class="v-l-c-t">
+                <!-- 浏览数 -->
+                <span><i class="fa-regular fa-eye"></i>1007</span>
+                <!-- 点赞数 -->
+                <span><i class="fa-regular fa-thumbs-up"></i>1007</span>
+                <!-- 评论数 -->
+                <span><i class="fa-regular fa-comment-dots"></i>1007</span>
+                <!-- 推贴数 -->
+                <span><i class="fa-regular fa-hand-point-up"></i>1007</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 版权 -->
+      <div class="copyright">
+        <span>Copyright © 2023 KUNgalgame</span>
+        <span>All rights reserved | Version 0.01</span>
+      </div>
+    </div>
+  </body>
 </html>

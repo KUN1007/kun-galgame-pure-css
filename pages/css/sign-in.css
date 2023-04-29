@@ -32,7 +32,7 @@
   position: absolute;
   padding: 5px;
   height: 30px;
-  top: 52%;
+  top: 46%;
   right: 12%;
   border: 1px solid var(--kungalgame-blue-1);
   background-color: var(--kungalgame-white);
@@ -70,7 +70,7 @@
   /* 容器的阴影 */
   box-shadow: 0 0.9rem 1.7rem var(--kungalgame-blue-0),
     0 0.7rem 0.7rem var(--kungalgame-blue-0);
-  height: 390px;
+  height: 490px;
   max-width: 700px;
   overflow: hidden;
   position: relative;

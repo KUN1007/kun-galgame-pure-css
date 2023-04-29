@@ -71,7 +71,6 @@
   background-color: var(--kungalgame-trans-blue-2);
 }
 .copyright {
-  position: absolute;
-  bottom: 1%;
+  margin-bottom: 20px;
   white-space: nowrap;
 }

@@ -2,6 +2,7 @@
 /* 内容区容器 */
 .content-container {
   background-color: var(--kungalgame-trans-white-2);
+  backdrop-filter: blur(5px);
   border-radius: 7px;
   /* 固定高度 */
   height: 2500px;

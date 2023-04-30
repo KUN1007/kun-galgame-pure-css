@@ -120,49 +120,49 @@ Tips: 网站目前正在建设中······
 
 
 主页
-![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/index.png)
+![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/index.png)
 
 
 
 
 帖子详情页
-![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/topic-1.png)
-![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/topic-2.png)
+![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/topic-1.png)
+![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/topic-2.png)
 
 
 
 帖子池页（做的太 low 了之后用 Vue 修）
-![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/pool.png)
+![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/pool.png)
 
 
 
 
 技术交流页
-![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/technology.png)
+![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/technology.png)
 
 
 
 
 编辑页
-![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/edit.png)
+![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/edit.png)
 
 
 
 
 排行榜
-![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/rank.png)
+![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/rank.png)
 
 
 
 
 不萌萌页
-![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/unmoe.png)
+![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/unmoe.png)
 
 
 
 
 更新日志页
-![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/update-log.png)
+![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/update-log.png)
 
 
 
@@ -170,70 +170,70 @@ Tips: 网站目前正在建设中······
 用户页
 
 
- 	* 用户个人信息
-  ![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/user-info.png)
- 	* 用户邮箱密码修改
-  ![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/user-pwd.png)
- 	* 用户发表的帖子等
-  ![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/user-topic.png)
+ 	用户个人信息
+  ![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/user-info.png)
+ 	用户邮箱密码修改
+  ![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/user-pwd.png)
+ 	用户发表的帖子等
+  ![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/user-topic.png)
 
 
 
 关于我们页
-![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/kungalgame-1.png)
-![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/kungalgame-2.png)
+![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/kungalgame-1.png)
+![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/kungalgame-2.png)
 
 
 
 
 执行条例页
-![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/regulations.png)
+![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/regulations.png)
 
 
 
 
 感谢名单页
-![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/thanks-list.png)
+![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/thanks-list.png)
 
 
 
 
 收支公示页
-![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/balance.png)
+![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/balance.png)
 
 
 
 
 联系我们页
-![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/contacts.png)
+![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/contacts.png)
 
 
 
 
 捐助页
-![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/donate.png)
+![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/donate.png)
 
 
 
 
 隐私政策页
-![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/privacy.png)
+![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/privacy.png)
 
 
 
 
 重定向页
-![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/redirect.png)
+![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/redirect.png)
 
 
 
 
 登陆页
-![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/sign-in-1.png)
-![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/sign-in-2.png)
+![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/sign-in-1.png)
+![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/sign-in-2.png)
 
 
 
 
 用户协议页
-![](https://github.com/KUN1007/kungalgame-pure-css/tree/main/img/overview/licence.png)
+![](https://github.com/KUN1007/kungalgame-pure-css/blob/main/img/overview/licence.png)

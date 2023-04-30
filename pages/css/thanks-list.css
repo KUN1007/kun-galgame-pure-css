@@ -1,0 +1,50 @@
+/* 内容区容器 */
+.container {
+  /* 固定宽高 */
+  width: 900px;
+  height: 1200px;
+  /* 居中 */
+  margin: auto;
+  position: relative;
+  border-radius: 7px;
+  box-shadow: var(--kungalgame-shadow-0);
+  /* 竖直方向弹性分布 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--kungalgame-font-color-3);
+  background-color: var(--kungalgame-trans-blue-0);
+  backdrop-filter: blur(17px);
+  padding: 20px;
+  box-sizing: border-box;
+}
+/* 页面标题 */
+.title {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+/* 页面内容 */
+.article {
+  display: flex;
+  flex-direction: column;
+}
+/* 被划出来的链接字体 */
+.skip {
+  border-bottom: 1px solid var(--kungalgame-blue-4);
+  cursor: pointer;
+  color: var(--kungalgame-blue-4);
+}
+/* 单个列表项 */
+.list > li {
+  list-style: inside;
+  text-indent: 4em;
+  margin: 5px 0;
+}
+p {
+  text-indent: 3em;
+  margin: 5px;
+}
+/* 版权 */
+.copyright {
+    margin-top: 60px;
+}

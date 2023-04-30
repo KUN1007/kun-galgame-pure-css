@@ -97,7 +97,6 @@ p {
   margin: 5px;
 }
 /* 被划出来的链接字体 */
-p > span,
 .skip {
   border-bottom: 1px solid var(--kungalgame-blue-4);
   cursor: pointer;

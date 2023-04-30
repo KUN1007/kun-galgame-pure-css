@@ -1,13 +1,17 @@
 @import url(../../css/color.css);
 /* 内容区 */
 .article {
+    /* 固定高度 */
   width: 90%;
   height: 800px;
+  /* 渐变背景色 */
   background: linear-gradient(
     var(--kungalgame-trans-pink-1),
     var(--kungalgame-trans-blue-1)
   );
+  /* 调和背景色 */
   background-color: var(--kungalgame-trans-white-4);
+  /* 模糊 */
   backdrop-filter: blur(5px);
   border: 1px solid var(--kungalgame-pink-4);
   box-shadow: var(--shadow);
@@ -17,12 +21,15 @@
   padding: 10px;
   color: var(--kungalgame-font-color-3);
 }
+/* 用户排行 */
 .kungalgamer-rank {
   width: 50%;
   border-right: 1px solid var(--kungalgame-blue-4);
   box-sizing: border-box;
 }
+/* 用户排行标题 */
 .kungalgamer-title {
+    /* 字体设置 */
   font-size: 30px;
   color: var(--kungalgame-pink-4);
   font-style: italic;
@@ -33,6 +40,7 @@
   align-items: center;
   margin-bottom: 20px;
 }
+/* 用户排行的交互 */
 .kungalgamer-nav {
   display: flex;
   justify-content: space-around;
@@ -43,6 +51,7 @@
   background-color: var(--kungalgame-pink-1);
   transition: 0.2s;
 }
+/* 排行选择项 */
 .moemoepoint,
 .praise,
 .topic,
@@ -59,6 +68,7 @@
 .reply {
   border-left: none;
 }
+/* 单个用户的容器 */
 .kungalgamer-container {
   height: 700px;
   border: 1px solid var(--kungalgame-pink-4);
@@ -80,6 +90,7 @@
   background: var(--kungalgame-blue-4);
   border-radius: 2px;
 }
+/* 单个用户 */
 .single-kungalgamer {
   height: 37px;
   flex-shrink: 0;
@@ -89,23 +100,31 @@
   justify-content: space-between;
   align-items: center;
 }
+/* 用户的头像和名字 */
 .avatar-name {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+/* 用户的头像 */
 .avatar-name img {
   width: 30px;
   border-radius: 50%;
+}
+/* 用户的名字 */
+.avatar-name span {
+    margin-left: 5px;
 }
 /* 
 
 帖子排行
 
 */
+/* 帖子排行 */
 .topic-rank {
   width: 50%;
 }
+/* 帖子排行标题 */
 .topic-title {
   font-size: 30px;
   color: var(--kungalgame-blue-4);
@@ -117,6 +136,7 @@
   align-items: center;
   margin-bottom: 20px;
 }
+/* 帖子排行的交互 */
 .topic-nav {
   display: flex;
   justify-content: space-around;
@@ -127,6 +147,7 @@
   background-color: var(--kungalgame-blue-1);
   transition: 0.2s;
 }
+/* 单个交互项目 */
 .view,
 .like,
 .comment,
@@ -143,6 +164,7 @@
 .top {
   border-left: none;
 }
+/* 单个帖子的容器 */
 .topic-container {
   height: 700px;
   border: 1px solid var(--kungalgame-blue-4);
@@ -164,6 +186,7 @@
   background: var(--kungalgame-blue-4);
   border-radius: 2px;
 }
+/* 单个帖子 */
 .single-topic {
   flex-shrink: 0;
   height: 37px;
@@ -173,14 +196,17 @@
   justify-content: space-between;
   align-items: center;
 }
+/* 帖子的名字 */
 .topic-name {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+/* 帖子的其它信息 */
 .v-l-c-t {
   flex-shrink: 0;
 }
+/* 版权 */
 .copyright {
   margin: 0 auto;
   margin-bottom: 20px;

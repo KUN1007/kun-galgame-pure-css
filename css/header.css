@@ -51,7 +51,7 @@
   left: 0;
   /* 如果导航栏就六个导航，那么每个导航的宽度都是整个导航
             的六分之一 */
-  width: calc((100% / 4) * 1);
+  width: calc(100% / 4);
   height: 7px;
   border-radius: 2px;
   transition: 0.5s;

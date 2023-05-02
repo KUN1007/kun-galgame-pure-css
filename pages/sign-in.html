@@ -28,7 +28,7 @@
         <!-- 登陆 -->
         <div class="container__form container--signin">
           <form action="#" class="form" id="form1">
-            <h2 class="form__title">登陆</h2>
+            <h2 class="title">登陆</h2>
             <input type="email" placeholder="用户名或邮箱" class="input" />
             <input type="password" placeholder="密码" class="input" />
             <a href="#" class="link">忘记密码? 点击发送重置邮件</a>
@@ -39,7 +39,7 @@
         <!-- 注册 -->
         <div class="container__form container--signup">
           <form action="#" class="form" id="form2">
-            <h2 class="form__title">注册</h2>
+            <h2 class="title">注册</h2>
             <!--           <input type="text" placeholder="用户名 (中文 < 7个字符, 英文 < 14 个字符)" class="input" />
           <input type="email" placeholder="邮箱 (gmail, outlook, sina, qq, 163)" class="input" />
           <input type="password" placeholder="密码 (7 ~ 17位, 数字、字母、符号组合)" class="input" /> -->
@@ -90,16 +90,19 @@
       const secondForm = document.getElementById("form2");
       const container = document.querySelector(".container");
 
-      signInBtn.addEventListener("click", () => {
+      signInBtn.onclick = () => {
         container.classList.remove("right-panel-active");
-      });
-
-      signUpBtn.addEventListener("click", () => {
+      };
+      signUpBtn.onclick = () => {
         container.classList.add("right-panel-active");
-      });
+      };
 
-      fistForm.addEventListener("submit", (e) => e.preventDefault());
-      secondForm.addEventListener("submit", (e) => e.preventDefault());
+      fistForm.onsubmit = (e) => {
+        e.preventDefault();
+      };
+      secondForm.onsubmit = (e) => {
+        e.preventDefault();
+      };
     </script>
   </body>
 </html>

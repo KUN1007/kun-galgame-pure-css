@@ -14,7 +14,7 @@
   position: relative;
 }
 /* 登录和注册的字体 */
-.form__title {
+.title {
   font-weight: 300;
   font-weight: bold;
   margin-bottom: 1.25rem;

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-auto-rows: minmax(100px, 3fr);
+        grid-gap: 10px;
+      }
+
+      .grid-item {
+        background-color: #eaeaea;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- 添加更多项目 -->
+    </div>
+    <script>
+      // 获取容器元素
+      const container = document.querySelector('.grid-container')
+
+      // 监听窗口大小变化事件
+      window.addEventListener('resize', resizeGridItems)
+
+      // 生成随机宽高的项目
+      for (let i = 0; i < 10; i++) {
+        const item = document.createElement('div')
+        item.classList.add('grid-item')
+        item.style.gridColumn = `span ${getRandomSpan()}`
+        item.style.gridRow = `span ${getRandomSpan()}`
+        container.appendChild(item)
+      }
+
+      // 生成随机数
+      function getRandomSpan() {
+        const min = 1
+        const max = 3
+        return Math.floor(Math.random() * (max - min + 1)) + min
+      }
+
+      // 调整项目大小以填满空间
+      function resizeGridItems() {
+        const items = container.querySelectorAll('.grid-item')
+        items.forEach((item) => {
+          item.style.gridColumn = `span ${getRandomSpan()}`
+          item.style.gridRow = `span ${getRandomSpan()}`
+        })
+      }
+
+      // 页面加载完成后调整项目大小
+      window.addEventListener('load', resizeGridItems)
+    </script>
+  </body>
+</html>

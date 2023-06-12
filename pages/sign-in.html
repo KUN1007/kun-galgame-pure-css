@@ -84,25 +84,25 @@
       </div>
     </div>
     <script>
-      const signInBtn = document.getElementById("signIn");
-      const signUpBtn = document.getElementById("signUp");
-      const fistForm = document.getElementById("form1");
-      const secondForm = document.getElementById("form2");
-      const container = document.querySelector(".container");
+      const signInBtn = document.getElementById('signIn')
+      const signUpBtn = document.getElementById('signUp')
+      const fistForm = document.getElementById('form1')
+      const secondForm = document.getElementById('form2')
+      const container = document.querySelector('.container')
 
       signInBtn.onclick = () => {
-        container.classList.remove("right-panel-active");
-      };
+        container.classList.remove('right-panel-active')
+      }
       signUpBtn.onclick = () => {
-        container.classList.add("right-panel-active");
-      };
+        container.classList.add('right-panel-active')
+      }
 
       fistForm.onsubmit = (e) => {
-        e.preventDefault();
-      };
+        e.preventDefault()
+      }
       secondForm.onsubmit = (e) => {
-        e.preventDefault();
-      };
+        e.preventDefault()
+      }
     </script>
   </body>
 </html>

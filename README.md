@@ -1,4 +1,4 @@
-# kungal-pure-css
+# kun-galgame-pure-css
 
   
 
@@ -11,6 +11,10 @@ KUNGalgame 世界上最萌的 Galgame 论坛！
 为营造最良好的 Galgame 讨论环境为目的进行努力！
 
 Tips: 网站目前正在建设中······
+
+**网站已经建设完毕啦，不用看这个最初的设计稿了，保留它作为回忆吧，因为真的挺感慨的**
+
+网站地址: kungal.com
 
 
 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: black;
+        color: #fff;
+      }
+
+      h1 {
+        font: bold 200% Consolas, Monaco, monospace;
+        border-right: 0.1em solid;
+        width: 16.5em;
+        width: 26ch;
+        margin: 2em 1em;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 3s steps(26, end),
+          cursor-blink 0.3s step-end infinite alternate;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+      }
+
+      @keyframes cursor-blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pure CSS Typing animation.</h1>
+  </body>
+</html>
